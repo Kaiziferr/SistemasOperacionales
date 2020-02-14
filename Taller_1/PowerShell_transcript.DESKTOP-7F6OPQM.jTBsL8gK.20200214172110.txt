@@ -1,0 +1,3747 @@
+﻿**********************
+Inicio de la transcripción de Windows PowerShell
+Hora de inicio: 20200214172110
+Nombre de usuario: DESKTOP-7F6OPQM\S T E V E N
+Usuario RunAs: DESKTOP-7F6OPQM\S T E V E N
+Nombre de la configuración: 
+Máquina: DESKTOP-7F6OPQM (Microsoft Windows NT 10.0.18362.0)
+Aplicación host: C:\WINDOWS\syswow64\WindowsPowerShell\v1.0\PowerShell_ISE.exe
+Id. de proceso: 2080
+PSVersion: 5.1.18362.628
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.18362.628
+BuildVersion: 10.0.18362.628
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+La transcripción ha comenzado. El archivo de salida es C:\Users\S T E V E N\Documents\PowerShell_transcript.DESKTOP-7F6OPQM.jTBsL8gK.20200214172110.txt
+PS C:\WINDOWS\system32> Update-Help
+Update-Help : No se pudo actualizar la Ayuda para los módulos 'AppvClient, Defender, Microsoft.PowerShell.ODataUtils, 
+Microsoft.PowerShell.Operation.Validation, UEV, WindowsDeveloperLicense' con las referencias culturales de interfaz de 
+usuario {es-MX} : No se puede conectar con el contenido de la Ayuda. Es posible que el servidor donde está almacenado 
+este contenido no esté disponible. Compruebe que el servidor esté disponible, o espere a que el servidor vuelva a estar 
+en línea, e intente ejecutar el comando de nuevo.
+En línea: 1 Carácter: 1
++ Update-Help
++ ~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [Update-Help], Exception
+    + FullyQualifiedErrorId : UnableToConnect,Microsoft.PowerShell.Commands.UpdateHelpCommand
+Update-Help : No se pudo actualizar la Ayuda para los módulos 'AppvClient, Defender, Microsoft.PowerShell.ODataUtils,
+Microsoft.PowerShell.Operation.Validation, UEV, WindowsDeveloperLicense' con las referencias culturales de interfaz de usuario
+{es-MX} : No se puede conectar con el contenido de la Ayuda. Es posible que el servidor donde está almacenado este contenido no esté
+disponible. Compruebe que el servidor esté disponible, o espere a que el servidor vuelva a estar en línea, e intente ejecutar el
+comando de nuevo.
+En línea: 1 Carácter: 1
++ Update-Help
++ ~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [Update-Help], Exception
+    + FullyQualifiedErrorId : UnableToConnect,Microsoft.PowerShell.Commands.UpdateHelpCommand
+
+PS C:\WINDOWS\system32> help ConvertTo-Html
+
+
+NOMBRE
+    ConvertTo-Html
+
+SINOPSIS
+    Converts Microsoft .NET Framework objects into HTML that can be displayed in a Web browser.
+
+
+SINTAXIS
+    ConvertTo-Html [[-Property] <Object[]>] [[-Head] <String[]>] [[-Title] <String>] [[-Body] <String[]>] [-As {Table | List}]
+    [-CssUri <Uri>] [-InputObject <PSObject>] [-PostContent <String[]>] [-PreContent <String[]>] [<CommonParameters>]
+
+    ConvertTo-Html [[-Property] <Object[]>] [-As {Table | List}] [-Fragment] [-InputObject <PSObject>] [-PostContent <String[]>]
+    [-PreContent <String[]>] [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    The ConvertTo-Html cmdlet converts .NET Framework objects into HTML that can be displayed in a Web browser. You can use this
+    cmdlet to display the output of a command in a Web page.
+
+    You can use the parameters of ConvertTo-Html to select object properties, to specify a table or list format, to specify the HTML
+    page title, to add text before and after the object, and to return only the table or list fragment, instead of a strict DTD page.
+
+    When you submit multiple objects to ConvertTo-Html , Windows PowerShell creates the table (or list) based on the properties of
+    the first object that you submit. If the remaining objects do not have one of the specified properties, the property value of
+    that object is an empty cell. If the remaining objects have additional properties, those property values are not included in the
+    file.
+
+
+VÍNCULOS RELACIONADOS
+    Online Version: http://go.microsoft.com/fwlink/?LinkId=821758
+    ConvertTo-Csv
+    ConvertTo-Json
+    ConvertTo-Xml
+    Export-Clixml
+    Import-Clixml
+
+NOTAS
+    Para ver los ejemplos, escriba: "get-help ConvertTo-Html -examples".
+    Para obtener más información, escriba: "get-help ConvertTo-Html -detailed".
+    Para obtener información técnica, escriba: "get-help ConvertTo-Html -full".
+    Para obtener ayuda disponible en línea, escriba: "get-help ConvertTo-Html -online"
+
+
+PS C:\WINDOWS\system32> help Out-Printer
+
+
+NOMBRE
+    Out-Printer
+
+SINOPSIS
+    Sends output to a printer.
+
+
+SINTAXIS
+    Out-Printer [[-Name] <String>] [-InputObject <PSObject>] [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    The Out-Printer cmdlet sends output to the default printer or to an alternate printer, if one is specified.
+
+
+VÍNCULOS RELACIONADOS
+    Online Version: http://go.microsoft.com/fwlink/?LinkId=821841
+    Out-File
+    Out-String
+
+NOTAS
+    Para ver los ejemplos, escriba: "get-help Out-Printer -examples".
+    Para obtener más información, escriba: "get-help Out-Printer -detailed".
+    Para obtener información técnica, escriba: "get-help Out-Printer -full".
+    Para obtener ayuda disponible en línea, escriba: "get-help Out-Printer -online"
+
+
+PS C:\WINDOWS\system32> help Out-File
+
+NOMBRE
+    Out-File
+
+SINOPSIS
+    Sends output to a file.
+
+
+SINTAXIS
+    Out-File [-FilePath] <String> [[-Encoding] {unknown | string | unicode | bigendianunicode | utf8 | utf7 | utf32 | ascii |
+    default | oem}] [-Append] [-Confirm] [-Force] [-InputObject <PSObject>] [-NoClobber] [-NoNewline] [-WhatIf] [-Width <Int32>]
+    [<CommonParameters>]
+
+    Out-File [[-Encoding] {unknown | string | unicode | bigendianunicode | utf8 | utf7 | utf32 | ascii | default | oem}] [-Append]
+    [-Confirm] [-Force] [-InputObject <PSObject>] -LiteralPath <String> [-NoClobber] [-NoNewline] [-WhatIf] [-Width <Int32>]
+    [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    The Out-File cmdlet sends output to a file. You can use this cmdlet instead of the redirection operator (>) when you need to use
+    its parameters.
+
+
+VÍNCULOS RELACIONADOS
+    Online Version: http://go.microsoft.com/fwlink/?LinkId=821839
+    Out-GridView
+    Out-Printer
+    Out-String
+    Tee-Object
+
+NOTAS
+    Para ver los ejemplos, escriba: "get-help Out-File -examples".
+    Para obtener más información, escriba: "get-help Out-File -detailed".
+    Para obtener información técnica, escriba: "get-help Out-File -full".
+    Para obtener ayuda disponible en línea, escriba: "get-help Out-File -online"
+
+
+PS C:\WINDOWS\system32> help Enter-PSHostProcess
+
+
+NOMBRE
+    Enter-PSHostProcess
+
+SINOPSIS
+    Connects to and enters into an interactive session with a local process.
+
+
+SINTAXIS
+    Enter-PSHostProcess [-HostProcessInfo] <PSHostProcessInfo> [[-AppDomainName] <String>] [<CommonParameters>]
+
+    Enter-PSHostProcess [-Id] <Int32> [[-AppDomainName] <String>] [<CommonParameters>]
+
+    Enter-PSHostProcess [-Name] <String> [[-AppDomainName] <String>] [<CommonParameters>]
+
+    Enter-PSHostProcess [-Process] <Process> [[-AppDomainName] <String>] [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    The Enter-PSHostProcess cmdlet connects to and enters into an interactive session with a local process.
+
+    Instead of creating a new process to host Windows PowerShell and run a remote session, the remote, interactive session is run in
+    an existing process that is already running Windows PowerShell. When you are interacting with a remote session on a specified
+    process, you can enumerate running runspaces, and then select a runspace to debug by running either Debug-Runspace or
+    Enable-RunspaceDebug.
+
+    The process that you want to enter must be hosting Windows PowerShell (System.Management.Automation.dll). You must be either a
+    member of the Administrators group on the computer on which the process is found, or you must be the user who is running the
+    script that started the process.
+
+    After you have selected a runspace to debug, a remote debug session is opened for the runspace if it is either currently running
+    a command or is stopped in the debugger. You can then debug the runspace script in the same way you would debug other remote
+    session scripts.
+
+    Detach from a debugging session, and then the interactive session with the process, by running exit twice, or stop script
+    execution by running the existing debugger quit command.
+
+    If you specify a process by using the Name parameter, and there is only one process found with the specified name, the process
+    is entered. If more than one process with the specified name is found, Windows PowerShell returns an error, and lists all
+    processes found with the specified name.
+
+    To support attaching to processes on remote computers, the Enter-PSHostProcess cmdlet is enabled in a specified remote computer,
+    so that you can attach to a local process within a remote Windows PowerShell session.
+
+
+VÍNCULOS RELACIONADOS
+    Online Version: http://go.microsoft.com/fwlink/?LinkID=403736
+    Exit-PSHostProcess
+
+NOTAS
+    Para ver los ejemplos, escriba: "get-help Enter-PSHostProcess -examples".
+    Para obtener más información, escriba: "get-help Enter-PSHostProcess -detailed".
+    Para obtener información técnica, escriba: "get-help Enter-PSHostProcess -full".
+    Para obtener ayuda disponible en línea, escriba: "get-help Enter-PSHostProcess -online"
+
+
+PS C:\WINDOWS\system32> help Exit-PSHostProcess
+
+NOMBRE
+    Exit-PSHostProcess
+
+SINOPSIS
+    Closes an interactive session with a local process.
+
+
+SINTAXIS
+    Exit-PSHostProcess [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    The Exit-PSHostProcess cmdlet closes an interactive session with a local process that you have opened by running the
+    Enter-PSHostProcess cmdlet. You run the Exit-PSHostProcess cmdlet from within the process, when you are finished debugging or
+    troubleshooting a script that is running within a process.
+
+
+VÍNCULOS RELACIONADOS
+    Online Version: http://go.microsoft.com/fwlink/?LinkID=403737
+    Enter-PSHostProcess
+
+NOTAS
+    Para ver los ejemplos, escriba: "get-help Exit-PSHostProcess -examples".
+    Para obtener más información, escriba: "get-help Exit-PSHostProcess -detailed".
+    Para obtener información técnica, escriba: "get-help Exit-PSHostProcess -full".
+    Para obtener ayuda disponible en línea, escriba: "get-help Exit-PSHostProcess -online"
+
+
+PS C:\WINDOWS\system32> help Get-ProcessMitigation
+Get-Help : Get-Help no pudo encontrar Get-ProcessMitigation en un archivo de Ayuda en esta sesión. Para descargar los 
+temas de Ayuda actualizados, escribe: "Update-Help". Para obtener Ayuda en pantalla, busca el tema de Ayuda en la 
+biblioteca de TechNet en https:/go.microsoft.com/fwlink/?LinkID=107116.
+En línea: 55 Carácter: 5
++     Get-Help @PSBoundParameters | more
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ResourceUnavailable: (:) [Get-Help], HelpNotFoundException
+    + FullyQualifiedErrorId : HelpNotFound,Microsoft.PowerShell.Commands.GetHelpCommand
+Get-Help : Get-Help no pudo encontrar Get-ProcessMitigation en un archivo de Ayuda en esta sesión. Para descargar los temas de Ayuda
+actualizados, escribe: "Update-Help". Para obtener Ayuda en pantalla, busca el tema de Ayuda en la biblioteca de TechNet en
+https:/go.microsoft.com/fwlink/?LinkID=107116.
+En línea: 55 Carácter: 5
++     Get-Help @PSBoundParameters | more
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ResourceUnavailable: (:) [Get-Help], HelpNotFoundException
+    + FullyQualifiedErrorId : HelpNotFound,Microsoft.PowerShell.Commands.GetHelpCommand
+
+PS C:\WINDOWS\system32> help Wait-Process
+
+
+NOMBRE
+    Wait-Process
+
+SINOPSIS
+    Waits for the processes to be stopped before accepting more input.
+
+
+SINTAXIS
+    Wait-Process [-Id] <Int32[]> [[-Timeout] <Int32>] [<CommonParameters>]
+
+    Wait-Process [[-Timeout] <Int32>] -InputObject <Process[]> [<CommonParameters>]
+
+    Wait-Process [-Name] <String[]> [[-Timeout] <Int32>] [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    The Wait-Process cmdlet waits for one or more running processes to be stopped before accepting input. In the Windows PowerShell
+    console, this cmdlet suppresses the command prompt until the processes are stopped. You can specify a process by process name or
+    process ID (PID), or pipe a process object to Wait-Process . Wait-Process works only on processes running on the local computer.
+
+
+VÍNCULOS RELACIONADOS
+    Online Version: http://go.microsoft.com/fwlink/?LinkId=821650
+    Debug-Process
+    Get-Process
+    Start-Process
+    Stop-Process
+    Wait-Process
+
+NOTAS
+    Para ver los ejemplos, escriba: "get-help Wait-Process -examples".
+    Para obtener más información, escriba: "get-help Wait-Process -detailed".
+    Para obtener información técnica, escriba: "get-help Wait-Process -full".
+    Para obtener ayuda disponible en línea, escriba: "get-help Wait-Process -online"
+
+
+PS C:\WINDOWS\system32> help Stop-Process
+
+NOMBRE
+    Stop-Process
+
+SINOPSIS
+    Stops one or more running processes.
+
+
+SINTAXIS
+    Stop-Process [-Id] <Int32[]> [-Confirm] [-Force] [-PassThru] [-WhatIf] [<CommonParameters>]
+
+    Stop-Process [-InputObject] <Process[]> [-Confirm] [-Force] [-PassThru] [-WhatIf] [<CommonParameters>]
+
+    Stop-Process [-Confirm] [-Force] -Name <String[]> [-PassThru] [-WhatIf] [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    The Stop-Process cmdlet stops one or more running processes. You can specify a process by process name or process ID (PID), or
+    pass a process object to Stop-Process . Stop-Process works only on processes running on the local computer.
+
+    On Windows Vista and later versions of the Windows operating system, to stop a process that is not owned by the current user,
+    you must start Windows PowerShell by using the Run as administrator option. Also, you are prompted for confirmation unless you
+    specify the Force parameter.
+
+
+VÍNCULOS RELACIONADOS
+    Online Version: http://go.microsoft.com/fwlink/?LinkId=821642
+    Debug-Process
+    Get-Process
+    Start-Process
+    Stop-Process
+    Wait-Process
+
+NOTAS
+    Para ver los ejemplos, escriba: "get-help Stop-Process -examples".
+    Para obtener más información, escriba: "get-help Stop-Process -detailed".
+    Para obtener información técnica, escriba: "get-help Stop-Process -full".
+    Para obtener ayuda disponible en línea, escriba: "get-help Stop-Process -online"
+
+
+PS C:\WINDOWS\system32> get help Stop-Process -Full
+get : El término 'get' no se reconoce como nombre de un cmdlet, función, archivo de script o programa ejecutable. 
+Compruebe si escribió correctamente el nombre o, si incluyó una ruta de acceso, compruebe que dicha ruta es correcta e 
+inténtelo de nuevo.
+En línea: 1 Carácter: 1
++ get help Stop-Process -Full
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (get:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+get : El término 'get' no se reconoce como nombre de un cmdlet, función, archivo de script o programa ejecutable. Compruebe si
+escribió correctamente el nombre o, si incluyó una ruta de acceso, compruebe que dicha ruta es correcta e inténtelo de nuevo.
+En línea: 1 Carácter: 1
++ get help Stop-Process -Full
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (get:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\WINDOWS\system32> get-help Stop-Process -full
+
+NOMBRE
+    Stop-Process
+
+SINOPSIS
+    Stops one or more running processes.
+
+
+SINTAXIS
+    Stop-Process [-Id] <Int32[]> [-Confirm] [-Force] [-PassThru] [-WhatIf] [<CommonParameters>]
+
+    Stop-Process [-InputObject] <Process[]> [-Confirm] [-Force] [-PassThru] [-WhatIf] [<CommonParameters>]
+
+    Stop-Process [-Confirm] [-Force] -Name <String[]> [-PassThru] [-WhatIf] [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    The Stop-Process cmdlet stops one or more running processes. You can specify a process by process name or process ID (PID), or
+    pass a process object to Stop-Process . Stop-Process works only on processes running on the local computer.
+
+    On Windows Vista and later versions of the Windows operating system, to stop a process that is not owned by the current user,
+    you must start Windows PowerShell by using the Run as administrator option. Also, you are prompted for confirmation unless you
+    specify the Force parameter.
+
+
+PARÁMETROS
+    -Confirm [<SwitchParameter>]
+        Prompts you for confirmation before running the cmdlet.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Force [<SwitchParameter>]
+        Stops the specified processes without prompting for confirmation. By default, Stop-Process prompts for confirmation before
+        stopping any process that is not owned by the current user.
+
+        To find the owner of a process, use the Get-WmiObject cmdlet to get a Win32_Process object that represents the process, and
+        then use the GetOwner method of the object.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Id <Int32[]>
+        Specifies the process IDs of the processes to stop. To specify multiple IDs, use commas to separate the IDs. To find the PID
+        of a process, type `Get-Process`.
+
+        ¿Requerido?                  true
+        ¿Posición?                   0
+        Valor predeterminado         None
+        ¿Aceptar canalización?       True (ByPropertyName)
+        ¿Aceptar caracteres comodín? false
+
+    -InputObject <Process[]>
+        Specifies the process objects to stop. Enter a variable that contains the objects, or type a command or expression that gets
+        the objects.
+
+        ¿Requerido?                  true
+        ¿Posición?                   0
+        Valor predeterminado         None
+        ¿Aceptar canalización?       True (ByValue)
+        ¿Aceptar caracteres comodín? false
+
+    -Name <String[]>
+        Specifies the process names of the processes to stop. You can type multiple process names, separated by commas, or use
+        wildcard characters.
+
+        ¿Requerido?                  true
+        ¿Posición?                   named
+        Valor predeterminado         None
+        ¿Aceptar canalización?       True (ByPropertyName)
+        ¿Aceptar caracteres comodín? false
+
+    -PassThru [<SwitchParameter>]
+        Returns an object that represents the process. By default, this cmdlet does not generate any output.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -WhatIf [<SwitchParameter>]
+        Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    <CommonParameters>
+        Este cmdlet admite los parámetros comunes: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable y OutVariable. Para obtener más información, consulta
+        about_CommonParameters (https:/go.microsoft.com/fwlink/?LinkID=113216).
+
+ENTRADAS
+    System.Diagnostics.Process
+        You can pipe a process object to this cmdlet.
+
+
+SALIDAS
+    None, System.Diagnostics.Process
+        This cmdlet returns a System.Diagnostics.Process object that represents the stopped process, if you specify the PassThru
+        parameter. Otherwise, this cmdlet does not generate any output.
+
+
+NOTAS
+
+
+        You can also refer to Stop-Process by its built-in aliases, kill and spps *. For more information, see about_Aliases.
+
+        You can also use the properties and methods of the Windows Management Instrumentation (WMI) Win32_Process object in Windows
+        PowerShell. For more information, see Get-WmiObject and the WMI SDK.
+
+        When stopping processes, realize that stopping a process can stop process and services that depend on the process. In an
+        extreme case, stopping a process can stop Windows.
+
+        *
+
+    Example 1: Stop all instances of a process
+
+    PS C:\>Stop-Process -Name "notepad"
+
+    This command stops all instances of the Notepad process on the computer. Each instance of Notepad runs in its own process. It
+    uses the Name parameter to specify the processes, all of which have the same name. If you were to use the Id parameter to stop
+    the same processes, you would have to list the process IDs of each instance of Notepad.
+    Example 2: Stop a specific instance of a process
+
+    PS C:\>Stop-Process -Id 3952 -Confirm -PassThru
+    Confirm
+    Are you sure you want to perform this action?
+    Performing operation "Stop-Process" on Target "notepad (3952)".
+    [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help
+    (default is "Y"):y
+    Handles  NPM(K)    PM(K)      WS(K) VM(M)   CPU(s)     Id ProcessName
+    -------  ------    -----      ----- -----   ------     -- -----------
+    41       2      996       3212    31            3952 notepad
+
+    This command stops a particular instance of the Notepad process. It uses the process ID, 3952, to identify the process. The
+    Confirm parameter directs Windows PowerShell to prompt you before it stops the process. Because the prompt includes the process
+    namein addition to its ID, this is best practice. The PassThru parameter passes the process object to the formatter for display.
+    Without this parameter, there would be no display after a Stop-Process command.
+    Example 3: Stop a process and detect that it has stopped
+
+    PS C:\>calc
+    PS C:\> $p = Get-Crocess -Name "calc"
+    PS C:\> Stop-Process -InputObject $p
+    PS C:\> Get-Process | Where-Object {$_.HasExited}
+
+    This series of commands starts and stops the Calc process, and then detects processes that have stopped.
+
+    The first command starts an instance of the calculator.
+
+    The second command uses Get-Process gets an object that represents the Calc process, and then stores it in the $p variable.
+
+    The third command stops the Calc process. It uses the InputObject parameter to pass the object to Stop-Process .
+
+    The last command gets all of the processes on the computer that were running but that are now stopped. It uses Get-Process to
+    get all of the processes on the computer. The pipeline operator (|) passes the results to the Where-Object cmdlet, which selects
+    the ones where the value of the HasExited property is $True. HasExited is just one property of process objects. To find all the
+    properties, type `Get-Process | Get-Member`.
+    Example 4: Stop a process not owned by the current user
+
+    PS C:\>Get-Process -Name "lsass" | Stop-Process
+
+    Stop-Process : Cannot stop process 'lsass (596)' because of the following error: Access is denied
+    At line:1 char:34
+    + Get-Process -Name "lsass" | Stop-Process <<<<
+
+    [ADMIN]: PS C:\> Get-Process -Name "lsass" | Stop-Process
+
+    Warning!
+    Are you sure you want to perform this action?
+    Performing operation 'Stop-Process' on Target 'lsass(596)'
+    [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"):
+    [ADMIN]: PS C:\> Get-Process -Name "lsass" | Stop-Process -Force
+    [ADMIN]: PS C:\>
+
+    These commands show the effect of using Force to stop a process that is not owned by the user.
+
+    The first command uses Get-Process to get the Lsass process. A pipeline operator sends the process to Stop-Process to stop it.
+    As shown in the sample output, the first command fails with an Access denied message, because this process can be stopped only
+    by a member of the Administrator group on the computer.
+
+    When Windows PowerShell is opened by using the Run as administrator option, and the command is repeated, Windows PowerShell
+    prompts you for confirmation.
+
+    The second command specifies Force to suppress the prompt. As a result, the process is stopped without confirmation.
+
+VÍNCULOS RELACIONADOS
+    Online Version: http://go.microsoft.com/fwlink/?LinkId=821642
+    Debug-Process
+    Get-Process
+    Start-Process
+    Stop-Process
+    Wait-Process
+
+
+
+PS C:\WINDOWS\system32> get-help Start-Process  -full
+
+NOMBRE
+    Start-Process
+
+SINOPSIS
+    Starts one or more processes on the local computer.
+
+
+SINTAXIS
+    Start-Process [-FilePath] <String> [[-ArgumentList] <String[]>] [-Credential <PSCredential>] [-LoadUserProfile] [-NoNewWindow]
+    [-PassThru] [-RedirectStandardError <String>] [-RedirectStandardInput <String>] [-RedirectStandardOutput <String>]
+    [-UseNewEnvironment] [-Wait] [-WindowStyle {Normal | Hidden | Minimized | Maximized}] [-WorkingDirectory <String>]
+    [<CommonParameters>]
+
+    Start-Process [-FilePath] <String> [[-ArgumentList] <String[]>] [-PassThru] [-Verb <String>] [-Wait] [-WindowStyle {Normal |
+    Hidden | Minimized | Maximized}] [-WorkingDirectory <String>] [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    The Start-Process cmdlet starts one or more processes on the local computer. To specify the program that runs in the process,
+    enter an executable file or script file, or a file that can be opened by using a program on the computer. If you specify a
+    non-executable file, Start-Process starts the program that is associated with the file, similar to the Invoke-Item cmdlet.
+
+    You can use the parameters of Start-Process to specify options, such as loading a user profile, starting the process in a new
+    window, or using alternate credentials.
+
+
+PARÁMETROS
+    -ArgumentList <String[]>
+        Specifies parameters or parameter values to use when this cmdlet starts the process.
+
+        ¿Requerido?                  false
+        ¿Posición?                   1
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Credential <PSCredential>
+        Specifies a user account that has permission to perform this action. Type a user name, such as User01 or Domain01\User01, or
+        enter a PSCredential object, such as one from the Get-Credential cmdlet. By default, the cmdlet uses the credentials of the
+        current user.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -FilePath <String>
+        Specifies the optional path and file name of the program that runs in the process. Enter the name of an executable file or
+        of a document, such as a .txt or .doc file, that is associated with a program on the computer. This parameter is required.
+
+        If you specify only a file name, use the WorkingDirectory parameter to specify the path.
+
+        ¿Requerido?                  true
+        ¿Posición?                   0
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -LoadUserProfile [<SwitchParameter>]
+        Indicates that this cmdlet loads the Windows user profile stored in the HKEY_USERS registry key for the current user.
+
+        This parameter does not affect the Windows PowerShell profiles. For more information, see about_Profiles.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -NoNewWindow [<SwitchParameter>]
+        Start the new process in the current console window. By default Windows PowerShell opens a new window.
+
+        You cannot use the NoNewWindow and WindowStyle parameters in the same command.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -PassThru [<SwitchParameter>]
+        Returns a process object for each process that the cmdlet started. By default, this cmdlet does not generate any output.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -RedirectStandardError <String>
+        Specifies a file. This cmdlet sends any errors generated by the process to a file that you specify. Enter the path and file
+        name. By default, the errors are displayed in the console.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -RedirectStandardInput <String>
+        Specifies a file. This cmdlet reads input from the specified file. Enter the path and file name of the input file. By
+        default, the process gets its input from the keyboard.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -RedirectStandardOutput <String>
+        Specifies a file. This cmdlet sends the output generated by the process to a file that you specify. Enter the path and file
+        name. By default, the output is displayed in the console.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -UseNewEnvironment [<SwitchParameter>]
+        Indicates that this cmdlet uses new environment variables specified for the process. By default, the started process runs
+        with the environment variables specified for the computer and user.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Verb <String>
+        Specifies a verb to use when this cmdlet starts the process. The verbs that are available are determined by the file name
+        extension of the file that runs in the process.
+
+        The following table shows the verbs for some common process file types.
+
+        `File type      Verbs` `---------      -------` `.cmd------Edit, Open, Print, Runas` `.exe------Open, RunAs`
+        `.txt------Open, Print, PrintTo` `.wav------Open, Play`
+
+        To find the verbs that can be used with the file that runs in a process, use the New-Object cmdlet to create a
+        System.Diagnostics.ProcessStartInfo object for the file. The available verbs are in the Verbs property of the
+        ProcessStartInfo object. For details, see the examples.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Wait [<SwitchParameter>]
+        Indicates that this cmdlet waits for the specified process to complete before accepting more input. This parameter
+        suppresses the command prompt or retains the window until the process finishes.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -WindowStyle <ProcessWindowStyle>
+        Specifies the state of the window that is used for the new process. The acceptable values for this parameter are: Normal,
+        Hidden, Minimized, and Maximized. The default value is Normal.
+
+        You cannot use the WindowStyle and NoNewWindow parameters in the same command.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -WorkingDirectory <String>
+        Specifies the location of the executable file or document that runs in the process. The default is the current folder.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    <CommonParameters>
+        Este cmdlet admite los parámetros comunes: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable y OutVariable. Para obtener más información, consulta
+        about_CommonParameters (https:/go.microsoft.com/fwlink/?LinkID=113216).
+
+ENTRADAS
+    None
+        You cannot pipe input to this cmdlet.
+
+
+SALIDAS
+    None, System.Diagnostics.Process
+        This cmdlet generates a System.Diagnostics.Process object, if you specify the PassThru parameter. Otherwise, this cmdlet
+        does not return any output.
+
+
+NOTAS
+
+
+        This cmdlet is implemented by using the Start method of the System.Diagnostics.Process * class. For more information about
+        this method, see Process.Start Methodhttp://go.microsoft.com/fwlink/?LinkId=143602
+        (http://go.microsoft.com/fwlink/?LinkId=143602) in the Microsoft Developer Network (MSDN) library.
+
+        *
+
+    Example 1: Start a process that uses default values
+
+    PS C:\>Start-Process -FilePath "sort.exe"
+
+    This command starts a process that uses the Sort.exe file in the current folder. The command uses all of the default values,
+    including the default window style, working folder, and credentials.
+    Example 2: Print a text file
+
+    PS C:\>Start-Process -FilePath "myfile.txt" -WorkingDirectory "C:\PS-Test" -Verb Print
+
+    This command starts a process that prints the C:\PS-Test\MyFile.txt file.
+    Example 3: Start a process to sort items to a new file
+
+    PS C:\>Start-Process -FilePath "Sort.exe" -RedirectStandardInput "Testsort.txt" -RedirectStandardOutput "Sorted.txt"
+    -RedirectStandardError "SortError.txt" -UseNewEnvironment
+
+    This command starts a process that sorts items in the Testsort.txt file and returns the sorted items in the Sorted.txt files.
+    Any errors are written to the SortError.txt file.
+
+    The UseNewEnvironment parameter specifies that the process runs with its own environment variables.
+    Example 4: Start a process in a maximized window
+
+    PS C:\>Start-Process -FilePath "notepad" -Wait -WindowStyle Maximized
+
+    This command starts the Notepad process. It maximizes the window and retains the window until the process completes.
+    Example 5: Start Windows Powershell as an administrator
+
+    PS C:\>Start-Process -FilePath "powershell" -Verb runAs
+
+    This command starts Windows PowerShell by using the Run as administrator option.
+    Example 6: Using different verbs to start a process
+
+    PS C:\>$startExe = New-Object System.Diagnostics.ProcessStartInfo -Args PowerShell.exe
+    PS C:\> $startExe.verbs
+    open
+    runas
+
+    # Starts a PowerShell process in a new console window.
+
+    PS C:\> Start-Process -FilePath "powershell.exe" -Verb open
+
+    # Starts a PowerShell process with "Run as Administrator" permissions.
+
+    PS C:\> Start-Process -FilePath "powershell.exe" -Verb runas
+
+    These commands show how to find the verbs that can be used when starting a process, and the effect of using the verbs to start
+    the process.
+
+    The available verbs are determined by the file name extension of the file that runs in the process. To find the verbs for a
+    process, create a System.Diagnostics.ProcessStartInfo object for the process file and look in the Verbs property of the object.
+    This example uses the PowerShell.exe file that runs in the PowerShell process.
+
+    The first command uses New-Object to create a System.Diagnostics.ProcessStartInfo object for PowerShell.exe, the file that runs
+    in the PowerShell process. The command saves the ProcessStartInfo object in the $startExe variable.
+
+    The second command displays the values in the Verbs property of the ProcessStartInfo object in the $startExe variable. The
+    results show that you can use the Open and Runas verbs with PowerShell.exe, or with any process that runs a .exe file.
+
+    The third command starts a PowerShell process with the Open verb. The Open verb starts the process in a new console window.
+
+    The fourth command starts a PowerShell process with the RunAs verb. The RunAs verb starts the process with permissions of a
+    member of the Administrators group on the computer. This is the same as starting Windows PowerShell by using the Run as
+    administrator option.
+
+VÍNCULOS RELACIONADOS
+    Online Version: http://go.microsoft.com/fwlink/?LinkId=821638
+    Debug-Process
+    Get-Process
+    Start-Service
+    Stop-Process
+    Wait-Process
+
+
+
+PS C:\WINDOWS\system32> get-help Get-Process   -full
+
+NOMBRE
+    Get-Process
+
+SINOPSIS
+    Gets the processes that are running on the local computer or a remote computer.
+
+
+SINTAXIS
+    Get-Process [[-Name] <String[]>] [-ComputerName <String[]>] [-FileVersionInfo] [-Module] [<CommonParameters>]
+
+    Get-Process [-ComputerName <String[]>] [-FileVersionInfo] -Id <Int32[]> [-Module] [<CommonParameters>]
+
+    Get-Process [-ComputerName <String[]>] [-FileVersionInfo] -InputObject <Process[]> [-Module] [<CommonParameters>]
+
+    Get-Process -Id <Int32[]> -IncludeUserName [<CommonParameters>]
+
+    Get-Process [[-Name] <String[]>] -IncludeUserName [<CommonParameters>]
+
+    Get-Process -IncludeUserName -InputObject <Process[]> [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    The Get-Process cmdlet gets the processes on a local or remote computer.
+
+    Without parameters, this cmdlet gets all of the processes on the local computer. You can also specify a particular process by
+    process name or process ID (PID) or pass a process object through the pipeline to this cmdlet.
+
+    By default, this cmdlet returns a process object that has detailed information about the process and supports methods that let
+    you start and stop the process. You can also use the parameters of the Get-Process cmdlet to get file version information for
+    the program that runs in the process and to get the modules that the process loaded.
+
+
+PARÁMETROS
+    -ComputerName <String[]>
+        Specifies the computers for which this cmdlet gets active processes. The default is the local computer.
+
+        Type the NetBIOS name, an IP address, or a fully qualified domain name (FQDN) of one or more computers. To specify the local
+        computer, type the computer name, a dot (.), or localhost.
+
+        This parameter does not rely on Windows PowerShell remoting. You can use the ComputerName parameter of this cmdlet even if
+        your computer is not configured to run remote commands.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         None
+        ¿Aceptar canalización?       True (ByPropertyName)
+        ¿Aceptar caracteres comodín? false
+
+    -FileVersionInfo [<SwitchParameter>]
+        Indicates that this cmdlet gets the file version information for the program that runs in the process.
+
+        On Windows Vista and later versions of Windows, you must open Windows PowerShell with the Run as administrator option to use
+        this parameter on processes that you do not own.
+
+        You cannot use the FileVersionInfo and ComputerName parameters of the Get-Process cmdlet in the same command. To get file
+        version information for a process on a remote computer, use the Invoke-Command cmdlet.
+
+        Using this parameter is equivalent to getting the MainModule.FileVersionInfo property of each process object. When you use
+        this parameter, Get-Process returns a FileVersionInfo object (System.Diagnostics.FileVersionInfo), not a process object. So,
+        you cannot pipe the output of the command to a cmdlet that expects a process object, such as Stop-Process.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Id <Int32[]>
+        Specifies one or more processes by process ID (PID). To specify multiple IDs, use commas to separate the IDs. To find the
+        PID of a process, type `Get-Process`.
+
+        ¿Requerido?                  true
+        ¿Posición?                   named
+        Valor predeterminado         None
+        ¿Aceptar canalización?       True (ByPropertyName)
+        ¿Aceptar caracteres comodín? false
+
+    -IncludeUserName [<SwitchParameter>]
+        Indicates that the UserName value of the Process object is returned with results of the command.
+
+        ¿Requerido?                  true
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -InputObject <Process[]>
+        Specifies one or more process objects. Enter a variable that contains the objects, or type a command or expression that gets
+        the objects.
+
+        ¿Requerido?                  true
+        ¿Posición?                   named
+        Valor predeterminado         None
+        ¿Aceptar canalización?       True (ByValue)
+        ¿Aceptar caracteres comodín? false
+
+    -Module [<SwitchParameter>]
+        Indicates that this cmdlet gets the modules that have been loaded by the processes.
+
+        On Windows Vista and later versions of Windows, you must open Windows PowerShell with the Run as administrator option to use
+        this parameter on processes that you do not own.
+
+        You cannot use the Module and ComputerName parameters of the Get-Process cmdlet in the same command. To get the modules that
+        have been loaded by a process on a remote computer, use the Invoke-Command cmdlet.
+
+        This parameter is equivalent to getting the Modules property of each process object. When you use this parameter, this
+        cmdlet returns a ProcessModule object (System.Diagnostics.ProcessModule), not a process object. So, you cannot pipe the
+        output of the command to a cmdlet that expects a process object, such as Stop-Process.
+
+        When you use both the Module and FileVersionInfo parameters in the same command, this cmdlet returns a FileVersionInfo
+        object with information about the file version of all modules.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Name <String[]>
+        Specifies one or more processes by process name. You can type multiple process names (separated by commas) and use wildcard
+        characters. The parameter name ("Name") is optional.
+
+        ¿Requerido?                  false
+        ¿Posición?                   0
+        Valor predeterminado         None
+        ¿Aceptar canalización?       True (ByPropertyName)
+        ¿Aceptar caracteres comodín? false
+
+    <CommonParameters>
+        Este cmdlet admite los parámetros comunes: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable y OutVariable. Para obtener más información, consulta
+        about_CommonParameters (https:/go.microsoft.com/fwlink/?LinkID=113216).
+
+ENTRADAS
+    System.Diagnostics.Process
+        You can pipe a process object to this cmdlet.
+
+
+SALIDAS
+    System.Diagnostics.Process, System.Diagnotics.FileVersionInfo, System.Diagnostics.ProcessModule
+        By default, this cmdlet returns a System.Diagnostics.Process object. If you use the FileVersionInfo parameter, it returns a
+        System.Diagnotics.FileVersionInfo object. If you use the Module parameter, without the FileVersionInfo parameter, it returns
+        a System.Diagnostics.ProcessModule object.
+
+
+NOTAS
+
+
+        * You can also refer to this cmdlet by its built-in aliases, ps and gps. For more information, see about_Aliases.
+
+        * On computers that are running a 64-bit version of Windows, the 64-bit version of Windows PowerShell gets only 64-bit
+        process modules and the 32-bit version of Windows PowerShell gets only 32-bit process modules.
+
+        * You can use the properties and methods of the Windows Management Instrumentation (WMI) Win32_Process object in Windows
+        PowerShell. For information, see Get-WmiObject and the WMI SDK.
+
+        * The default display of a process is a table that includes the following columns. For a description of all of the
+        properties of process objects, see Process Propertieshttp://go.microsoft.com/fwlink/?LinkId=204482 at
+        http://go.microsoft.com/fwlink/?LinkId=204482.
+
+
+        - Handles: The number of handles that the process has opened.
+
+        - NPM(K): The amount of non-paged memory that the process is using, in kilobytes.
+
+        - PM(K): The amount of pageable memory that the process is using, in kilobytes.
+
+        - WS(K): The size of the working set of the process, in kilobytes. The working set consists of the pages of memory that were
+        recently referenced by the process.
+
+        - VM(M): The amount of virtual memory that the process is using, in megabytes. Virtual memory includes storage in the paging
+        files on disk.
+
+        - CPU(s): The amount of processor time that the process has used on all processors, in seconds.
+
+        - ID: The process ID (PID) of the process.
+
+        - ProcessName: The name of the process.
+
+        For explanations of the concepts related to processes, see the Glossary in Help and Support Center and the Help for Task
+        Manager.
+        * You can also use the built-in alternate views of the processes available with Format-Table, such as StartTime and
+        Priority, and you can design your own views.
+
+
+    Example 1: Get a list of all active processes on the local computer
+
+    PS C:\>Get-Process
+
+    This command gets a list of all active processes running on the local computer. For a definition of each column, see the
+    "Additional Notes" section of the Help topic for Get-Help.
+    Example 2: Get all available data about one or more processes
+
+    PS C:\>Get-Process winword, explorer | Format-List *
+
+    This command gets all available data about the Winword and Explorer processes on the computer. It uses the Name parameter to
+    specify the processes, but it omits the optional parameter name. The pipeline operator (|) passes the data to the Format-List
+    cmdlet, which displays all available properties (*) of the Winword and Explorer process objects.
+
+    You can also identify the processes by their process IDs. For instance, `Get-Process -Id 664, 2060`.
+    Example 3: Get all processes with a working set greater than a specified size
+
+    PS C:\>Get-Process | Where-Object {$_.WorkingSet -gt 20000000}
+
+    This command gets all processes that have a working set greater than 20 MB. It uses the Get-Process cmdlet to get all running
+    processes. The pipeline operator (|) passes the process objects to the Where-Object cmdlet, which selects only the object with a
+    value greater than 20,000,000 bytes for the WorkingSet property. WorkingSet is one of many properties of process objects. To see
+    all of the properties, type `Get-Process | Get-Member`. By default, the values of all amount properties are in bytes, even
+    though the default display lists them in kilobytes and megabytes.
+    Example 4: List processes on the computer in groups based on priority
+
+    PS C:\>$A = Get-Process PS C:\>Get-Process -InputObject $A | Format-Table -View priority
+
+    These commands list the processes on the computer in groups based on their priority class. The first command gets all the
+    processes on the computer and then stores them in the $A variable.
+
+    The second command uses the InputObject parameter to pass the process objects that are stored in the $A variable to the
+    Get-Process cmdlet. The pipeline operator passes the objects to the Format-Table cmdlet, which formats the processes by using
+    the Priority view. The Priority view, and other views, are defined in the PS1XML format files in the Windows PowerShell home
+    directory ($pshome).
+    Example 5: Add a property to the standard Get-Process output display
+
+    PS C:\>Get-Process Powershell -ComputerName S1, localhost | ft @{Label="NPM(K)";Expression={[int]($_.NPM/1024)}}, @{Label="PM(K)"
+    ;Expression={[int]($_.PM/1024)}},@{Label="WS(K)";Expression={[int]($_.WS/1024)}},@{Label="VM(M)";Expression={[int]($_.VM/1MB)}},
+    @{Label="CPU(s)";Expression={if ($_.CPU -ne $()) { $_.CPU.ToString("N")}}}, Id, MachineName, ProcessName -Auto
+
+
+
+
+
+
+    NPM(K) PM(K) WS(K) VM(M) CPU(s)   Id MachineName ProcessName
+    ------ ----- ----- ----- ------   -- ----------- -----------
+    6      23500 31340   142        1980 S1          powershell
+    6      23500 31348   142        4016 S1          powershell
+    27     54572 54520   576        4428 localhost   powershell
+
+    This example provides a Format-Table (alias = ft) command that adds the MachineName property to the standard Get-Process output
+    display.
+    Example 6: Get version information for a process
+
+    PS C:\>Get-Process powershell -FileVersionInfo
+
+
+
+
+    ProductVersion   FileVersion      FileName
+    --------------   -----------      --------
+    6.1.6713.1       6.1.6713.1 (f... C:\WINDOWS\system32\WindowsPowerShell\v1.0\powershell.exe
+
+    This command uses the FileVersionInfo parameter to get the version information for the PowerShell.exe file that is the main
+    module for the PowerShell process.
+
+    To run this command with processes that you do not own on Windows Vista and later versions of Windows, you must open Windows
+    PowerShell with the Run as administrator option.
+    Example 7: Get modules loaded with the specified process
+
+    PS C:\>Get-Process SQL* -Module
+
+    This command uses the Module parameter to get the modules that have been loaded by the process. This command gets the modules
+    for the processes that have names that begin with SQL.
+
+    To run this command on Windows Vista and later versions of Windows with processes that you do not own, you must start Windows
+    PowerShell with the Run as administrator option.
+    Example 8: Find the owner of a process
+
+    PS C:\>$P = Get-WmiObject win32_process -Filter "name='powershell.exe'"
+    PS C:\>$P.getowner()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    __GENUS          : 2
+    __CLASS          : __PARAMETERS
+    __SUPERCLASS     :
+    __DYNASTY        : __PARAMETERS
+    __RELPATH        :
+    __PROPERTY_COUNT : 3
+    __DERIVATION     : {}
+    __SERVER         :
+    __NAMESPACE      :
+    __PATH           :
+    Domain           : DOMAIN01
+    ReturnValue      : 0
+    User             : user01
+
+    This command shows how to find the owner of a process. Because the System.Diagnostics.Process object that Get-Process returns
+    does not have a property or method that returns the process owner, the command uses the Get-WmiObject cmdlet to get a
+    Win32_Process object that represents the same process.
+
+    The first command uses Get-WmiObject to get the PowerShell process. It saves it in the $P variable.
+
+    The second command uses the GetOwner method to get the owner of the process in $P. The command reveals that the owner is
+    Domain01\user01.
+    Example 9: Use an automatic variable to identify the process hosting the current session
+
+    PS C:\>Get-Process powershell
+
+
+
+
+
+    Handles  NPM(K)    PM(K)      WS(K) VM(M)   CPU(s)     Id ProcessName
+    -------  ------    -----      ----- -----   ------     -- -----------
+    308      26        52308      61780   567     3.18   5632 powershell
+    377      26        62676      63384   575     3.88   5888 powershell PS C:\>Get-Process -Id $pid
+
+
+
+    Handles  NPM(K)    PM(K)      WS(K) VM(M)   CPU(s)     Id ProcessName
+    -------  ------    -----      ----- -----   ------     -- -----------
+    396      26        56488      57236   575     3.90   5888 powershell
+
+    These commands show how to use the $pid automatic variable to identify the process that is hosting the current Windows
+    PowerShell session. You can use this method to distinguish the host process from other Windows PowerShell processes that you
+    might want to stop or close. The first command gets all of the Windows PowerShell processes in the current session.
+
+    The second command gets the Windows PowerShell process that is hosting the current session.
+    Example 10: Get all processes that have a main window title and display them in a table
+
+    PS C:\>Get-Process | where {$_.mainWindowTitle} | Format-Table id, name, mainwindowtitle -autosize
+
+    This command gets all the processes that have a main window title, and it displays them in a table with the process ID and the
+    process name.
+
+    The mainWindowTitle property is just one of many useful properties of the Process object that Get-Process returns. To view all
+    of the properties, pipe the results of a Get-Process command to the Get-Member cmdlet (get-process | get-member).
+
+VÍNCULOS RELACIONADOS
+    Online Version: http://go.microsoft.com/fwlink/?linkid=821590
+    Debug-Process
+    Get-Process
+    Start-Process
+    Stop-Process
+    Wait-Process
+
+
+
+PS C:\WINDOWS\system32> get-help Debug-Process  -full
+
+NOMBRE
+    Debug-Process
+
+SINOPSIS
+    Debugs one or more processes running on the local computer.
+
+
+SINTAXIS
+    Debug-Process [-Id] <Int32[]> [-Confirm] [-WhatIf] [<CommonParameters>]
+
+    Debug-Process [-Confirm] -InputObject <Process[]> [-WhatIf] [<CommonParameters>]
+
+    Debug-Process [-Name] <String[]> [-Confirm] [-WhatIf] [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    The Debug-Process cmdlet attaches a debugger to one or more running processes on a local computer. You can specify the processes
+    by their process name or process ID (PID), or you can pipe process objects to this cmdlet.
+
+    This cmdlet attaches the debugger that is currently registered for the process. Before using this cmdlet, verify that a debugger
+    is downloaded and correctly configured.
+
+
+PARÁMETROS
+    -Confirm [<SwitchParameter>]
+        Prompts you for confirmation before running the cmdlet.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Id <Int32[]>
+        Specifies the process IDs of the processes to be debugged. The Id parameter name is optional.
+
+        To find the process ID of a process, type `Get-Process`.
+
+        ¿Requerido?                  true
+        ¿Posición?                   0
+        Valor predeterminado         None
+        ¿Aceptar canalización?       True (ByPropertyName)
+        ¿Aceptar caracteres comodín? false
+
+    -InputObject <Process[]>
+        Specifies the process objects that represent processes to be debugged. Enter a variable that contains the process objects or
+        a command that gets the process objects, such as the Get-Process cmdlet. You can also pipe process objects to this cmdlet.
+
+        ¿Requerido?                  true
+        ¿Posición?                   named
+        Valor predeterminado         None
+        ¿Aceptar canalización?       True (ByValue)
+        ¿Aceptar caracteres comodín? false
+
+    -Name <String[]>
+        Specifies the names of the processes to be debugged. If there is more than one process with the same name, this cmdlet
+        attaches a debugger to all processes with that name.  The Name parameter is optional.
+
+        ¿Requerido?                  true
+        ¿Posición?                   0
+        Valor predeterminado         None
+        ¿Aceptar canalización?       True (ByPropertyName)
+        ¿Aceptar caracteres comodín? false
+
+    -WhatIf [<SwitchParameter>]
+        Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    <CommonParameters>
+        Este cmdlet admite los parámetros comunes: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable y OutVariable. Para obtener más información, consulta
+        about_CommonParameters (https:/go.microsoft.com/fwlink/?LinkID=113216).
+
+ENTRADAS
+    System.Int32, System.Diagnostics.Process, System.String
+        You can pipe a process ID (Int32), a process object (System.Diagnostics.Process), or a process name (String) to this cmdlet.
+
+
+SALIDAS
+    None
+        This cmdlet does not generate any output.
+
+
+NOTAS
+
+
+        This cmdlet uses the AttachDebugger * method of the Windows Management Instrumentation (WMI) Win32_Process class. For more
+        information about this method, see AttachDebugger Methodhttp://go.microsoft.com/fwlink/?LinkId=143640 at
+        http://go.microsoft.com/fwlink/?LinkId=143640.
+
+        *
+
+    Example 1: Attach a debugger to a process on the computer
+
+    PS C:\>Debug-Process -Name "Windows Powershell"
+
+    This command attaches a debugger to the Windows PowerShell process on the computer.
+    Example 2: Attach a debugger to all processes that begin with the specified string
+
+    PS C:\>Debug-Process -Name "SQL*"
+
+    This command attaches a debugger to all processes that have names that begin with SQL.
+    Example 3: Attach a debugger to multiple processes
+
+    PS C:\>Debug-Process "Winlogon", "Explorer", "Outlook"
+
+    This command attaches a debugger to the Winlogon, Explorer, and Outlook processes.
+    Example 4: Attach a debugger to multiple process IDs
+
+    PS C:\>Debug-Process -Id 1132, 2028
+
+    This command attaches a debugger to the processes that have process IDs 1132 and 2028.
+    Example 5: Use Get-Process to get a process then attach a debugger to it
+
+    PS C:\>Get-Process "Windows PowerShell" | Debug-Process
+
+    This command attaches a debugger to the Windows PowerShell processes on the computer. It uses the Get-Process cmdlet to get the
+    Windows PowerShell processes on the computer, and it uses a pipeline operator (|) to send the processes to the Debug-Process
+    cmdlet.
+
+    To specify a particular PowerShell process, use the ID parameter of Get-Process .
+    Example 6: Attach a debugger to a current process on the local computer
+
+    PS C:\>$PID | Debug-Process
+
+    This command attaches a debugger to the current Windows PowerShell processes on the computer.
+
+    The command uses the $PID automatic variable, which contains the process ID of the current Windows PowerShell process. Then, it
+    uses a pipeline operator (|) to send the process ID to the Debug-Process cmdlet.
+
+    For more information about the $PID automatic variable, see about_Automatic_Variables.
+    Example 7: Attach a debugger to the specified process on multiple computers
+
+    PS C:\>Get-Process -ComputerName "Server01", "Server02" -Name "MyApp" | Debug-Process
+
+    This command attaches a debugger to the MyApp processes on the Server01 and Server02 computers.
+
+    The command uses the Get-Process cmdlet to get the MyApp processes on the Server01 and Server02 computers. It uses a pipeline
+    operator to send the processes to the Debug-Process cmdlet, which attaches the debuggers.
+    Example 8: Attach a debugger to a process that uses the InputObject parameter
+
+    PS C:\>$P = Get-Process "Windows PowerShell"
+    PS C:\>Debug-Process -InputObject $P
+
+    This command attaches a debugger to the Windows PowerShell processes on the local computer.
+
+    The first command uses the Get-Process cmdlet to get the Windows PowerShell processes on the computer. It saves the resulting
+    process object in the variable named $P.
+
+    The second command uses the InputObject parameter of the Debug-Process cmdlet to submit the process object in the $P variable.
+
+VÍNCULOS RELACIONADOS
+    Online Version: http://go.microsoft.com/fwlink/?LinkId=821577
+    Debug-Process
+    Get-Process
+    Start-Process
+    Stop-Process
+    Wait-Process
+
+
+
+PS C:\WINDOWS\system32> get-help Debug-Process  -full
+
+NOMBRE
+    Debug-Process
+
+SINOPSIS
+    Debugs one or more processes running on the local computer.
+
+
+SINTAXIS
+    Debug-Process [-Id] <Int32[]> [-Confirm] [-WhatIf] [<CommonParameters>]
+
+    Debug-Process [-Confirm] -InputObject <Process[]> [-WhatIf] [<CommonParameters>]
+
+    Debug-Process [-Name] <String[]> [-Confirm] [-WhatIf] [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    The Debug-Process cmdlet attaches a debugger to one or more running processes on a local computer. You can specify the processes
+    by their process name or process ID (PID), or you can pipe process objects to this cmdlet.
+
+    This cmdlet attaches the debugger that is currently registered for the process. Before using this cmdlet, verify that a debugger
+    is downloaded and correctly configured.
+
+
+PARÁMETROS
+    -Confirm [<SwitchParameter>]
+        Prompts you for confirmation before running the cmdlet.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Id <Int32[]>
+        Specifies the process IDs of the processes to be debugged. The Id parameter name is optional.
+
+        To find the process ID of a process, type `Get-Process`.
+
+        ¿Requerido?                  true
+        ¿Posición?                   0
+        Valor predeterminado         None
+        ¿Aceptar canalización?       True (ByPropertyName)
+        ¿Aceptar caracteres comodín? false
+
+    -InputObject <Process[]>
+        Specifies the process objects that represent processes to be debugged. Enter a variable that contains the process objects or
+        a command that gets the process objects, such as the Get-Process cmdlet. You can also pipe process objects to this cmdlet.
+
+        ¿Requerido?                  true
+        ¿Posición?                   named
+        Valor predeterminado         None
+        ¿Aceptar canalización?       True (ByValue)
+        ¿Aceptar caracteres comodín? false
+
+    -Name <String[]>
+        Specifies the names of the processes to be debugged. If there is more than one process with the same name, this cmdlet
+        attaches a debugger to all processes with that name.  The Name parameter is optional.
+
+        ¿Requerido?                  true
+        ¿Posición?                   0
+        Valor predeterminado         None
+        ¿Aceptar canalización?       True (ByPropertyName)
+        ¿Aceptar caracteres comodín? false
+
+    -WhatIf [<SwitchParameter>]
+        Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    <CommonParameters>
+        Este cmdlet admite los parámetros comunes: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable y OutVariable. Para obtener más información, consulta
+        about_CommonParameters (https:/go.microsoft.com/fwlink/?LinkID=113216).
+
+ENTRADAS
+    System.Int32, System.Diagnostics.Process, System.String
+        You can pipe a process ID (Int32), a process object (System.Diagnostics.Process), or a process name (String) to this cmdlet.
+
+
+SALIDAS
+    None
+        This cmdlet does not generate any output.
+
+
+NOTAS
+
+
+        This cmdlet uses the AttachDebugger * method of the Windows Management Instrumentation (WMI) Win32_Process class. For more
+        information about this method, see AttachDebugger Methodhttp://go.microsoft.com/fwlink/?LinkId=143640 at
+        http://go.microsoft.com/fwlink/?LinkId=143640.
+
+        *
+
+    Example 1: Attach a debugger to a process on the computer
+
+    PS C:\>Debug-Process -Name "Windows Powershell"
+
+    This command attaches a debugger to the Windows PowerShell process on the computer.
+    Example 2: Attach a debugger to all processes that begin with the specified string
+
+    PS C:\>Debug-Process -Name "SQL*"
+
+    This command attaches a debugger to all processes that have names that begin with SQL.
+    Example 3: Attach a debugger to multiple processes
+
+    PS C:\>Debug-Process "Winlogon", "Explorer", "Outlook"
+
+    This command attaches a debugger to the Winlogon, Explorer, and Outlook processes.
+    Example 4: Attach a debugger to multiple process IDs
+
+    PS C:\>Debug-Process -Id 1132, 2028
+
+    This command attaches a debugger to the processes that have process IDs 1132 and 2028.
+    Example 5: Use Get-Process to get a process then attach a debugger to it
+
+    PS C:\>Get-Process "Windows PowerShell" | Debug-Process
+
+    This command attaches a debugger to the Windows PowerShell processes on the computer. It uses the Get-Process cmdlet to get the
+    Windows PowerShell processes on the computer, and it uses a pipeline operator (|) to send the processes to the Debug-Process
+    cmdlet.
+
+    To specify a particular PowerShell process, use the ID parameter of Get-Process .
+    Example 6: Attach a debugger to a current process on the local computer
+
+    PS C:\>$PID | Debug-Process
+
+    This command attaches a debugger to the current Windows PowerShell processes on the computer.
+
+    The command uses the $PID automatic variable, which contains the process ID of the current Windows PowerShell process. Then, it
+    uses a pipeline operator (|) to send the process ID to the Debug-Process cmdlet.
+
+    For more information about the $PID automatic variable, see about_Automatic_Variables.
+    Example 7: Attach a debugger to the specified process on multiple computers
+
+    PS C:\>Get-Process -ComputerName "Server01", "Server02" -Name "MyApp" | Debug-Process
+
+    This command attaches a debugger to the MyApp processes on the Server01 and Server02 computers.
+
+    The command uses the Get-Process cmdlet to get the MyApp processes on the Server01 and Server02 computers. It uses a pipeline
+    operator to send the processes to the Debug-Process cmdlet, which attaches the debuggers.
+    Example 8: Attach a debugger to a process that uses the InputObject parameter
+
+    PS C:\>$P = Get-Process "Windows PowerShell"
+    PS C:\>Debug-Process -InputObject $P
+
+    This command attaches a debugger to the Windows PowerShell processes on the local computer.
+
+    The first command uses the Get-Process cmdlet to get the Windows PowerShell processes on the computer. It saves the resulting
+    process object in the variable named $P.
+
+    The second command uses the InputObject parameter of the Debug-Process cmdlet to submit the process object in the $P variable.
+
+VÍNCULOS RELACIONADOS
+    Online Version: http://go.microsoft.com/fwlink/?LinkId=821577
+    Debug-Process
+    Get-Process
+    Start-Process
+    Stop-Process
+    Wait-Process
+
+
+
+PS C:\WINDOWS\system32> get-help Get-PSHostProcessInfo -full
+
+NOMBRE
+    Get-PSHostProcessInfo
+
+SINOPSIS
+
+
+
+SINTAXIS
+    Get-PSHostProcessInfo [-Id] <Int32[]> [<CommonParameters>]
+
+    Get-PSHostProcessInfo [[-Name] <String[]>] [<CommonParameters>]
+
+    Get-PSHostProcessInfo [-Process] <Process[]> [<CommonParameters>]
+
+
+DESCRIPCIÓN
+
+
+
+PARÁMETROS
+    -Id <Int32[]>
+        @{Text=}
+
+        ¿Requerido?                  true
+        ¿Posición?                   0
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Name <String[]>
+        @{Text=}
+
+        ¿Requerido?                  false
+        ¿Posición?                   0
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Process <Process[]>
+        @{Text=}
+
+        ¿Requerido?                  true
+        ¿Posición?                   0
+        Valor predeterminado         None
+        ¿Aceptar canalización?       True (ByValue)
+        ¿Aceptar caracteres comodín? false
+
+    <CommonParameters>
+        Este cmdlet admite los parámetros comunes: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable y OutVariable. Para obtener más información, consulta
+        about_CommonParameters (https:/go.microsoft.com/fwlink/?LinkID=113216).
+
+ENTRADAS
+
+SALIDAS
+
+NOTAS
+
+
+
+
+    1:
+
+    PS C:\>
+
+
+    2:
+
+    PS C:\>
+
+
+
+VÍNCULOS RELACIONADOS
+    Online Version: http://go.microsoft.com/fwlink/?LinkId=821487
+
+
+
+PS C:\WINDOWS\system32> get-help New-EventLog -full
+
+NOMBRE
+    New-EventLog
+
+SINOPSIS
+    Creates a new event log and a new event source on a local or remote computer.
+
+
+SINTAXIS
+    New-EventLog [-LogName] <String> [-Source] <String[]> [[-ComputerName] <String[]>] [-CategoryResourceFile <String>]
+    [-MessageResourceFile <String>] [-ParameterResourceFile <String>] [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    The New-EventLog cmdlet creates a new classic event log on a local or remote computer. It can also register an event source that
+    writes to the new log or to an existing log.
+
+    The cmdlets that contain the EventLog noun (the EventLog cmdlets) work only on classic event logs. To get events from logs that
+    use the Windows Event Log technology in Windows Vista and later versions of the Windows operating system, use the Get-WinEvent
+    cmdlet.
+
+
+PARÁMETROS
+    -CategoryResourceFile <String>
+        Specifies the path of the file that contains category strings for the source events. This file is also known as the Category
+        Message File.
+
+        The file must be present on the computer on which the event log is being created. This parameter does not create or move
+        files.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -ComputerName <String[]>
+        Specifies the computers on which this cmdlet creates new event logs. The default is the local computer.
+
+        Type the NetBIOS name, an IP address or a fully qualified domain name of a remote computer. To specify the local computer,
+        type the computer name, a dot (.), or localhost.
+
+        This parameter does not rely on Windows PowerShell remoting. You can use the ComputerName parameter of New-EventLog even if
+        your computer is not configured to run remote commands.
+
+        ¿Requerido?                  false
+        ¿Posición?                   2
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -LogName <String>
+        Specifies the name of the event log.
+
+        If the log does not exist, New-EventLog creates the log and uses this value for the Log and LogDisplayName properties of the
+        new event log. If the log exists, New-EventLog registers a new source for the event log.
+
+        ¿Requerido?                  true
+        ¿Posición?                   0
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -MessageResourceFile <String>
+        Specifies the path of the file that contains message formatting strings for the source events. This file is also known as
+        the Event Message File.
+
+        The file must be present on the computer on which the event log is being created. This parameter does not create or move
+        files.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -ParameterResourceFile <String>
+        Specifies the path of the file that contains strings used for parameter substitutions in event descriptions. This file is
+        also known as the Parameter Message File.
+
+        The file must be present on the computer on which the event log is being created. This parameter does not create or move
+        files.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Source <String[]>
+        Specifies the names of the event log sources, such as application programs that write to the event log. This parameter is
+        required.
+
+        ¿Requerido?                  true
+        ¿Posición?                   1
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    <CommonParameters>
+        Este cmdlet admite los parámetros comunes: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable y OutVariable. Para obtener más información, consulta
+        about_CommonParameters (https:/go.microsoft.com/fwlink/?LinkID=113216).
+
+ENTRADAS
+    None
+        You cannot pipe input to this cmdlet.
+
+
+SALIDAS
+    System.Diagnostics.EventLogEntry
+
+
+
+NOTAS
+
+
+        To use New-EventLog * on Windows Vista and later versions of the Windows operating system, open Windows PowerShell by using
+        Run as administrator option.
+
+        To create an event source in Windows Vista, Windows XP Professional, or Windows Server 2003, you must be a member of the
+        Administrators group on the computer.
+
+        When you create a new event log and a new event source, the system registers the new source for the new log, but the log is
+        not created until the first entry is written to it.
+
+        The operating system stores event logs as files. When you create a new event log, the associated file is stored in the
+        %SystemRoot%\System32\Config directory on the specified computer. The file name is the first eight characters of the Log
+        property that has an .evt file name extension.
+
+        *
+
+    Example 1: Create an event log and register its source
+
+    PS C:\>New-EventLog -Source "TestApp" -LogName "TestLog" -MessageResourceFile "C:\Test\TestApp.dll"
+
+    This command creates the TestLog event log on the local computer and registers a new source for it.
+    Example 2: Add an event source to the Application log
+
+    PS C:\>$file = "C:\Program Files\TestApps\NewTestApp.dll"
+    PS C:\> New-EventLog -ComputerName "Server01" -Source "NewTestApp" -LogName "Application" -MessageResourceFile $file
+    -CategoryResourceFile $file
+
+    This command adds a new event source, NewTestApp, to the Application log on the Server01 remote computer.
+
+    The command requires that the NewTestApp.dll file is located on the Server01 computer.
+
+VÍNCULOS RELACIONADOS
+    Online Version: http://go.microsoft.com/fwlink/?LinkId=821603
+    Clear-EventLog
+    Get-EventLog
+    Limit-EventLog
+    New-EventLog
+    Remove-EventLog
+    Show-EventLog
+    Write-EventLog
+
+
+
+PS C:\WINDOWS\system32> help Write-EventLog 
+
+NOMBRE
+    Write-EventLog
+
+SINOPSIS
+    Writes an event to an event log.
+
+
+SINTAXIS
+    Write-EventLog [-LogName] <String> [-Source] <String> [-EventId] <Int32> [[-EntryType] {Error | Information | FailureAudit |
+    SuccessAudit | Warning}] [-Message] <String> [-Category <Int16>] [-ComputerName <String>] [-RawData <Byte[]>]
+    [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    The Write-EventLog cmdlet writes an event to an event log.
+
+    To write an event to an event log, the event log must exist on the computer and the source must be registered for the event log.
+
+    The cmdlets that contain the EventLog noun (the EventLog cmdlets) work only on classic event logs. To get events from logs that
+    use the Windows Event Log technology in Windows Vista and later versions of the Windows operating system, use the Get-WinEvent
+    cmdlet.
+
+
+VÍNCULOS RELACIONADOS
+    Online Version: http://go.microsoft.com/fwlink/?LinkId=821651
+    Clear-EventLog
+    Get-EventLog
+    Limit-EventLog
+    New-EventLog
+    Remove-EventLog
+    Show-EventLog
+    Write-EventLog
+
+NOTAS
+    Para ver los ejemplos, escriba: "get-help Write-EventLog -examples".
+    Para obtener más información, escriba: "get-help Write-EventLog -detailed".
+    Para obtener información técnica, escriba: "get-help Write-EventLog -full".
+    Para obtener ayuda disponible en línea, escriba: "get-help Write-EventLog -online"
+
+
+PS C:\WINDOWS\system32> get-help Write-EventLog  -full
+
+NOMBRE
+    Write-EventLog
+
+SINOPSIS
+    Writes an event to an event log.
+
+
+SINTAXIS
+    Write-EventLog [-LogName] <String> [-Source] <String> [-EventId] <Int32> [[-EntryType] {Error | Information | FailureAudit |
+    SuccessAudit | Warning}] [-Message] <String> [-Category <Int16>] [-ComputerName <String>] [-RawData <Byte[]>]
+    [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    The Write-EventLog cmdlet writes an event to an event log.
+
+    To write an event to an event log, the event log must exist on the computer and the source must be registered for the event log.
+
+    The cmdlets that contain the EventLog noun (the EventLog cmdlets) work only on classic event logs. To get events from logs that
+    use the Windows Event Log technology in Windows Vista and later versions of the Windows operating system, use the Get-WinEvent
+    cmdlet.
+
+
+PARÁMETROS
+    -Category <Int16>
+        Specifies a task category for the event. Enter an integer that is associated with the strings in the category message file
+        for the event log.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -ComputerName <String>
+        Specifies a remote computer. The default is the local computer.
+
+        Type the NetBIOS name, an IP address, or a fully qualified domain name of a remote computer.
+
+        This parameter does not rely on Windows PowerShell remoting. You can use the ComputerName parameter of the Get-EventLog
+        cmdlet even if your computer is not configured to run remote commands.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -EntryType <EventLogEntryType>
+        Specifies the entry type of the event. The acceptable values for this parameter are: Error, Warning, Information,
+        SuccessAudit, and FailureAudit. The default value is Information.
+
+        For a description of the values, see System.Diagnostics.EventLogEntryTypehttp://go.microsoft.com/fwlink/?LinkId=143599
+        (http://go.microsoft.com/fwlink/?LinkId=143599) in the Microsoft Developer Network (MSDN) library.
+
+        ¿Requerido?                  false
+        ¿Posición?                   3
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -EventId <Int32>
+        Specifies the event identifier. This parameter is required. The maximum value for the EventId parameter is 65535.
+
+        ¿Requerido?                  true
+        ¿Posición?                   2
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -LogName <String>
+        Specifies the name of the log to which the event is written. Enter the log name. The log name is the value of the Log
+        property, not the LogDisplayName . Wildcard characters are not permitted. This parameter is required.
+
+        ¿Requerido?                  true
+        ¿Posición?                   0
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Message <String>
+        Specifies the event message. This parameter is required.
+
+        ¿Requerido?                  true
+        ¿Posición?                   4
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -RawData <Byte[]>
+        Specifies the binary data that is associated with the event, in bytes.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Source <String>
+        Specifies the event source, which is typically the name of the application that is writing the event to the log.
+
+        ¿Requerido?                  true
+        ¿Posición?                   1
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    <CommonParameters>
+        Este cmdlet admite los parámetros comunes: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable y OutVariable. Para obtener más información, consulta
+        about_CommonParameters (https:/go.microsoft.com/fwlink/?LinkID=113216).
+
+ENTRADAS
+    None
+        You cannot pipe input to this cmdlet.
+
+
+SALIDAS
+    System.Diagnostics.EventLogEntry
+        This cmdlet returns objects that represents the events in the logs.
+
+
+NOTAS
+
+
+        To use Write-EventLog *, start Windows PowerShell by using the Run as administrator option.
+
+        *
+
+    Example 1: Write an event to the Application event log
+
+    PS C:\>Write-EventLog -LogName "Application" -Source "MyApp" -EventID 3001 -EntryType Information -Message "MyApp added a
+    user-requested feature to the display." -Category 1 -RawData 10,20
+
+    This command writes an event from the MyApp source to the Application event log.
+    Example 2: Write an event to the Application event log of a remote computer
+
+    PS C:\>Write-EventLog -ComputerName "Server01" -LogName Application -Source "MyApp" -EventID 3001 -Message "MyApp added a
+    user-requested feature to the display."
+
+    This command writes an event from the MyApp source to the Application event log on the Server01 remote computer.
+
+VÍNCULOS RELACIONADOS
+    Online Version: http://go.microsoft.com/fwlink/?LinkId=821651
+    Clear-EventLog
+    Get-EventLog
+    Limit-EventLog
+    New-EventLog
+    Remove-EventLog
+    Show-EventLog
+    Write-EventLog
+
+
+
+PS C:\WINDOWS\system32> get-help Get-Alias -full
+
+NOMBRE
+    Get-Alias
+
+SINOPSIS
+    Gets the aliases for the current session.
+
+
+SINTAXIS
+    Get-Alias [-Definition <String[]>] [-Exclude <String[]>] [-Scope <String>] [<CommonParameters>]
+
+    Get-Alias [[-Name] <String[]>] [-Exclude <String[]>] [-Scope <String>] [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    The Get-Alias cmdlet gets the aliases in the current session. This includes built-in aliases, aliases that you have set or
+    imported, and aliases that you have added to your Windows PowerShell profile.
+
+    By default, Get-Alias takes an alias and returns the command name. When you use the Definition parameter, Get-Alias takes a
+    command name and returns its aliases.
+
+    Beginning in Windows PowerShell 3.0, Get-Alias displays non-hyphenated alias names in an <alias> -> <definition> format to make
+    it even easier to find the information that you need.
+
+
+PARÁMETROS
+    -Definition <String[]>
+        Specifies an array of aliases for the specified item. Enter the name of a cmdlet, function, script, file, or executable file.
+
+        This parameter is called Definition , because it searches for the item name in the Definition property of the alias object.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Exclude <String[]>
+        Specifies an array of items that this cmdlet omits. The value of this parameter qualifies the Name and Definition
+        parameters. Enter a name, a definition, or a pattern, such as s*. Wildcards are permitted.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Name <String[]>
+        Specifies the aliases that this cmdlet gets. Wildcards are permitted. By default, Get-Alias retrieves all aliases defined
+        for the current session. The parameter name Name is optional. You can also pipe alias names to Get-Alias .
+
+        ¿Requerido?                  false
+        ¿Posición?                   0
+        Valor predeterminado         None
+        ¿Aceptar canalización?       True (ByPropertyName, ByValue)
+        ¿Aceptar caracteres comodín? false
+
+    -Scope <String>
+        Gets only the aliases in the specified scope. The acceptable values for this parameter are:
+
+        - Global
+
+        - Local
+
+        - Script
+
+        - A number relative to the current scope (0 through the number of scopes, where 0 is the current scope and 1 is its parent)
+
+
+        Local is the default. For more information, see about_Scopes.
+
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    <CommonParameters>
+        Este cmdlet admite los parámetros comunes: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable y OutVariable. Para obtener más información, consulta
+        about_CommonParameters (https:/go.microsoft.com/fwlink/?LinkID=113216).
+
+ENTRADAS
+    System.String
+        You can pipe alias names to Get-Alias .
+
+
+SALIDAS
+    System.Management.Automation.AliasInfo
+        Get-Alias returns an object that represents each alias. Get-Alias returns the same object for every alias, but Windows
+        PowerShell uses an arrow-based format to display the names of non-hyphenated aliases.
+
+
+NOTAS
+
+
+        * To create a new alias, use Set-Alias or New-Alias. To delete an alias, use Remove-Item.
+
+        * The arrow-based alias name format is not used for aliases that include a hyphen. These are likely to be preferred
+        substitute names for cmdlets and functions, instead of typical abbreviations or nicknames.
+
+    Example 1: Get all aliases in the current session
+
+    PS C:\>Get-Alias
+    CommandType     Name
+    -----------     ----
+    Alias           % -> ForEach-Object
+    Alias           ? -> Where-Object
+    Alias           ac -> Add-Content
+    Alias           asnp -> Add-PSSnapin
+    Alias           cat -> Get-Content
+    Alias           cd -> Set-Location
+    Alias           chdir -> Set-Location
+    Alias           clc -> Clear-Content
+    Alias           clear -> Clear-Host
+    Alias           clhy -> Clear-History â€¦
+
+    This command gets all aliases in the current session.
+
+    The output shows the <alias> -> <definition> format that was introduced in Windows PowerShell 3.0. This format is used only for
+    aliases that do not include hyphens, because aliases with hyphens are typically preferred names for cmdlets and functions,
+    rather than nicknames.
+    Example 2: Get aliases by name
+
+    PS C:\>Get-Alias -Name g*, s* -Exclude Get-*
+
+    This command gets all aliases that begin with g or s, except for aliases that begin with Get-.
+    Example 3: Get aliases for a cmdlet
+
+    PS C:\>Get-Alias -Definition Get-ChildItem
+
+    This command gets the aliases for the Get-ChildItem cmdlet.
+
+    By default, the Get-Alias cmdlet gets the item name when you know the alias. The Definition parameter gets the alias when you
+    know the item name.
+    Example 4: Get aliases by property
+
+    PS C:\>Get-Alias | Where-Object {$_.Options -Match "ReadOnly"}
+
+    This command gets all aliases in which the value of the Options property is ReadOnly. This command provides a quick way to find
+    the aliases that are built into Windows PowerShell, because they have the ReadOnly option.
+
+    Options is just one property of the AliasInfo objects that Get-Alias gets. To find all properties and methods of AliasInfo
+    objects, type `Get-Alias | get-member`.
+    Example 5: Get aliases by name and filter by beginning letter
+
+    PS C:\>Get-Alias -Definition "*-PSSession" -Exclude e* -Scope Global
+
+    This example gets aliases for commands that have names that end in -PSSession, except for those that begin with e.
+
+    The command uses the Scope parameter to apply the command in the global scope. This is useful in scripts when you want to get
+    the aliases in the session.
+
+VÍNCULOS RELACIONADOS
+    Online Version: http://go.microsoft.com/fwlink/?LinkId=821778
+    About Aliases
+    Export-Alias
+    Import-Alias
+    New-Alias
+    Set-Alias
+
+
+
+PS C:\WINDOWS\system32> get-help Get-Alias  -full
+
+NOMBRE
+    Get-Alias
+
+SINOPSIS
+    Gets the aliases for the current session.
+
+
+SINTAXIS
+    Get-Alias [-Definition <String[]>] [-Exclude <String[]>] [-Scope <String>] [<CommonParameters>]
+
+    Get-Alias [[-Name] <String[]>] [-Exclude <String[]>] [-Scope <String>] [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    The Get-Alias cmdlet gets the aliases in the current session. This includes built-in aliases, aliases that you have set or
+    imported, and aliases that you have added to your Windows PowerShell profile.
+
+    By default, Get-Alias takes an alias and returns the command name. When you use the Definition parameter, Get-Alias takes a
+    command name and returns its aliases.
+
+    Beginning in Windows PowerShell 3.0, Get-Alias displays non-hyphenated alias names in an <alias> -> <definition> format to make
+    it even easier to find the information that you need.
+
+
+PARÁMETROS
+    -Definition <String[]>
+        Specifies an array of aliases for the specified item. Enter the name of a cmdlet, function, script, file, or executable file.
+
+        This parameter is called Definition , because it searches for the item name in the Definition property of the alias object.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Exclude <String[]>
+        Specifies an array of items that this cmdlet omits. The value of this parameter qualifies the Name and Definition
+        parameters. Enter a name, a definition, or a pattern, such as s*. Wildcards are permitted.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Name <String[]>
+        Specifies the aliases that this cmdlet gets. Wildcards are permitted. By default, Get-Alias retrieves all aliases defined
+        for the current session. The parameter name Name is optional. You can also pipe alias names to Get-Alias .
+
+        ¿Requerido?                  false
+        ¿Posición?                   0
+        Valor predeterminado         None
+        ¿Aceptar canalización?       True (ByPropertyName, ByValue)
+        ¿Aceptar caracteres comodín? false
+
+    -Scope <String>
+        Gets only the aliases in the specified scope. The acceptable values for this parameter are:
+
+        - Global
+
+        - Local
+
+        - Script
+
+        - A number relative to the current scope (0 through the number of scopes, where 0 is the current scope and 1 is its parent)
+
+
+        Local is the default. For more information, see about_Scopes.
+
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    <CommonParameters>
+        Este cmdlet admite los parámetros comunes: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable y OutVariable. Para obtener más información, consulta
+        about_CommonParameters (https:/go.microsoft.com/fwlink/?LinkID=113216).
+
+ENTRADAS
+    System.String
+        You can pipe alias names to Get-Alias .
+
+
+SALIDAS
+    System.Management.Automation.AliasInfo
+        Get-Alias returns an object that represents each alias. Get-Alias returns the same object for every alias, but Windows
+        PowerShell uses an arrow-based format to display the names of non-hyphenated aliases.
+
+
+NOTAS
+
+
+        * To create a new alias, use Set-Alias or New-Alias. To delete an alias, use Remove-Item.
+
+        * The arrow-based alias name format is not used for aliases that include a hyphen. These are likely to be preferred
+        substitute names for cmdlets and functions, instead of typical abbreviations or nicknames.
+
+    Example 1: Get all aliases in the current session
+
+    PS C:\>Get-Alias
+    CommandType     Name
+    -----------     ----
+    Alias           % -> ForEach-Object
+    Alias           ? -> Where-Object
+    Alias           ac -> Add-Content
+    Alias           asnp -> Add-PSSnapin
+    Alias           cat -> Get-Content
+    Alias           cd -> Set-Location
+    Alias           chdir -> Set-Location
+    Alias           clc -> Clear-Content
+    Alias           clear -> Clear-Host
+    Alias           clhy -> Clear-History â€¦
+
+    This command gets all aliases in the current session.
+
+    The output shows the <alias> -> <definition> format that was introduced in Windows PowerShell 3.0. This format is used only for
+    aliases that do not include hyphens, because aliases with hyphens are typically preferred names for cmdlets and functions,
+    rather than nicknames.
+    Example 2: Get aliases by name
+
+    PS C:\>Get-Alias -Name g*, s* -Exclude Get-*
+
+    This command gets all aliases that begin with g or s, except for aliases that begin with Get-.
+    Example 3: Get aliases for a cmdlet
+
+    PS C:\>Get-Alias -Definition Get-ChildItem
+
+    This command gets the aliases for the Get-ChildItem cmdlet.
+
+    By default, the Get-Alias cmdlet gets the item name when you know the alias. The Definition parameter gets the alias when you
+    know the item name.
+    Example 4: Get aliases by property
+
+    PS C:\>Get-Alias | Where-Object {$_.Options -Match "ReadOnly"}
+
+    This command gets all aliases in which the value of the Options property is ReadOnly. This command provides a quick way to find
+    the aliases that are built into Windows PowerShell, because they have the ReadOnly option.
+
+    Options is just one property of the AliasInfo objects that Get-Alias gets. To find all properties and methods of AliasInfo
+    objects, type `Get-Alias | get-member`.
+    Example 5: Get aliases by name and filter by beginning letter
+
+    PS C:\>Get-Alias -Definition "*-PSSession" -Exclude e* -Scope Global
+
+    This example gets aliases for commands that have names that end in -PSSession, except for those that begin with e.
+
+    The command uses the Scope parameter to apply the command in the global scope. This is useful in scripts when you want to get
+    the aliases in the session.
+
+VÍNCULOS RELACIONADOS
+    Online Version: http://go.microsoft.com/fwlink/?LinkId=821778
+    About Aliases
+    Export-Alias
+    Import-Alias
+    New-Alias
+    Set-Alias
+
+
+
+PS C:\WINDOWS\system32> get-help Export-Alias  -full
+
+NOMBRE
+    Export-Alias
+
+SINOPSIS
+    Exports information about currently defined aliases to a file.
+
+
+SINTAXIS
+    Export-Alias [[-Name] <String[]>] [-Append] [-As {Csv | Script}] [-Confirm] [-Description <String>] [-Force] -LiteralPath
+    <String> [-NoClobber] [-PassThru] [-Scope <String>] [-WhatIf] [<CommonParameters>]
+
+    Export-Alias [-Path] <String> [[-Name] <String[]>] [-Append] [-As {Csv | Script}] [-Confirm] [-Description <String>] [-Force]
+    [-NoClobber] [-PassThru] [-Scope <String>] [-WhatIf] [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    The Export-Alias cmdlet exports the aliases in the current session to a file. If the output file does not exist, the cmdlet will
+    create it. Export-Alias can export the aliases in a particular scope or all scopes, it can generate the data in CSV format or as
+    a series of Set-Alias commands that you can add to a session or to a Windows PowerShell profile.
+
+
+PARÁMETROS
+    -Append [<SwitchParameter>]
+        Indicates that this cmdlet appends the output to the specified file, rather than overwriting the existing contents of that
+        file.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -As <ExportAliasFormat>
+        Specifies the output format. CSV is the default. The acceptable values for this parameter are:
+
+        - CSV. Comma-separated value (CSV) format.  - Script. Creates a Set-Alias command for each exported alias. If you name the
+        output file with a .ps1 file name extension, you can run it as a script to add the aliases to any session.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Confirm [<SwitchParameter>]
+        Prompts you for confirmation before running the cmdlet.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Description <String>
+        Specifies the description of the exported file. The description appears as a comment at the top of the file, following the
+        header information.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Force [<SwitchParameter>]
+        Forces the command to run without asking for user confirmation.
+
+        Overwrites the output file, even if the read-only attribute is set on the file.
+
+        By default, Export-Alias overwrites files without warning, unless the read-only or hidden attribute is set or the NoClobber
+        parameter is used in the command. The NoClobber parameter takes precedence over the Force parameter when both are used in a
+        command.
+
+        The Force parameter cannot force Export-Alias to overwrite files with the hidden attribute.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -LiteralPath <String>
+        Specifies the path to the output file. Unlike Path , the value of the LiteralPath parameter is used exactly as it is typed.
+        No characters are interpreted as wildcards. If the path includes escape characters, enclose it in single quotation marks.
+        Single quotation marks tell Windows PowerShell not to interpret any characters as escape sequences.
+
+        ¿Requerido?                  true
+        ¿Posición?                   named
+        Valor predeterminado         None
+        ¿Aceptar canalización?       True (ByPropertyName)
+        ¿Aceptar caracteres comodín? false
+
+    -Name <String[]>
+        Specifies the names as an array of the aliases to export. Wildcards are permitted.
+
+        By default, Export-Alias exports all aliases in the session or scope.
+
+        ¿Requerido?                  false
+        ¿Posición?                   1
+        Valor predeterminado         None
+        ¿Aceptar canalización?       True (ByPropertyName)
+        ¿Aceptar caracteres comodín? false
+
+    -NoClobber [<SwitchParameter>]
+        Indicates that this cmdlet prevents Export-Alias from overwriting any files, even if the Force parameter is used in the
+        command.
+
+        If the NoClobber parameter is omitted, Export-Alias will overwrite an existing file without warning, unless the read-only
+        attribute is set on the file. NoClobber takes precedence over the Force parameter, which permits Export-Alias to overwrite a
+        file with the read-only attribute. NoClobber does not prevent the Append parameter from adding content to an existing file.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -PassThru [<SwitchParameter>]
+        Returns an object representing the item with which you are working. By default, this cmdlet does not generate any output.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Path <String>
+        Specifies the path to the output file. Wildcards are permitted, but the resulting path value must resolve to a single file
+        name.
+
+        ¿Requerido?                  true
+        ¿Posición?                   0
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Scope <String>
+        Specifies the scope from which the aliases should be exported. The acceptable values for this parameter are:
+
+        - Global
+
+        - Local
+
+        - Script
+
+        - A number relative to the current scope (0 through the number of scopes where 0 is the current scope and 1 is its parent)
+
+
+        The default value is Local. For more information, see about_Scopes.
+
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -WhatIf [<SwitchParameter>]
+        Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    <CommonParameters>
+        Este cmdlet admite los parámetros comunes: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable y OutVariable. Para obtener más información, consulta
+        about_CommonParameters (https:/go.microsoft.com/fwlink/?LinkID=113216).
+
+ENTRADAS
+    None.
+        You cannot pipe objects to this cmdlet.
+
+
+SALIDAS
+    None or System.Management.Automation.AliasInfo
+        When you use the Passthru parameter, Export-Alias returns a System.Management.Automation.AliasInfo object that represents
+        the alias. Otherwise, this cmdlet does not generate any output.
+
+
+NOTAS
+
+
+        * You can only Export-Aliases to a file.
+
+    Example 1: Export an alias
+
+    PS C:\>Export-Alias -Path "alias.csv"
+
+    This command exports current alias information to a file named Alias.csv in the current directory.
+    Example 2: Export an alias unless the export file already exists
+
+    PS C:\>Export-Alias -Path "alias.csv" -NoClobber
+
+    This command exports the aliases in the current session to an Alias.csv file.
+
+    Because the NoClobber parameter is specified, the command will fail if an Alias.csv file already exists in the current directory.
+    Example 3: Append aliases to a file
+
+    PS C:\>Export-Alias -Path "alias.csv" -Append -Description "Appended Aliases" -Force
+
+    This command appends the aliases in the current session to the Alias.csv file.
+
+    The command uses the Description parameter to add a description to the comments at the top of the file.
+
+    The command also uses the Force parameter to overwrite any existing Alias.csv files, even if they have the read-only attribute.
+    Example 4: Export aliases as a script
+
+    PS C:\>Export-Alias -Path "alias.ps1" -As Script
+    PS C:\> Add-Content -Path $Profile -Value (Get-Content alias.ps1)
+    PS C:\> $S = New-PSSession -ComputerName Server01
+    PS C:\> Invoke-Command -Session $S -FilePath .\alias.ps1
+
+    This example shows how to use the script file format that Export-Alias generates.
+
+    The first command exports the aliases in the session to the Alias.ps1 file. It uses the As parameter with a value of Script to
+    generate a file that contains a Set-Alias command for each alias.
+
+    The second command adds the aliases in the Alias.ps1 file to the CurrentUser-CurrentHost profile. (The path to the profile is
+    saved in the $Profile variable.) The command uses the Get-Content cmdlet to get the aliases from the Alias.ps1 file and the
+    Add-Content cmdlet to add them to the profile. For more information, see about_Profiles.
+
+    The third and fourth commands add the aliases in the Alias.ps1 file to a remote session on the Server01 computer. The third
+    command uses the New-PSSession cmdlet to create the session. The fourth command uses the FilePath parameter of the
+    Invoke-Command cmdlet to run the Alias.ps1 file in the new session.
+
+VÍNCULOS RELACIONADOS
+    Online Version: http://go.microsoft.com/fwlink/?LinkId=821766
+    Get-Alias
+    Import-Alias
+    New-Alias
+    Set-Alias
+
+
+
+PS C:\WINDOWS\system32> get-help Import-Alias -full
+
+NOMBRE
+    Import-Alias
+
+SINOPSIS
+    Imports an alias list from a file.
+
+
+SINTAXIS
+    Import-Alias [-Confirm] [-Force] -LiteralPath <String> [-PassThru] [-Scope <String>] [-WhatIf] [<CommonParameters>]
+
+    Import-Alias [-Path] <String> [-Confirm] [-Force] [-PassThru] [-Scope <String>] [-WhatIf] [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    The Import-Alias cmdlet imports an alias list from a file.
+
+    Beginning in Windows PowerShell 3.0, as a security feature, Import-Alias does not overwrite existing aliases by default. To
+    overwrite an existing alias, after assuring that the contents of the alias file is safe, use the Force parameter.
+
+
+PARÁMETROS
+    -Confirm [<SwitchParameter>]
+        Prompts you for confirmation before running the cmdlet.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Force [<SwitchParameter>]
+        Allows the cmdlet to import an alias that is already defined or is read only. You can use the following command to display
+        information about the currently-defined aliases:
+
+        `Get-Alias | Select-Object name,Options`
+
+        If the corresponding alias is read-only, it will be displayed in the value of the Options property.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -LiteralPath <String>
+        Specifies the path to a file that includes exported alias information. Unlike the Path parameter, the value of the
+        LiteralPath parameter is used exactly as it is typed. No characters are interpreted as wildcards. If the path includes
+        escape characters, enclose it in single quotation marks. Single quotation marks tell Windows PowerShell not to interpret any
+        characters as escape sequences.
+
+        ¿Requerido?                  true
+        ¿Posición?                   named
+        Valor predeterminado         None
+        ¿Aceptar canalización?       True (ByPropertyName, ByValue)
+        ¿Aceptar caracteres comodín? false
+
+    -PassThru [<SwitchParameter>]
+        Returns an object representing the item with which you are working. By default, this cmdlet does not generate any output.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Path <String>
+        Specifies the path to a file that includes exported alias information. Wildcards are allowed but they must resolve to a
+        single name.
+
+        ¿Requerido?                  true
+        ¿Posición?                   0
+        Valor predeterminado         None
+        ¿Aceptar canalización?       True (ByPropertyName, ByValue)
+        ¿Aceptar caracteres comodín? false
+
+    -Scope <String>
+        Specifies the scope into which the aliases are imported. The acceptable values for this parameter are:
+
+        - Global
+
+        - Local
+
+        - Script
+
+        - A number relative to the current scope (0 through the number of scopes, where 0 is the current scope and 1 is its parent)
+
+
+        The default is Local. For more information, see about_Scopes.
+
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -WhatIf [<SwitchParameter>]
+        Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    <CommonParameters>
+        Este cmdlet admite los parámetros comunes: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable y OutVariable. Para obtener más información, consulta
+        about_CommonParameters (https:/go.microsoft.com/fwlink/?LinkID=113216).
+
+ENTRADAS
+    System.String
+        You can pipe a string that contains a path to Import-Alias .
+
+
+SALIDAS
+    None or System.Management.Automation.AliasInfo
+        When you use the Passthru parameter, Import-Alias returns a System.Management.Automation.AliasInfo object that represents
+        the alias. Otherwise, this cmdlet does not generate any output.
+
+
+NOTAS
+
+
+
+
+    Example 1: Import aliases from a file
+
+    PS C:\>Import-Alias test.txt
+
+    This command imports alias information from a file named test.txt.
+
+VÍNCULOS RELACIONADOS
+    Online Version: http://go.microsoft.com/fwlink/?LinkId=821812
+    Export-Alias
+    Get-Alias
+    New-Alias
+    Set-Alias
+
+
+
+PS C:\WINDOWS\system32> get-help New-Alias -full
+
+NOMBRE
+    New-Alias
+
+SINOPSIS
+    Creates a new alias.
+
+
+SINTAXIS
+    New-Alias [-Name] <String> [-Value] <String> [-Confirm] [-Description <String>] [-Force] [-Option {None | ReadOnly | Constant |
+    Private | AllScope | Unspecified}] [-PassThru] [-Scope <String>] [-WhatIf] [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    The New-Alias cmdlet creates a new alias in the current Windows PowerShell session. Aliases created by using New-Alias are not
+    saved after you exit the session or close Windows PowerShell. You can use the Export-Alias cmdlet to save your alias information
+    to a file. You can later use Import-Alias to retrieve that saved alias information.
+
+
+PARÁMETROS
+    -Confirm [<SwitchParameter>]
+        Prompts you for confirmation before running the cmdlet.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Description <String>
+        Specifies a description of the alias. You can type any string. If the description includes spaces, enclose it in quotation
+        marks.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Force [<SwitchParameter>]
+        Indicates that the cmdlet acts like Set-Alias if the alias named already exists.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Name <String>
+        Specifies the new alias. You can use any alphanumeric characters in an alias, but the first character cannot be a number.
+
+        ¿Requerido?                  true
+        ¿Posición?                   0
+        Valor predeterminado         None
+        ¿Aceptar canalización?       True (ByPropertyName)
+        ¿Aceptar caracteres comodín? false
+
+    -Option <ScopedItemOptions>
+        Specifies that the cmdlet sets the value of the Options property of the alias. The acceptable values for this parameter are:
+
+        - None. Sets no options. (None is the default.)  - ReadOnly. Can be deleted. Cannot be not changed, except by using the
+        Force parameter. - Constant. Cannot be deleted or changed. - Private. The alias is available only in the current scope.  -
+        AllScope. The alias is copied to any new scopes that are created.
+
+        To see the Options * * property of all aliases in the session, type `Get-Alias | Format-Table -Property name, options
+        -autosize`.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -PassThru [<SwitchParameter>]
+        Returns an object representing the item with which you are working. By default, this cmdlet does not generate any output.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Scope <String>
+        Specifies the scope of the new alias. The acceptable values for this parameter are:
+
+        - Global
+
+        - Local
+
+        - Script
+
+        - A number relative to the current scope (0 through the number of scopes, where 0 is the current scope and 1 is its parent).
+
+
+        Local is the default. For more information, see about_Scopes.
+
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Value <String>
+        Specifies the name of the cmdlet or command element that is being aliased.
+
+        ¿Requerido?                  true
+        ¿Posición?                   1
+        Valor predeterminado         None
+        ¿Aceptar canalización?       True (ByPropertyName)
+        ¿Aceptar caracteres comodín? false
+
+    -WhatIf [<SwitchParameter>]
+        Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    <CommonParameters>
+        Este cmdlet admite los parámetros comunes: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable y OutVariable. Para obtener más información, consulta
+        about_CommonParameters (https:/go.microsoft.com/fwlink/?LinkID=113216).
+
+ENTRADAS
+    None
+        You cannot pipe input to this cmdlet.
+
+
+SALIDAS
+    None or System.Management.Automation.AliasInfo
+        When you use the Passthru parameter, New-Alias generates a System.Management.Automation.AliasInfo object representing the
+        new alias. Otherwise, this cmdlet does not generate any output.
+
+
+NOTAS
+
+
+        To create a new alias, use Set-Alias or New-Alias. To change an alias, use Set-Alias *. To delete an alias, use Remove-Item.
+
+        *
+
+    Example 1: Create an alias for a cmdlet
+
+    PS C:\>New-Alias -Name "List" Get-ChildItem
+
+    This command creates an alias named List to represent the Get-ChildItem cmdlet.
+    Example 2: Create a read-only alias for a cmdlet
+
+    PS C:\>New-Alias -Name "W" -Value Get-WmiObject -Description "quick wmi alias" -Option ReadOnly
+    PS C:\>Get-Alias -Name "W" | Format-List *
+
+    This command creates an alias named W to represent the Get-WmiObject cmdlet. It creates a description, quick wmi alias, for the
+    alias and makes it read-only. The last line of the command uses Get-Alias to get the new alias and pipes it to Format-List to
+    display all of the information about it.
+
+VÍNCULOS RELACIONADOS
+    Online Version: http://go.microsoft.com/fwlink/?LinkId=821831
+    Export-Alias
+    Get-Alias
+    Import-Alias
+    Set-Alias
+
+
+
+PS C:\WINDOWS\system32> get-help Set-Alias   -full
+
+NOMBRE
+    Set-Alias
+
+SINOPSIS
+    Creates or changes an alias for a cmdlet or other command element in the current Windows PowerShell session.
+
+
+SINTAXIS
+    Set-Alias [-Name] <String> [-Value] <String> [-Confirm] [-Description <String>] [-Force] [-Option {None | ReadOnly | Constant |
+    Private | AllScope | Unspecified}] [-PassThru] [-Scope <String>] [-WhatIf] [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    The Set-Alias cmdlet creates or changes an alias (alternate name) for a cmdlet or for a command element, such as a function, a
+    script, a file, or other executable. You can also use Set-Alias to reassign a current alias to a new command, or to change any
+    of the properties of an alias, such as its description. Unless you add the alias to the Windows PowerShell profile, the changes
+    to an alias are lost when you exit the session or close Windows PowerShell.
+
+
+PARÁMETROS
+    -Confirm [<SwitchParameter>]
+        Prompts you for confirmation before running the cmdlet.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Description <String>
+        Specifies a description of the alias. You can type any string. If the description includes spaces, enclose it quotation
+        marks.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Force [<SwitchParameter>]
+        Indicates that the cmdlet will set a read-only alias. Use the Option parameter to create a read-only alias. The Force
+        parameter cannot set a constant alias.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Name <String>
+        Specifies the new alias. You can use any alphanumeric characters in an alias, but the first character cannot be a number.
+
+        ¿Requerido?                  true
+        ¿Posición?                   0
+        Valor predeterminado         None
+        ¿Aceptar canalización?       True (ByPropertyName)
+        ¿Aceptar caracteres comodín? false
+
+    -Option <ScopedItemOptions>
+        Sets the value of the Options property of the alias. The acceptable values for this parameter are:
+
+        - None. Sets no options. (None is the default.) - ReadOnly. Can be deleted. Cannot be not changed, except by using the Force
+        parameter. - Constant. Cannot be deleted or changed. - Private. The alias is available only in the current scope.  -
+        AllScope. The alias is copied to any new scopes that are created.  - Unspecified.
+
+        To see the Options property of all aliases in the session, type `get-alias | format-table -property name, options -autosize`.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -PassThru [<SwitchParameter>]
+        Returns an object representing the item with which you are working. By default, this cmdlet does not generate any output.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Scope <String>
+        Specifies the scope in which this alias is valid. The acceptable values for this parameter are:
+
+        - Global
+
+        - Local
+
+        - Script
+
+        - A number relative to the current scope (0 through the number of scopes, where 0 is the current scope and 1 is its parent).
+
+
+        Local is the default. For more information, see about_Scopes.
+
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Value <String>
+        Specifies the name of the cmdlet or command element that is being aliased.
+
+        ¿Requerido?                  true
+        ¿Posición?                   1
+        Valor predeterminado         None
+        ¿Aceptar canalización?       True (ByPropertyName)
+        ¿Aceptar caracteres comodín? false
+
+    -WhatIf [<SwitchParameter>]
+        Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    <CommonParameters>
+        Este cmdlet admite los parámetros comunes: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable y OutVariable. Para obtener más información, consulta
+        about_CommonParameters (https:/go.microsoft.com/fwlink/?LinkID=113216).
+
+ENTRADAS
+    None
+        You cannot pipe input to this cmdlet.
+
+
+SALIDAS
+    None or System.Management.Automation.AliasInfo
+        When you use the PassThru parameter, Set-Alias generates a System.Management.Automation.AliasInfo object representing the
+        alias. Otherwise, this cmdlet does not generate any output.
+
+
+NOTAS
+
+
+        * An alias is an alternate name or nickname for a cmdlet or command element. To run the cmdlet, you can use its full name or
+        any valid alias. For more information, see about_Aliases. To create a new alias, use Set-Alias * or New-Alias. To delete an
+        alias, use Remove-Item. A cmdlet can have multiple aliases, but an alias can only be associated with one cmdlet at a time.
+        If you use Set-Alias * to associate the alias with a different cmdlet, it is no longer associated with the original cmdlet.
+        You can create an alias for a cmdlet, but you cannot create an alias for a command with parameters and values. For example,
+        you can create an alias for Set-Location *, but you cannot create an alias for `Set-Location C:\Windows\System32`. To create
+        an alias for a command, create a function that includes the command, and then create an alias to the function. To save the
+        aliases from a session and use them in a different session, add the Set-Alias * command to your Windows PowerShell profile.
+        Profiles do not exist by default. To create a profile in the path stored in the $profile variable, type `New-Item -Type file
+        -Force $profile`. To see the value of the $profile variable, type `$profile`.
+
+        * You can also save your aliases by using Export-Alias to copy the aliases from the session to a file, and then use
+        Import-Alias to add them to the alias list for a new session. You can also refer to Set-Alias by its built-in alias, sal *.
+        For more information, see about_Aliases.
+
+    Example 1: Create an alias for a Get-ChildItem
+
+    PS C:\>Set-Alias -Name list -Value get-childitem
+
+    This command creates the alias list for the Get-ChildItem cmdlet. After you create the alias, you can use list in place of
+    Get-ChildItem at the command line and in scripts.
+    Example 2: Create an alias and omit parameter names
+
+    PS C:\>Set-Alias list get-location
+
+    This command associates the alias list with the Get-Location cmdlet. If list is an alias for another cmdlet, this command
+    changes its association so that it now is the alias only for Get-Location .
+
+    This command uses the same format as the command in the previous example, but it omits the optional parameter names, Name and
+    Value . When you omit parameter names, the values of those parameters must appear in the specified order in the command. In this
+    case, the value of Name ( list ) must be the first parameter and the value of Value (get-location) must be the second parameter.
+    Example 3: Make an alias read-only
+
+    PS C:\>Set-Alias scrub Remove-Item -Option ReadOnly -Passthru | Format-List
+
+    This command associates the alias scrub with the Remove-Item cmdlet. It uses the ReadOnly option to prevent the alias from being
+    deleted or assigned to another cmdlet.
+
+    The PassThru parameter directs Windows PowerShell to pass an object that represents the new alias through the pipeline to the
+    Format-List cmdlet. If the PassThru parameter were omitted, there would be no output from this cmdlet to display (in a list or
+    otherwise).
+    Example 4: Create an alias for Notepad.exe
+
+    PS C:\>Set-Alias np c:\windows\notepad.exe
+
+    This command associates the alias, np , with the executable file for Notepad. After the command completes, to open Notepad from
+    the Windows PowerShell command line, just type `np`.
+
+    This example demonstrates that you can create aliases for executable files and elements other than cmdlets.
+
+    To make the command more generic, you can use the Windir environment variable (${env:windir}) to represent the C\Windows
+    directory. The generic version of the command is `Set-Alias np ${env:windir}\notepad.exe`.
+    Example 5: Create an alias for a command with parameters
+
+    PS C:\>function CD32 {set-location c:\windows\system32}
+    PS C:\>Set-Alias go cd32
+
+    These commands show how to assign an alias to a command with parameters, or even to a pipeline of many commands.
+
+    You can create an alias for a cmdlet, but you cannot create an alias for a command that consists of a cmdlet and its parameters.
+    However, if you place the command in a function or a script, then you can create a useful function or script name and you can
+    create one or more aliases for the function or script.
+
+    In this example, the user wants to create an alias for the command `Set-Location C:\windows\system32`, where Set-Location is a
+    cmdlet and C:\Windows\System32 is the value of the Path parameter.
+
+    To do this, the first command creates a function called CD32 that contains the Set-Location command.
+
+    The second command creates the alias go for the CD32 function. Then, to run the Set-Location command, the user can type either
+    `CD32` or `go`.
+
+VÍNCULOS RELACIONADOS
+    Online Version: http://go.microsoft.com/fwlink/?LinkId=821857
+    Export-Alias
+    Get-Alias
+    Import-Alias
+    New-Alias
+
+
+
+PS C:\WINDOWS\system32> get-help Start-Transcript -full
+
+NOMBRE
+    Start-Transcript
+
+SINOPSIS
+    Creates a record of all or part of a Windows PowerShell session to a text file.
+
+
+SINTAXIS
+    Start-Transcript [[-LiteralPath] <String>] [-Append] [-Confirm] [-Force] [-IncludeInvocationHeader] [-NoClobber] [-WhatIf]
+    [<CommonParameters>]
+
+    Start-Transcript [[-OutputDirectory] <String>] [-Append] [-Confirm] [-Force] [-IncludeInvocationHeader] [-NoClobber] [-WhatIf]
+    [<CommonParameters>]
+
+    Start-Transcript [[-Path] <String>] [-Append] [-Confirm] [-Force] [-IncludeInvocationHeader] [-NoClobber] [-WhatIf]
+    [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    The Start-Transcript cmdlet creates a record of all or part of a Windows PowerShell session to a text file. The transcript
+    includes all command that the user types and all output that appears on the console.
+
+    Starting in Windows PowerShell 5.0, Start-Transcript includes the host name in the generated file name of all transcripts. This
+    is especially useful when your enterprise's logging is centralized. Files that are created by the Start-Transcript cmdlet
+    include random characters in names to prevent potential overwrites or duplication when two or more transcripts are started
+    simultaneously. This also prevents unauthorized discovery of transcripts that are stored in a centralized file share.
+    Additionally in Windows PowerShell 5.0, the Start-Transcript cmdlet works in Windows PowerShell ISE.
+
+
+PARÁMETROS
+    -Append [<SwitchParameter>]
+        Indicates that this cmdlet adds the new transcript to the end of an existing file. Use the Path parameter to specify the
+        file.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Confirm [<SwitchParameter>]
+        Prompts you for confirmation before running the cmdlet.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Force [<SwitchParameter>]
+        Allows the cmdlet to append the transcript to an existing read-only file. When used on a read-only file, the cmdlet changes
+        the file permission to read-write. The cmdlet cannot override security restrictions when this parameter is used.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -IncludeInvocationHeader [<SwitchParameter>]
+        Indicates that this cmdlet logs the time stamp when commands are run.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -LiteralPath <String>
+        Specifies a location to the transcript file. Unlike the Path parameter, the value of the LiteralPath parameter is used
+        exactly as it is typed. No characters are interpreted as wildcards. If the path includes escape characters, enclose it in
+        single quotation marks. Single quotation marks inform Windows PowerShell not to interpret any characters as escape sequences.
+
+        ¿Requerido?                  false
+        ¿Posición?                   0
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -NoClobber [<SwitchParameter>]
+        Indicates that this cmdlet will not overwrite of an existing file. By default, if a transcript file exists in the specified
+        path, Start-Transcript overwrites the file without warning.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -OutputDirectory <String>
+        Specifies a specific path and folder in which to save a transcript. Windows PowerShell automatically assigns the transcript
+        name.
+
+        ¿Requerido?                  false
+        ¿Posición?                   0
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Path <String>
+        Specifies a location to the transcript file. Enter a path to a .txt file. Wildcards are not permitted.
+
+        If you do not specify a path, Start-Transcript uses the path in the value of the $Transcript global variable. If you have
+        not created this variable, Start-Transcript stores the transcripts in the $Home\My Documents directory as
+        \PowerShell_transcript.<time-stamp>.txt files.
+
+        If any of the directories in the path do not exist, the command fails.
+
+        ¿Requerido?                  false
+        ¿Posición?                   0
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -WhatIf [<SwitchParameter>]
+        Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    <CommonParameters>
+        Este cmdlet admite los parámetros comunes: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable y OutVariable. Para obtener más información, consulta
+        about_CommonParameters (https:/go.microsoft.com/fwlink/?LinkID=113216).
+
+ENTRADAS
+    None
+        You cannot pipe objects to this cmdlet.
+
+
+SALIDAS
+    System.String
+        This cmdlet returns a string that contains a confirmation message and the path to the output file.
+
+
+NOTAS
+
+
+        * To stop a transcript, use the Stop-Transcript cmdlet.
+
+        To record an entire session, add the Start-Transcript command to your profile. For more information, see about_Profiles.
+
+        *
+
+    -------------------------- EXAMPLExample 1: Start a transcript file with default settings --------------------------xample:
+    Start a transcript file with default settings
+
+    PS C:\>Start-Transcript
+
+    This command starts a transcript in the default file location.
+    Example 2: Start a transcript file at a specific location
+
+    PS C:\>Start-Transcript -Path "C:\transcripts\transcript0.txt" -NoClobber
+
+    This command starts a transcript in the Transcript0.txt file in C:\transcripts. Since the NoClobber parameter is used, the
+    command prevents any existing files from being overwritten. If the Transcript0.txt file already exists, the command fails.
+
+VÍNCULOS RELACIONADOS
+    Online Version: http://go.microsoft.com/fwlink/?LinkId=821532
+    Stop-Transcript
+
+
+
+PS C:\WINDOWS\system32> Get-EventLog -LogName Security -Newest 100 
+
+   Index Time          EntryType   Source                 InstanceID Message
+   ----- ----          ---------   ------                 ---------- -------
+  236448 feb. 14 18:09 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236447 feb. 14 18:09 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236446 feb. 14 18:09 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236445 feb. 14 18:09 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236444 feb. 14 18:09 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236443 feb. 14 18:09 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236442 feb. 14 18:09 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236441 feb. 14 18:09 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236440 feb. 14 18:09 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236439 feb. 14 18:09 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236438 feb. 14 18:09 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236437 feb. 14 18:09 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236436 feb. 14 18:09 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236435 feb. 14 18:09 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236434 feb. 14 18:09 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236433 feb. 14 18:09 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236432 feb. 14 18:09 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236431 feb. 14 18:09 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236430 feb. 14 18:09 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236429 feb. 14 18:09 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236428 feb. 14 18:09 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236427 feb. 14 18:09 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236426 feb. 14 18:09 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236425 feb. 14 18:09 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236424 feb. 14 18:09 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236423 feb. 14 18:09 SuccessA... Microsoft-Windows...         4672 Se asignaron privilegios especiales a un nuevo inicio de sesi...
+  236422 feb. 14 18:09 SuccessA... Microsoft-Windows...         4624 Se inició sesión correctamente en una cuenta....
+  236421 feb. 14 18:03 SuccessA... Microsoft-Windows...         5061 Operación criptográfica....
+  236420 feb. 14 18:03 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236419 feb. 14 18:03 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236418 feb. 14 18:03 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236417 feb. 14 17:56 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236416 feb. 14 17:56 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236415 feb. 14 17:56 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236414 feb. 14 17:56 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236413 feb. 14 17:56 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236412 feb. 14 17:56 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236411 feb. 14 17:56 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236410 feb. 14 17:56 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236409 feb. 14 17:56 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236408 feb. 14 17:56 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236407 feb. 14 17:56 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236406 feb. 14 17:56 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236405 feb. 14 17:56 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236404 feb. 14 17:56 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236403 feb. 14 17:56 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236402 feb. 14 17:56 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236401 feb. 14 17:56 SuccessA... Microsoft-Windows...         4672 Se asignaron privilegios especiales a un nuevo inicio de sesi...
+  236400 feb. 14 17:56 SuccessA... Microsoft-Windows...         4624 Se inició sesión correctamente en una cuenta....
+  236399 feb. 14 17:53 SuccessA... Microsoft-Windows...         4798 Se enumeró la pertenencia a grupos locales de un usuario....
+  236398 feb. 14 17:53 SuccessA... Microsoft-Windows...         4798 Se enumeró la pertenencia a grupos locales de un usuario....
+  236397 feb. 14 17:53 SuccessA... Microsoft-Windows...         5061 Operación criptográfica....
+  236396 feb. 14 17:53 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236395 feb. 14 17:53 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236394 feb. 14 17:53 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236393 feb. 14 17:52 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236392 feb. 14 17:52 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236391 feb. 14 17:52 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236390 feb. 14 17:52 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236389 feb. 14 17:52 SuccessA... Microsoft-Windows...         4634 Se cerró sesión en una cuenta....
+  236388 feb. 14 17:52 SuccessA... Microsoft-Windows...         4634 Se cerró sesión en una cuenta....
+  236387 feb. 14 17:52 SuccessA... Microsoft-Windows...         4672 Se asignaron privilegios especiales a un nuevo inicio de sesi...
+  236386 feb. 14 17:52 SuccessA... Microsoft-Windows...         4624 Se inició sesión correctamente en una cuenta....
+  236385 feb. 14 17:52 SuccessA... Microsoft-Windows...         4624 Se inició sesión correctamente en una cuenta....
+  236384 feb. 14 17:52 SuccessA... Microsoft-Windows...         4648 Se intentó iniciar sesión con credenciales explícitas....
+  236383 feb. 14 17:52 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236382 feb. 14 17:52 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236381 feb. 14 17:52 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236380 feb. 14 17:52 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236379 feb. 14 17:52 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236378 feb. 14 17:52 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236377 feb. 14 17:52 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236376 feb. 14 17:52 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236375 feb. 14 17:52 SuccessA... Microsoft-Windows...         5061 Operación criptográfica....
+  236374 feb. 14 17:52 SuccessA... Microsoft-Windows...         5061 Operación criptográfica....
+  236373 feb. 14 17:52 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236372 feb. 14 17:52 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236371 feb. 14 17:52 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236370 feb. 14 17:52 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236369 feb. 14 17:52 SuccessA... Microsoft-Windows...         5061 Operación criptográfica....
+  236368 feb. 14 17:52 SuccessA... Microsoft-Windows...         4798 Se enumeró la pertenencia a grupos locales de un usuario....
+  236367 feb. 14 17:52 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236366 feb. 14 17:52 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236365 feb. 14 17:52 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236364 feb. 14 17:52 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236363 feb. 14 17:52 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236362 feb. 14 17:52 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236361 feb. 14 17:52 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236360 feb. 14 17:52 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236359 feb. 14 17:51 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236358 feb. 14 17:51 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236357 feb. 14 17:51 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236356 feb. 14 17:51 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236355 feb. 14 17:51 SuccessA... Microsoft-Windows...         4672 Se asignaron privilegios especiales a un nuevo inicio de sesi...
+  236354 feb. 14 17:51 SuccessA... Microsoft-Windows...         4624 Se inició sesión correctamente en una cuenta....
+  236353 feb. 14 17:48 SuccessA... Microsoft-Windows...         4798 Se enumeró la pertenencia a grupos locales de un usuario....
+  236352 feb. 14 17:45 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236351 feb. 14 17:45 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236350 feb. 14 17:45 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+  236349 feb. 14 17:45 SuccessA... Microsoft-Windows...         5379 Las credenciales del Administrador de credenciales se leyeron...
+
+
+PS C:\WINDOWS\system32> help Get-EventLog 
+
+NOMBRE
+    Get-EventLog
+
+SINOPSIS
+    Gets the events in an event log, or a list of the event logs, on the local or remote computers.
+
+
+SINTAXIS
+    Get-EventLog [-LogName] <String> [[-InstanceId] <Int64[]>] [-After <DateTime>] [-AsBaseObject] [-Before <DateTime>]
+    [-ComputerName <String[]>] [-EntryType {Error | Information | FailureAudit | SuccessAudit | Warning}] [-Index <Int32[]>]
+    [-Message <String>] [-Newest <Int32>] [-Source <String[]>] [-UserName <String[]>] [<CommonParameters>]
+
+    Get-EventLog [-AsString] [-ComputerName <String[]>] [-List] [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    The Get-EventLog cmdlet gets events and event logs on the local and remote computers.
+
+    You can use the parameters of this cmdlet to search for events by using their property values. This cmdlet gets only the events
+    that match all of the specified property values.
+
+    The cmdlets that contain the EventLog noun work only on classic event logs. To get events from logs that use the Windows Event
+    Log technology in Windows Vista and later versions of Windows, use Get-WinEvent.
+
+
+VÍNCULOS RELACIONADOS
+    Online Version: http://go.microsoft.com/fwlink/?LinkId=821585
+    Clear-EventLog
+    Limit-EventLog
+    New-EventLog
+    Remove-EventLog
+    Show-EventLog
+    Write-EventLog
+
+NOTAS
+    Para ver los ejemplos, escriba: "get-help Get-EventLog -examples".
+    Para obtener más información, escriba: "get-help Get-EventLog -detailed".
+    Para obtener información técnica, escriba: "get-help Get-EventLog -full".
+    Para obtener ayuda disponible en línea, escriba: "get-help Get-EventLog -online"
+
+
+PS C:\WINDOWS\system32> Get-Service -ComputerName "Redes01" 
+>> ErrorTerminación(Get-Service): "No se puede abrir el Administrador de control de servicios en el equipo 'Redes01'. Puede que se requieran otros privilegios para realizar la operación."
+Get-Service : No se puede abrir el Administrador de control de servicios en el equipo 'Redes01'. Puede que se requieran 
+otros privilegios para realizar la operación.
+En línea: 1 Carácter: 1
++ Get-Service -ComputerName "Redes01"
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Get-Service], InvalidOperationException
+    + FullyQualifiedErrorId : System.InvalidOperationException,Microsoft.PowerShell.Commands.GetServiceCommand
+Get-Service : No se puede abrir el Administrador de control de servicios en el equipo 'Redes01'. Puede que se requieran otros
+privilegios para realizar la operación.
+En línea: 1 Carácter: 1
++ Get-Service -ComputerName "Redes01"
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Get-Service], InvalidOperationException
+    + FullyQualifiedErrorId : System.InvalidOperationException,Microsoft.PowerShell.Commands.GetServiceCommand
+
+PS C:\WINDOWS\system32> Get-Service -ComputerName
+>> ErrorTerminación(Get-Service): "Falta un argumento para el parámetro 'ComputerName'. Especifique un parámetro del tipo 'System.String[]' e inténtelo de nuevo."
+Get-Service : Falta un argumento para el parámetro 'ComputerName'. Especifique un parámetro del tipo 'System.String[]' 
+e inténtelo de nuevo.
+En línea: 1 Carácter: 13
++ Get-Service -ComputerName
++             ~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-Service], ParameterBindingException
+    + FullyQualifiedErrorId : MissingArgument,Microsoft.PowerShell.Commands.GetServiceCommand
+Get-Service : Falta un argumento para el parámetro 'ComputerName'. Especifique un parámetro del tipo 'System.String[]' e inténtelo
+de nuevo.
+En línea: 1 Carácter: 13
++ Get-Service -ComputerName
++             ~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-Service], ParameterBindingException
+    + FullyQualifiedErrorId : MissingArgument,Microsoft.PowerShell.Commands.GetServiceCommand
+
+PS C:\WINDOWS\system32> Get-Service
+
+Status   Name               DisplayName
+------   ----               -----------
+Stopped  AarSvc_45337f      Agent Activation Runtime_45337f
+Running  AdobeARMservice    Adobe Acrobat Update Service
+Stopped  AJRouter           Servicio de enrutador de AllJoyn
+Stopped  ALG                Servicio de puerta de enlace de niv...
+Stopped  AppIDSvc           Identidad de aplicación
+Running  Appinfo            Información de la aplicación
+Stopped  AppMgmt            Administración de aplicaciones
+Stopped  AppReadiness       Preparación de aplicaciones
+Stopped  AppVClient         Microsoft App-V Client
+Running  AppXSvc            Servicio de implementación de AppX ...
+Stopped  aspnet_state       ASP.NET State Service
+Stopped  AssignedAccessM... AssignedAccessManager Service
+Running  AudioEndpointBu... Compilador de extremo de audio de W...
+Running  Audiosrv           Audio de Windows
+Stopped  autotimesvc        Hora de la red de telefonía móvil
+Running  AVP20.0            Servicio Kaspersky Anti-Virus 20.0
+Stopped  AxInstSV           Instalador de ActiveX (AxInstSV)
+Stopped  BcastDVRUserSer... Servicio de usuario de difusión y G...
+Stopped  BDESVC             Servicio Cifrado de unidad BitLocker
+Running  BFE                Motor de filtrado de base
+Stopped  BITS               Servicio de transferencia inteligen...
+Stopped  BluetoothUserSe... Servicio de soporte técnico al usua...
+Running  BrokerInfrastru... Servicio de infraestructura de tare...
+Stopped  BTAGService        Servicio de puerta de enlace de aud...
+Running  BthAvctpSvc        Servicio AVCTP
+Stopped  bthserv            Servicio de compatibilidad con Blue...
+Stopped  c2wts              Notificaciones del servicio de toke...
+Running  camsvc             Servicio Administrador de funcional...
+Stopped  CaptureService_... CaptureService_45337f
+Running  cbdhsvc_45337f     Servicio de usuario de Portapapeles...
+Running  CDPSvc             Servicio de plataforma de dispositi...
+Running  CDPUserSvc_45337f  Servicio de usuario de plataforma d...
+Running  CertPropSvc        Propagación de certificados
+Running  ClickToRunSvc      Servicio Hacer clic y ejecutar de M...
+Running  ClipSVC            Servicio de licencia de cliente (Cl...
+Stopped  COMSysApp          Aplicación del sistema COM+
+Stopped  ConsentUxUserSv... ConsentUX_45337f
+Running  CoreMessagingRe... CoreMessaging
+Stopped  cphs               Intel(R) Content Protection HECI Se...
+Stopped  CredentialEnrol... CredentialEnrollmentManagerUserSvc_...
+Running  CryptSvc           Servicios de cifrado
+Stopped  CscService         Offline Files
+Running  DcomLaunch         Iniciador de procesos de servidor DCOM
+Stopped  debugregsvc        debugregsvc
+Stopped  defragsvc          Optimizar unidades
+Stopped  DeveloperToolsS... Developer Tools Service
+Stopped  DeviceAssociati... DeviceAssociationBroker_45337f
+Running  DeviceAssociati... Servicio de asociación de dispositivos
+Stopped  DeviceInstall      Servicio de instalación de disposit...
+Stopped  DevicePickerUse... DevicePicker_45337f
+Stopped  DevicesFlowUser... DevicesFlow_45337f
+Stopped  DevQueryBroker     Agente de detección en segundo plan...
+Running  Dhcp               Cliente DHCP
+Stopped  diagnosticshub.... Servicio Recopilador estándar del c...
+Stopped  diagsvc            Diagnostic Execution Service
+Running  DiagTrack          Experiencia del usuario y telemetrí...
+Running  DispBrokerDeskt... Mostrar el servicio de directivas
+Running  DisplayEnhancem... Servicio de mejora de visualización
+Stopped  DmEnrollmentSvc    Servicio de inscripción de administ...
+Stopped  dmwappushservice   Servicio de enrutamiento de mensaje...
+Running  Dnscache           Cliente DNS
+Running  DoSvc              Optimización de entrega
+Stopped  dot3svc            Configuración automática de redes c...
+Running  DPS                Servicio de directivas de diagnóstico
+Stopped  DsmSvc             Administrador de configuración de d...
+Stopped  DsSvc              Servicio de uso compartido de datos
+Running  DusmSvc            Uso de datos
+Stopped  Eaphost            Protocolo de autenticación extensible
+Stopped  EFS                Sistema de cifrado de archivos (EFS)
+Stopped  embeddedmode       Modo incrustado
+Stopped  EntAppSvc          Servicio de administración de aplic...
+Running  EventLog           Registro de eventos de Windows
+Running  EventSystem        Sistema de eventos COM+
+Stopped  Fax                Fax
+Stopped  fdPHost            Host de proveedor de detección de f...
+Stopped  FDResPub           Publicación de recurso de detección...
+Stopped  fhsvc              File History Service
+Running  FontCache          Servicio de caché de fuentes de Win...
+Running  FontCache3.0.0.0   Windows Presentation Foundation Fon...
+Stopped  FrameServer        Servicio FrameServer de la Cámara d...
+Stopped  GoogleChromeEle... Google Chrome Elevation Service
+Running  gpsvc              Cliente de directiva de grupo
+Stopped  GraphicsPerfSvc    GraphicsPerfSvc
+Stopped  gupdate            Google Update Servicio (gupdate)
+Stopped  gupdatem           Google Update Servicio (gupdatem)
+Stopped  hidserv            Servicio de dispositivo de interfaz...
+Stopped  HvHost             Servicio de host HV
+Stopped  icssvc             Servicio de punto de conexión de Wi...
+Running  igfxCUIService1... Intel(R) HD Graphics Control Panel ...
+Running  IKEEXT             Módulos de creación de claves de IP...
+Running  InstallService     Servicio de instalación de Microsof...
+Running  iphlpsvc           Aplicación auxiliar IP
+Running  IpOverUsbSvc       Windows Phone IP over USB Transport...
+Stopped  IpxlatCfgSvc       Servicio de configuración de trasla...
+Running  KeyIso             Aislamiento de claves CNG
+Stopped  klvssbridge64_20.0 Kaspersky Volume Shadow Copy Servic...
+Stopped  kpm_launch_service Kaspersky Password Manager Service
+Running  KSDE4.0            Servicio de Kaspersky Secure Connec...
+Stopped  KtmRm              KTMRM para DTC (Coordinador de tran...
+Running  LanmanServer       Servidor
+Running  LanmanWorkstation  Estación de trabajo
+Running  lfsvc              Geolocation Service
+Running  LicenseManager     Servicio de administrador de licenc...
+Stopped  lltdsvc            Asignador de detección de topología...
+Running  lmhosts            Aplicación auxiliar de NetBIOS sobr...
+Running  LSM                Administrador de sesión local
+Stopped  LxpSvc             Servicio de experiencia de idioma
+Running  LxssManager        LxssManager
+Running  LxssManagerUser... LxssManagerUser_45337f
+Stopped  MapsBroker         Administrador de mapas descargado
+Stopped  MessagingServic... MessagingService_45337f
+Stopped  MozillaMaintenance Mozilla Maintenance Service
+Running  mpssvc             Firewall de Windows Defender
+Stopped  MSDTC              Coordinador de transacciones distri...
+Stopped  MSiSCSI            Servicio del iniciador iSCSI de Mic...
+Stopped  msiserver          Windows Installer
+Stopped  MsMpiLaunchSvc     MS-MPI Launch Service
+Stopped  MySQL80            MySQL80
+Stopped  NaturalAuthenti... Autenticación natural
+Stopped  NcaSvc             Asistente para la conectividad de red
+Running  NcbService         Agente de conexión de red
+Stopped  NcdAutoSetup       Configuración automática de disposi...
+Stopped  Netlogon           Net Logon
+Stopped  Netman             Conexiones de red
+Running  netprofm           Servicio de lista de redes
+Stopped  NetSetupSvc        Servicio de configuración de red
+Stopped  NetTcpPortSharing  Servicio de uso compartido de puert...
+Stopped  NgcCtnrSvc         Contenedor de Microsoft Passport
+Stopped  NgcSvc             Microsoft Passport
+Running  NitroDriverRead... NitroPDFDriverCreatorReadSpool11
+Stopped  NitroUpdateService NitroUpdateService
+Running  NlaSvc             Reconoc. ubicación de red
+Running  nlsX86cc           Nalpeiron Licensing Service
+Running  nsi                Servicio Interfaz de almacenamiento...
+Running  OneSyncSvc_45337f  Sincronizar host_45337f
+Stopped  OpenVPNService     OpenVPN Service
+Stopped  ose                Office  Source Engine
+Stopped  p2pimsvc           Administrador de identidad de redes...
+Stopped  p2psvc             Agrupación de red del mismo nivel
+Running  PcaSvc             Servicio Asistente para la compatib...
+Stopped  PeerDistSvc        BranchCache
+Stopped  perceptionsimul... Servicio de simulación de percepció...
+Stopped  PerfHost           DLL de host del Contador de rendimi...
+Stopped  PhoneSvc           Servicio telefónico
+Stopped  PimIndexMainten... Datos de los contactos_45337f
+Stopped  pla                Registros y alertas de rendimiento
+Running  PlugPlay           Plug and Play
+Stopped  PNRPAutoReg        Servicio de publicación de nombres ...
+Stopped  PNRPsvc            Protocolo de resolución de nombres ...
+Running  PolicyAgent        Agente de directiva IPsec
+Running  postgresql-x64-10  postgresql-x64-10 - PostgreSQL Serv...
+Running  Power              Energía
+Stopped  PrintNotify        Extensiones y notificaciones de imp...
+Stopped  PrintWorkflowUs... PrintWorkflow_45337f
+Running  ProfSvc            Servicio de perfil de usuario
+Stopped  PushToInstall      Servicio PushToInstall de Windows
+Stopped  QWAVE              Experiencia de calidad de audio y v...
+Stopped  RasAuto            Administrador de conexiones automát...
+Running  RasMan             Administrador de conexiones de acce...
+Stopped  RemoteAccess       Enrutamiento y acceso remoto
+Stopped  RemoteRegistry     Registro remoto
+Stopped  RetailDemo         Servicio de prueba comercial
+Running  RmSvc              Servicio de administración de radio
+Stopped  rpcapd             Remote Packet Capture Protocol v.0 ...
+Running  RpcEptMapper       Asignador de extremos de RPC
+Stopped  RpcLocator         Ubicador de llamada a procedimiento...
+Running  RpcSs              Llamada a procedimiento remoto (RPC)
+Running  SamSs              Administrador de cuentas de seguridad
+Stopped  SCardSvr           Tarjeta inteligente
+Stopped  ScDeviceEnum       Smart Card Device Enumeration Service
+Running  Schedule           Programador de tareas
+Stopped  SCPolicySvc        Directiva de extracción de tarjetas...
+Stopped  SDRSVC             Windows Backup
+Stopped  seclogon           Inicio de sesión secundario
+Running  SecurityHealthS... Servicio de seguridad de Windows
+Running  SEMgrSvc           Payments and NFC/SE Manager
+Running  SENS               Servicio de notificación de eventos...
+Stopped  Sense              Servicio Protección contra amenazas...
+Stopped  SensorDataService  Servicio de datos del sensor
+Stopped  SensorService      Sensor Service
+Stopped  SensrSvc           Servicio de supervisión de sensores
+Running  SessionEnv         Configuración de Escritorio remoto
+Running  SgrmBroker         Agente de supervisión en tiempo de ...
+Stopped  SharedAccess       Conexión compartida a Internet (ICS)
+Stopped  SharedRealitySvc   Servicio de datos espacial
+Running  ShellHWDetection   Detección de hardware shell
+Stopped  shpamsvc           Shared PC Account Manager
+Stopped  smphost            Microsoft Storage Spaces SMP
+Stopped  SmsRouter          Servicio enrutador de SMS de Micros...
+Stopped  SNMPTRAP           Captura de SNMP
+Stopped  spectrum           Servicio de percepción de Windows
+Running  Spooler            Cola de impresión
+Stopped  sppsvc             Protección de software
+Running  SQLWriter          SQL Server VSS Writer
+Running  SSDPSRV            Detección SSDP
+Stopped  ssh-agent          OpenSSH Authentication Agent
+Stopped  sshd               OpenSSH SSH Server
+Stopped  SshdBroker         SshdBroker
+Running  SstpSvc            Servicio de protocolo de túnel de s...
+Running  StateRepository    Servicio de repositorio de estado
+Running  stisvc             Adquisición de imágenes de Windows ...
+Running  StorSvc            Servicio de almacenamiento
+Stopped  svsvc              Comprobador puntual
+Stopped  swprv              Proveedor de instantáneas de softwa...
+Running  SysMain            SysMain
+Running  SystemEventsBroker Agente de eventos del sistema
+Running  TabletInputService Servicio de Panel de escritura a ma...
+Running  TapiSrv            Telefonía
+Stopped  Te.Service         Te.Service
+Running  TermService        Servicios de Escritorio remoto
+Running  Themes             Temas
+Stopped  TieringEngineSe... Administración de capas de almacena...
+Running  TimeBrokerSvc      Agente de eventos de tiempo
+Running  TokenBroker        Administrador de cuentas web
+Running  TrkWks             Cliente de seguimiento de vínculos ...
+Stopped  TroubleshootingSvc Servicio de solución de problemas r...
+Stopped  TrustedInstaller   Instalador de módulos de Windows
+Stopped  tzautoupdate       Actualizador de zona horaria automá...
+Stopped  UevAgentService    Servicio de virtualización de la ex...
+Running  UmRdpService       Redirector de puerto en modo usuari...
+Stopped  UnistoreSvc_45337f Almacenamiento de datos de usuarios...
+Stopped  upnphost           Dispositivo host de UPnP
+Stopped  UserDataSvc_45337f Acceso a datos de usuarios_45337f
+Running  UserManager        Administrador de usuarios
+Running  UsoSvc             Actualizar el servicio Orchestrator
+Stopped  VacSvc             Servicio Volumetric Audio Compositor
+Running  VaultSvc           Administrador de credenciales
+Stopped  VBoxSDS            VirtualBox system service
+Stopped  vds                Disco virtual
+Stopped  vmicguestinterface Interfaz de servicio invitado de Hy...
+Stopped  vmicheartbeat      Servicio de latido de Hyper-V
+Stopped  vmickvpexchange    Servicio de intercambio de datos de...
+Stopped  vmicrdv            Servicio de virtualización de Escri...
+Stopped  vmicshutdown       Servicio de cierre de invitado de H...
+Stopped  vmictimesync       Servicio de sincronización de hora ...
+Stopped  vmicvmsession      Servicio PowerShell Direct de Hyper-V
+Stopped  vmicvss            Solicitante de instantáneas de volu...
+Stopped  VSS                Instantáneas de volumen
+Stopped  VSStandardColle... Visual Studio Standard Collector Se...
+Stopped  W32Time            Hora de Windows
+Stopped  WaaSMedicSvc       Windows Update Medic Service
+Stopped  WalletService      WalletService
+Stopped  WarpJITSvc         WarpJITSvc
+Stopped  wbengine           Servicio del módulo de copia de seg...
+Stopped  WbioSrvc           Servicio biométrico de Windows
+Running  Wcmsvc             Administrador de conexiones de Windows
+Stopped  wcncsvc            Registrador de configuración de Win...
+Running  WdiServiceHost     Host del servicio de diagnóstico
+Running  WdiSystemHost      Host de sistema de diagnóstico
+Stopped  WdNisSvc           Servicio de inspección de red de An...
+Stopped  WebClient          Cliente web
+Stopped  WebManagement      Web Management
+Stopped  Wecsvc             Recopilador de eventos de Windows
+Stopped  WEPHOSTSVC         Servicio host de proveedor de cifra...
+Stopped  wercplsupport      Ayuda del Panel de control de Infor...
+Stopped  WerSvc             Servicio Informe de errores de Windows
+Stopped  WFDSConMgrSvc      Servicio de administrador de conexi...
+Stopped  WiaRpc             Still Image Acquisition Events
+Stopped  WinDefend          Servicio de antivirus de Windows De...
+Running  WinHttpAutoProx... Servicio de detección automática de...
+Running  Winmgmt            Instrumental de administración de W...
+Stopped  WinRM              Administración remota de Windows (W...
+Stopped  wisvc              Servicio de Windows Insider
+Running  WlanSvc            Configuración automática de WLAN
+Running  wlidsvc            Ayudante para el inicio de sesión d...
+Stopped  wlpasvc            Servicio de asistente para perfil l...
+Stopped  WManSvc            Servicio de administración de Windows
+Stopped  wmiApSrv           Adaptador de rendimiento de WMI
+Stopped  WMPNetworkSvc      Servicio de uso compartido de red d...
+Stopped  workfolderssvc     Work Folders
+Stopped  WpcMonSvc          Control parental
+Stopped  WPDBusEnum         Servicio enumerador de dispositivos...
+Running  WpnService         Servicio del sistema de notificacio...
+Running  WpnUserService_... Servicio de usuario de notificacion...
+Running  wscsvc             Security Center
+Running  WSearch            Windows Search
+Running  wuauserv           Windows Update
+Stopped  WwanSvc            Configuración automática de WWAN
+Stopped  XblAuthManager     Administrador de autenticación de X...
+Stopped  XblGameSave        Juegos guardados en Xbox Live
+Stopped  XboxGipSvc         Xbox Accessory Management Service
+Stopped  XboxNetApiSvc      Servicio de red de Xbox Live
+
+
+PS C:\WINDOWS\system32>  Out-File -Width 200 
+>> ErrorTerminación(): "Se ha detenido la canalización."
+>> ErrorTerminación(): "Se ha detenido la canalización."
+PS C:\WINDOWS\system32> help Out-File -Width 200 
+>> ErrorTerminación(help): "No se encuentra ningún parámetro que coincida con el nombre del parámetro 'Width'."
+help : No se encuentra ningún parámetro que coincida con el nombre del parámetro 'Width'.
+En línea: 1 Carácter: 15
++ help Out-File -Width 200
++               ~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [help], ParameterBindingException
+    + FullyQualifiedErrorId : NamedParameterNotFound,help
+help : No se encuentra ningún parámetro que coincida con el nombre del parámetro 'Width'.
+En línea: 1 Carácter: 15
++ help Out-File -Width 200
++               ~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [help], ParameterBindingException
+    + FullyQualifiedErrorId : NamedParameterNotFound,help
+
+PS C:\WINDOWS\system32> Get-Service | Out-File procesos.txt -NoClobber 
+PS C:\WINDOWS\system32> Stop-Transcript
+**********************
+Fin de la transcripción de Windows PowerShell
+Hora de finalización: 20200214183616
+**********************
