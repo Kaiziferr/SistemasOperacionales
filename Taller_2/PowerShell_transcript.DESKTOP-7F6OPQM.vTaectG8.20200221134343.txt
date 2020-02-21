@@ -1,0 +1,2091 @@
+﻿**********************
+Inicio de la transcripción de Windows PowerShell
+Hora de inicio: 20200221134343
+Nombre de usuario: DESKTOP-7F6OPQM\S T E V E N
+Usuario RunAs: DESKTOP-7F6OPQM\S T E V E N
+Nombre de la configuración: 
+Máquina: DESKTOP-7F6OPQM (Microsoft Windows NT 10.0.18362.0)
+Aplicación host: C:\WINDOWS\syswow64\WindowsPowerShell\v1.0\PowerShell_ISE.exe
+Id. de proceso: 8796
+PSVersion: 5.1.18362.628
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.18362.628
+BuildVersion: 10.0.18362.628
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+La transcripción ha comenzado. El archivo de salida es C:\Users\S T E V E N\Documents\PowerShell_transcript.DESKTOP-7F6OPQM.vTaectG8.20200221134343.txt
+PS C:\Users\S T E V E N> Get-Process -Name WmiPrvSE | Select-Object -Property BasePriority,Id,SessionId,WorkingSet |
+  Export-Csv -Path .\data1.csv -NoTypeInformation
+PS C:\Users\S T E V E N> Get-Process -Name WmiPrvSE | Select-Object -Property BasePriority,Id |
+  Export-Csv -Path .\data2.csv -NoTypeInformation
+PS C:\Users\S T E V E N> diff -Ref (cat .\data1.csv) -Diff (cat .\data2.csv)
+
+
+
+InputObject                                  SideIndicator
+-----------                                  -------------
+"BasePriority","Id"                          =>
+"8","1712"                                   =>
+"8","5828"                                   =>
+"8","9848"                                   =>
+"BasePriority","Id","SessionId","WorkingSet" <=
+"8","1712","0","10563584"                    <=
+"8","5828","0","8806400"                     <=
+"8","9848","0","4476928"                     <=
+
+
+PS C:\Users\S T E V E N> get-service | export-csv servicios.csv | out-file
+>> ErrorTerminación(Out-File): "No se puede procesar el argumento porque el valor del argumento "path" es NULL. Cambie el valor del argumento "path" a un valor no nulo."
+out-file : No se puede procesar el argumento porque el valor del argumento "path" es NULL. Cambie el valor del 
+argumento "path" a un valor no nulo.
+En línea: 1 Carácter: 42
++ get-service | export-csv servicios.csv | out-file
++                                          ~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Out-File], PSArgumentNullException
+    + FullyQualifiedErrorId : ArgumentNull,Microsoft.PowerShell.Commands.OutFileCommand
+out-file : No se puede procesar el argumento porque el valor del argumento "path" es NULL. Cambie el valor del argumento "path" a un
+valor no nulo.
+En línea: 1 Carácter: 42
++ get-service | export-csv servicios.csv | out-file
++                                          ~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Out-File], PSArgumentNullException
+    + FullyQualifiedErrorId : ArgumentNull,Microsoft.PowerShell.Commands.OutFileCommand
+
+PS C:\Users\S T E V E N> get-service | export-csv data3.csv -Delimiter ";"
+
+PS C:\Users\S T E V E N> get-service | export-csv data3.csv | out-file
+>> ErrorTerminación(Out-File): "No se puede procesar el argumento porque el valor del argumento "path" es NULL. Cambie el valor del argumento "path" a un valor no nulo."
+out-file : No se puede procesar el argumento porque el valor del argumento "path" es NULL. Cambie el valor del 
+argumento "path" a un valor no nulo.
+En línea: 1 Carácter: 38
++ get-service | export-csv data3.csv | out-file
++                                      ~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Out-File], PSArgumentNullException
+    + FullyQualifiedErrorId : ArgumentNull,Microsoft.PowerShell.Commands.OutFileCommand
+out-file : No se puede procesar el argumento porque el valor del argumento "path" es NULL. Cambie el valor del argumento "path" a un
+valor no nulo.
+En línea: 1 Carácter: 38
++ get-service | export-csv data3.csv | out-file
++                                      ~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Out-File], PSArgumentNullException
+    + FullyQualifiedErrorId : ArgumentNull,Microsoft.PowerShell.Commands.OutFileCommand
+
+PS C:\Users\S T E V E N> get-process | export-csv procesos.csv
+PS C:\Users\S T E V E N> import-csv procesos.csv
+
+
+Name                       : ApplicationFrameHost
+SI                         : 19
+Handles                    : 317
+VM                         : 4294967295
+WS                         : 24338432
+PM                         : 7221248
+NPM                        : 19440
+Path                       :
+Company                    :
+CPU                        : 0,4375
+FileVersion                :
+ProductVersion             :
+Description                :
+Product                    :
+__NounName                 : Process
+BasePriority               : 8
+ExitCode                   :
+HasExited                  : False
+ExitTime                   :
+Handle                     : 2528
+SafeHandle                 : Microsoft.Win32.SafeHandles.SafeProcessHandle
+HandleCount                : 317
+Id                         : 4392
+MachineName                : .
+MainWindowHandle           : 197230
+MainWindowTitle            : Configuraci?n
+MainModule                 :
+MaxWorkingSet              : 1413120
+MinWorkingSet              : 204800
+Modules                    :
+NonpagedSystemMemorySize   : 19440
+NonpagedSystemMemorySize64 : 19440
+PagedMemorySize            : 7221248
+PagedMemorySize64          : 7221248
+PagedSystemMemorySize      : 323312
+PagedSystemMemorySize64    : 323312
+PeakPagedMemorySize        : 8433664
+PeakPagedMemorySize64      : 8433664
+PeakWorkingSet             : 28008448
+PeakWorkingSet64           : 28008448
+PeakVirtualMemorySize      : -1
+PeakVirtualMemorySize64    : 4294967295
+PriorityBoostEnabled       : True
+PriorityClass              : Normal
+PrivateMemorySize          : 7221248
+PrivateMemorySize64        : 7221248
+PrivilegedProcessorTime    : 00:00:00.3281250
+ProcessName                : ApplicationFrameHost
+ProcessorAffinity          : 3
+Responding                 : True
+SessionId                  : 19
+StartInfo                  : System.Diagnostics.ProcessStartInfo
+StartTime                  : 21/02/2020 7:13:07 a. m.
+SynchronizingObject        :
+Threads                    : System.Diagnostics.ProcessThreadCollection
+TotalProcessorTime         : 00:00:00.4375000
+UserProcessorTime          : 00:00:00.1093750
+VirtualMemorySize          : -1
+VirtualMemorySize64        : 4294967295
+EnableRaisingEvents        : False
+StandardInput              :
+StandardOutput             :
+StandardError              :
+WorkingSet                 : 24338432
+WorkingSet64               : 24338432
+Site                       :
+Container                  :
+
+Name                       : armsvc
+SI                         : 0
+Handles                    : 328
+VM                         : 69824512
+WS                         : 2674688
+PM                         : 3530752
+NPM                        : 18184
+Path                       :
+Company                    :
+CPU                        :
+FileVersion                :
+ProductVersion             :
+Description                :
+Product                    :
+__NounName                 : Process
+BasePriority               : 8
+ExitCode                   :
+HasExited                  :
+ExitTime                   :
+Handle                     :
+SafeHandle                 :
+HandleCount                : 328
+Id                         : 3968
+MachineName                : .
+MainWindowHandle           : 0
+MainWindowTitle            :
+MainModule                 :
+MaxWorkingSet              :
+MinWorkingSet              :
+Modules                    :
+NonpagedSystemMemorySize   : 18184
+NonpagedSystemMemorySize64 : 18184
+PagedMemorySize            : 3530752
+PagedMemorySize64          : 3530752
+PagedSystemMemorySize      : 148792
+PagedSystemMemorySize64    : 148792
+PeakPagedMemorySize        : 4243456
+PeakPagedMemorySize64      : 4243456
+PeakWorkingSet             : 18919424
+PeakWorkingSet64           : 18919424
+PeakVirtualMemorySize      : 89673728
+PeakVirtualMemorySize64    : 89673728
+PriorityBoostEnabled       :
+PriorityClass              :
+PrivateMemorySize          : 3530752
+PrivateMemorySize64        : 3530752
+PrivilegedProcessorTime    :
+ProcessName                : armsvc
+ProcessorAffinity          :
+Responding                 : True
+SessionId                  : 0
+StartInfo                  : System.Diagnostics.ProcessStartInfo
+StartTime                  :
+SynchronizingObject        :
+Threads                    : System.Diagnostics.ProcessThreadCollection
+TotalProcessorTime         :
+UserProcessorTime          :
+VirtualMemorySize          : 69824512
+VirtualMemorySize64        : 69824512
+EnableRaisingEvents        : False
+StandardInput              :
+StandardOutput             :
+StandardError              :
+WorkingSet                 : 2674688
+WorkingSet64               : 2674688
+Site                       :
+Container                  :
+
+Name                       : AsusSmartGestureDetector64
+SI                         : 19
+Handles                    : 249
+VM                         : 4294967295
+WS                         : 434176
+PM                         : 2813952
+NPM                        : 12704
+Path                       :
+Company                    :
+CPU                        : 0,5
+FileVersion                :
+ProductVersion             :
+Description                :
+Product                    :
+__NounName                 : Process
+BasePriority               : 6
+ExitCode                   :
+HasExited                  : False
+ExitTime                   :
+Handle                     : 3916
+SafeHandle                 : Microsoft.Win32.SafeHandles.SafeProcessHandle
+HandleCount                : 249
+Id                         : 1416
+MachineName                : .
+MainWindowHandle           : 0
+MainWindowTitle            :
+MainModule                 :
+MaxWorkingSet              : 1413120
+MinWorkingSet              : 204800
+Modules                    :
+NonpagedSystemMemorySize   : 12704
+NonpagedSystemMemorySize64 : 12704
+PagedMemorySize            : 2813952
+PagedMemorySize64          : 2813952
+PagedSystemMemorySize      : 182056
+PagedSystemMemorySize64    : 182056
+PeakPagedMemorySize        : 2940928
+PeakPagedMemorySize64      : 2940928
+PeakWorkingSet             : 12136448
+PeakWorkingSet64           : 12136448
+PeakVirtualMemorySize      : -1
+PeakVirtualMemorySize64    : 4294967295
+PriorityBoostEnabled       : True
+PriorityClass              : BelowNormal
+PrivateMemorySize          : 2813952
+PrivateMemorySize64        : 2813952
+PrivilegedProcessorTime    : 00:00:00.3281250
+ProcessName                : AsusSmartGestureDetector64
+ProcessorAffinity          : 3
+Responding                 : True
+SessionId                  : 19
+StartInfo                  : System.Diagnostics.ProcessStartInfo
+StartTime                  : 21/02/2020 7:13:15 a. m.
+SynchronizingObject        :
+Threads                    : System.Diagnostics.ProcessThreadCollection
+TotalProcessorTime         : 00:00:00.5000000
+UserProcessorTime          : 00:00:00.1718750
+VirtualMemorySize          : -1
+VirtualMemorySize64        : 4294967295
+EnableRaisingEvents        : False
+StandardInput              :
+StandardOutput             :
+StandardError              :
+WorkingSet                 : 434176
+WorkingSet64               : 434176
+Site                       :
+Container                  :
+
+Name                       : AsusTPCenter
+SI                         : 19
+Handles                    : 243
+VM                         : 4294967295
+WS                         : 860160
+PM                         : 3485696
+NPM                        : 16664
+Path                       :
+Company                    :
+CPU                        : 4,421875
+FileVersion                :
+ProductVersion             :
+Description                :
+Product                    :
+__NounName                 : Process
+BasePriority               : 6
+ExitCode                   :
+HasExited                  : False
+ExitTime                   :
+Handle                     : 3984
+SafeHandle                 : Microsoft.Win32.SafeHandles.SafeProcessHandle
+HandleCount                : 243
+Id                         : 16332
+MachineName                : .
+MainWindowHandle           : 0
+MainWindowTitle            :
+MainModule                 :
+MaxWorkingSet              : 1413120
+MinWorkingSet              : 204800
+Modules                    :
+NonpagedSystemMemorySize   : 16664
+NonpagedSystemMemorySize64 : 16664
+PagedMemorySize            : 3485696
+PagedMemorySize64          : 3485696
+PagedSystemMemorySize      : 192752
+PagedSystemMemorySize64    : 192752
+PeakPagedMemorySize        : 3833856
+PeakPagedMemorySize64      : 3833856
+PeakWorkingSet             : 14266368
+PeakWorkingSet64           : 14266368
+PeakVirtualMemorySize      : -1
+PeakVirtualMemorySize64    : 4294967295
+PriorityBoostEnabled       : True
+PriorityClass              : BelowNormal
+PrivateMemorySize          : 3485696
+PrivateMemorySize64        : 3485696
+PrivilegedProcessorTime    : 00:00:02.3906250
+ProcessName                : AsusTPCenter
+ProcessorAffinity          : 3
+Responding                 : True
+SessionId                  : 19
+StartInfo                  : System.Diagnostics.ProcessStartInfo
+StartTime                  : 21/02/2020 1:21:58 p. m.
+SynchronizingObject        :
+Threads                    : System.Diagnostics.ProcessThreadCollection
+TotalProcessorTime         : 00:00:04.4218750
+UserProcessorTime          : 00:00:02.0312500
+VirtualMemorySize          : -1
+VirtualMemorySize64        : 4294967295
+EnableRaisingEvents        : False
+StandardInput              :
+StandardOutput             :
+StandardError              :
+WorkingSet                 : 860160
+WorkingSet64               : 860160
+Site                       :
+Container                  :
+
+Name                       : AsusTPHelper
+SI                         : 19
+Handles                    : 113
+VM                         : 4294967295
+WS                         : 180224
+PM                         : 1458176
+NPM                        : 8488
+Path                       :
+Company                    :
+CPU                        : 0,25
+FileVersion                :
+ProductVersion             :
+Description                :
+Product                    :
+__NounName                 : Process
+BasePriority               : 6
+ExitCode                   :
+HasExited                  :
+ExitTime                   :
+Handle                     :
+SafeHandle                 :
+HandleCount                : 113
+Id                         : 2556
+MachineName                : .
+MainWindowHandle           : 0
+MainWindowTitle            :
+MainModule                 :
+MaxWorkingSet              :
+MinWorkingSet              :
+Modules                    :
+NonpagedSystemMemorySize   : 8488
+NonpagedSystemMemorySize64 : 8488
+PagedMemorySize            : 1458176
+PagedMemorySize64          : 1458176
+PagedSystemMemorySize      : 119728
+PagedSystemMemorySize64    : 119728
+PeakPagedMemorySize        : 1589248
+PeakPagedMemorySize64      : 1589248
+PeakWorkingSet             : 7290880
+PeakWorkingSet64           : 7290880
+PeakVirtualMemorySize      : -1
+PeakVirtualMemorySize64    : 4294967295
+PriorityBoostEnabled       :
+PriorityClass              :
+PrivateMemorySize          : 1458176
+PrivateMemorySize64        : 1458176
+PrivilegedProcessorTime    : 00:00:00.2187500
+ProcessName                : AsusTPHelper
+ProcessorAffinity          :
+Responding                 : True
+SessionId                  : 19
+StartInfo                  : System.Diagnostics.ProcessStartInfo
+StartTime                  : 21/02/2020 7:13:18 a. m.
+SynchronizingObject        :
+Threads                    : System.Diagnostics.ProcessThreadCollection
+TotalProcessorTime         : 00:00:00.2500000
+UserProcessorTime          : 00:00:00.0312500
+VirtualMemorySize          : -1
+VirtualMemorySize64        : 4294967295
+EnableRaisingEvents        : False
+StandardInput              :
+StandardOutput             :
+StandardError              :
+WorkingSet                 : 180224
+WorkingSet64               : 180224
+Site                       :
+Container                  :
+
+Name                       : AsusTPLoader
+SI                         : 19
+Handles                    : 270
+VM                         : 4294967295
+WS                         : 376832
+PM                         : 2846720
+NPM                        : 14808
+Path                       :
+Company                    :
+CPU                        : 1,359375
+FileVersion                :
+ProductVersion             :
+Description                :
+Product                    :
+__NounName                 : Process
+BasePriority               : 6
+ExitCode                   :
+HasExited                  : False
+ExitTime                   :
+Handle                     : 3780
+SafeHandle                 : Microsoft.Win32.SafeHandles.SafeProcessHandle
+HandleCount                : 270
+Id                         : 9560
+MachineName                : .
+MainWindowHandle           : 0
+MainWindowTitle            :
+MainModule                 :
+MaxWorkingSet              : 1413120
+MinWorkingSet              : 204800
+Modules                    :
+NonpagedSystemMemorySize   : 14808
+NonpagedSystemMemorySize64 : 14808
+PagedMemorySize            : 2846720
+PagedMemorySize64          : 2846720
+PagedSystemMemorySize      : 203000
+PagedSystemMemorySize64    : 203000
+PeakPagedMemorySize        : 3461120
+PeakPagedMemorySize64      : 3461120
+PeakWorkingSet             : 19951616
+PeakWorkingSet64           : 19951616
+PeakVirtualMemorySize      : -1
+PeakVirtualMemorySize64    : 4294967295
+PriorityBoostEnabled       : True
+PriorityClass              : BelowNormal
+PrivateMemorySize          : 2846720
+PrivateMemorySize64        : 2846720
+PrivilegedProcessorTime    : 00:00:01.0937500
+ProcessName                : AsusTPLoader
+ProcessorAffinity          : 3
+Responding                 : True
+SessionId                  : 19
+StartInfo                  : System.Diagnostics.ProcessStartInfo
+StartTime                  : 21/02/2020 7:12:46 a. m.
+SynchronizingObject        :
+Threads                    : System.Diagnostics.ProcessThreadCollection
+TotalProcessorTime         : 00:00:01.3593750
+UserProcessorTime          : 00:00:00.2656250
+VirtualMemorySize          : -1
+VirtualMemorySize64        : 4294967295
+EnableRaisingEvents        : False
+StandardInput              :
+StandardOutput             :
+StandardError              :
+WorkingSet                 : 376832
+WorkingSet64               : 376832
+Site                       :
+Container                  :
+
+Name                       : audiodg
+SI                         : 0
+Handles                    : 593
+VM                         : 4294967295
+WS                         : 23588864
+PM                         : 22913024
+NPM                        : 17872
+Path                       :
+Company                    :
+CPU                        : 317,59375
+FileVersion                :
+ProductVersion             :
+Description                :
+Product                    :
+__NounName                 : Process
+BasePriority               : 8
+ExitCode                   :
+HasExited                  :
+ExitTime                   :
+Handle                     :
+SafeHandle                 :
+HandleCount                : 593
+Id                         : 16552
+MachineName                : .
+MainWindowHandle           : 0
+MainWindowTitle            :
+MainModule                 :
+MaxWorkingSet              :
+MinWorkingSet              :
+Modules                    :
+NonpagedSystemMemorySize   : 17872
+NonpagedSystemMemorySize64 : 17872
+PagedMemorySize            : 22913024
+PagedMemorySize64          : 22913024
+PagedSystemMemorySize      : 129112
+PagedSystemMemorySize64    : 129112
+PeakPagedMemorySize        : 27987968
+PeakPagedMemorySize64      : 27987968
+PeakWorkingSet             : 33914880
+PeakWorkingSet64           : 33914880
+PeakVirtualMemorySize      : -1
+PeakVirtualMemorySize64    : 4294967295
+PriorityBoostEnabled       :
+PriorityClass              :
+PrivateMemorySize          : 22913024
+PrivateMemorySize64        : 22913024
+PrivilegedProcessorTime    : 00:00:10.1250000
+ProcessName                : audiodg
+ProcessorAffinity          :
+Responding                 : True
+SessionId                  : 0
+StartInfo                  : System.Diagnostics.ProcessStartInfo
+StartTime                  : 21/02/2020 8:13:47 a. m.
+SynchronizingObject        :
+Threads                    : System.Diagnostics.ProcessThreadCollection
+TotalProcessorTime         : 00:05:17.6250000
+UserProcessorTime          : 00:05:07.5000000
+VirtualMemorySize          : -1
+VirtualMemorySize64        : 4294967295
+EnableRaisingEvents        : False
+StandardInput              :
+StandardOutput             :
+StandardError              :
+WorkingSet                 : 23588864
+WorkingSet64               : 23588864
+Site                       :
+Container                  :
+
+Name                       : avp
+SI                         : 0
+Handles                    : 5382
+VM                         : 1006227456
+WS                         : 191401984
+PM                         : 463757312
+NPM                        : 361208
+Path                       :
+Company                    :
+CPU                        :
+FileVersion                :
+ProductVersion             :
+Description                :
+Product                    :
+__NounName                 : Process
+BasePriority               : 8
+ExitCode                   :
+HasExited                  :
+ExitTime                   :
+Handle                     :
+SafeHandle                 :
+HandleCount                : 5382
+Id                         : 3940
+MachineName                : .
+MainWindowHandle           : 0
+MainWindowTitle            :
+MainModule                 :
+MaxWorkingSet              :
+MinWorkingSet              :
+Modules                    :
+NonpagedSystemMemorySize   : 361208
+NonpagedSystemMemorySize64 : 361208
+PagedMemorySize            : 463757312
+PagedMemorySize64          : 463757312
+PagedSystemMemorySize      : 705944
+PagedSystemMemorySize64    : 705944
+PeakPagedMemorySize        : 596025344
+PeakPagedMemorySize64      : 596025344
+PeakWorkingSet             : 435314688
+PeakWorkingSet64           : 435314688
+PeakVirtualMemorySize      : 1176829952
+PeakVirtualMemorySize64    : 1176829952
+PriorityBoostEnabled       :
+PriorityClass              :
+PrivateMemorySize          : 463757312
+PrivateMemorySize64        : 463757312
+PrivilegedProcessorTime    :
+ProcessName                : avp
+ProcessorAffinity          :
+Responding                 : True
+SessionId                  : 0
+StartInfo                  : System.Diagnostics.ProcessStartInfo
+StartTime                  :
+SynchronizingObject        :
+Threads                    : System.Diagnostics.ProcessThreadCollection
+TotalProcessorTime         :
+UserProcessorTime          :
+VirtualMemorySize          : 1006227456
+VirtualMemorySize64        : 1006227456
+EnableRaisingEvents        : False
+StandardInput              :
+StandardOutput             :
+StandardError              :
+WorkingSet                 : 191401984
+WorkingSet64               : 191401984
+Site                       :
+Container                  :
+
+Name                       : avpui
+SI                         : 19
+Handles                    : 845
+VM                         : 381218816
+WS                         : 3895296
+PM                         : 80117760
+NPM                        : 106824
+Path                       : C:\Program Files (x86)\Kaspersky Lab\Kaspersky
+                             Total Security 20.0\avpui.exe
+Company                    : AO Kaspersky Lab
+CPU                        : 36,21875
+FileVersion                : 20.0.21.1325
+ProductVersion             : 20.0.21.1325
+Description                : Kaspersky Anti-Virus
+Product                    : Kaspersky Anti-Virus
+__NounName                 : Process
+BasePriority               : 8
+ExitCode                   :
+HasExited                  : False
+ExitTime                   :
+Handle                     : 3764
+SafeHandle                 : Microsoft.Win32.SafeHandles.SafeProcessHandle
+HandleCount                : 845
+Id                         : 11880
+MachineName                : .
+MainWindowHandle           : 0
+MainWindowTitle            :
+MainModule                 : System.Diagnostics.ProcessModule (avpui.exe)
+MaxWorkingSet              : 1413120
+MinWorkingSet              : 204800
+Modules                    : System.Diagnostics.ProcessModuleCollection
+NonpagedSystemMemorySize   : 106824
+NonpagedSystemMemorySize64 : 106824
+PagedMemorySize            : 80117760
+PagedMemorySize64          : 80117760
+PagedSystemMemorySize      : 542352
+PagedSystemMemorySize64    : 542352
+PeakPagedMemorySize        : 84426752
+PeakPagedMemorySize64      : 84426752
+PeakWorkingSet             : 132849664
+PeakWorkingSet64           : 132849664
+PeakVirtualMemorySize      : 406368256
+PeakVirtualMemorySize64    : 406368256
+PriorityBoostEnabled       : True
+PriorityClass              : Normal
+PrivateMemorySize          : 80117760
+PrivateMemorySize64        : 80117760
+PrivilegedProcessorTime    : 00:00:10.4218750
+ProcessName                : avpui
+ProcessorAffinity          : 3
+Responding                 : True
+SessionId                  : 19
+StartInfo                  : System.Diagnostics.ProcessStartInfo
+StartTime                  : 21/02/2020 7:11:46 a. m.
+SynchronizingObject        :
+Threads                    : System.Diagnostics.ProcessThreadCollection
+TotalProcessorTime         : 00:00:36.2187500
+UserProcessorTime          : 00:00:25.7968750
+VirtualMemorySize          : 381218816
+VirtualMemorySize64        : 381218816
+EnableRaisingEvents        : False
+StandardInput              :
+StandardOutput             :
+StandardError              :
+WorkingSet                 : 3895296
+WorkingSet64               : 3895296
+Site                       :
+Container                  :
+
+Name                       : chrome
+SI                         : 19
+Handles                    : 240
+VM                         : 4294967295
+WS                         : 43298816
+PM                         : 20455424
+NPM                        : 16584
+Path                       :
+Company                    :
+CPU                        : 1,296875
+FileVersion                :
+ProductVersion             :
+Description                :
+Product                    :
+__NounName                 : Process
+BasePriority               : 4
+ExitCode                   :
+HasExited                  : False
+ExitTime                   :
+Handle                     : 3644
+SafeHandle                 : Microsoft.Win32.SafeHandles.SafeProcessHandle
+HandleCount                : 240
+Id                         : 1940
+MachineName                : .
+MainWindowHandle           : 0
+MainWindowTitle            :
+MainModule                 :
+MaxWorkingSet              : 1413120
+MinWorkingSet              : 204800
+Modules                    :
+NonpagedSystemMemorySize   : 16584
+NonpagedSystemMemorySize64 : 16584
+PagedMemorySize            : 20455424
+PagedMemorySize64          : 20455424
+PagedSystemMemorySize      : 422800
+PagedSystemMemorySize64    : 422800
+PeakPagedMemorySize        : 24731648
+PeakPagedMemorySize64      : 24731648
+PeakWorkingSet             : 45346816
+PeakWorkingSet64           : 45346816
+PeakVirtualMemorySize      : -1
+PeakVirtualMemorySize64    : 4294967295
+PriorityBoostEnabled       : True
+PriorityClass              : Idle
+PrivateMemorySize          : 20455424
+PrivateMemorySize64        : 20455424
+PrivilegedProcessorTime    : 00:00:00.2187500
+ProcessName                : chrome
+ProcessorAffinity          : 3
+Responding                 : True
+SessionId                  : 19
+StartInfo                  : System.Diagnostics.ProcessStartInfo
+StartTime                  : 21/02/2020 1:40:17 p. m.
+SynchronizingObject        :
+Threads                    : System.Diagnostics.ProcessThreadCollection
+TotalProcessorTime         : 00:00:01.2968750
+UserProcessorTime          : 00:00:01.0781250
+VirtualMemorySize          : -1
+VirtualMemorySize64        : 4294967295
+EnableRaisingEvents        : False
+StandardInput              :
+StandardOutput             :
+StandardError              :
+WorkingSet                 : 43298816
+WorkingSet64               : 43298816
+Site                       :
+Container                  :
+
+Name                       : chrome
+SI                         : 19
+Handles                    : 352
+VM                         : 4294967295
+WS                         : 103669760
+PM                         : 73334784
+NPM                        : 25696
+Path                       :
+Company                    :
+CPU                        : 275,0625
+FileVersion                :
+ProductVersion             :
+Description                :
+Product                    :
+__NounName                 : Process
+BasePriority               : 4
+ExitCode                   :
+HasExited                  : False
+ExitTime                   :
+Handle                     : 3476
+SafeHandle                 : Microsoft.Win32.SafeHandles.SafeProcessHandle
+HandleCount                : 352
+Id                         : 3552
+MachineName                : .
+MainWindowHandle           : 0
+MainWindowTitle            :
+MainModule                 :
+MaxWorkingSet              : 1413120
+MinWorkingSet              : 204800
+Modules                    :
+NonpagedSystemMemorySize   : 25696
+NonpagedSystemMemorySize64 : 25696
+PagedMemorySize            : 73334784
+PagedMemorySize64          : 73334784
+PagedSystemMemorySize      : 540320
+PagedSystemMemorySize64    : 540320
+PeakPagedMemorySize        : 76341248
+PeakPagedMemorySize64      : 76341248
+PeakWorkingSet             : 137609216
+PeakWorkingSet64           : 137609216
+PeakVirtualMemorySize      : -1
+PeakVirtualMemorySize64    : 4294967295
+PriorityBoostEnabled       : True
+PriorityClass              : Idle
+PrivateMemorySize          : 73334784
+PrivateMemorySize64        : 73334784
+PrivilegedProcessorTime    : 00:00:07.7343750
+ProcessName                : chrome
+ProcessorAffinity          : 3
+Responding                 : True
+SessionId                  : 19
+StartInfo                  : System.Diagnostics.ProcessStartInfo
+StartTime                  : 21/02/2020 1:37:03 p. m.
+SynchronizingObject        :
+Threads                    : System.Diagnostics.ProcessThreadCollection
+TotalProcessorTime         : 00:04:35.0625000
+UserProcessorTime          : 00:04:27.3281250
+VirtualMemorySize          : -1
+VirtualMemorySize64        : 4294967295
+EnableRaisingEvents        : False
+StandardInput              :
+StandardOutput             :
+StandardError              :
+WorkingSet                 : 103669760
+WorkingSet64               : 103669760
+Site                       :
+Container                  :
+
+Name                       : chrome
+SI                         : 19
+Handles                    : 213
+VM                         : 4294967295
+WS                         : 23384064
+PM                         : 12677120
+NPM                        : 14952
+Path                       :
+Company                    :
+CPU                        : 0,234375
+FileVersion                :
+ProductVersion             :
+Description                :
+Product                    :
+__NounName                 : Process
+BasePriority               : 4
+ExitCode                   :
+HasExited                  : False
+ExitTime                   :
+Handle                     : 4044
+SafeHandle                 : Microsoft.Win32.SafeHandles.SafeProcessHandle
+HandleCount                : 213
+Id                         : 5888
+MachineName                : .
+MainWindowHandle           : 0
+MainWindowTitle            :
+MainModule                 :
+MaxWorkingSet              : 1413120
+MinWorkingSet              : 204800
+Modules                    :
+NonpagedSystemMemorySize   : 14952
+NonpagedSystemMemorySize64 : 14952
+PagedMemorySize            : 12677120
+PagedMemorySize64          : 12677120
+PagedSystemMemorySize      : 405288
+PagedSystemMemorySize64    : 405288
+PeakPagedMemorySize        : 13930496
+PeakPagedMemorySize64      : 13930496
+PeakWorkingSet             : 23441408
+PeakWorkingSet64           : 23441408
+PeakVirtualMemorySize      : -1
+PeakVirtualMemorySize64    : 4294967295
+PriorityBoostEnabled       : True
+PriorityClass              : Idle
+PrivateMemorySize          : 12677120
+PrivateMemorySize64        : 12677120
+PrivilegedProcessorTime    : 00:00:00.1093750
+ProcessName                : chrome
+ProcessorAffinity          : 3
+Responding                 : True
+SessionId                  : 19
+StartInfo                  : System.Diagnostics.ProcessStartInfo
+StartTime                  : 21/02/2020 1:51:42 p. m.
+SynchronizingObject        :
+Threads                    : System.Diagnostics.ProcessThreadCollection
+TotalProcessorTime         : 00:00:00.2343750
+UserProcessorTime          : 00:00:00.1250000
+VirtualMemorySize          : -1
+VirtualMemorySize64        : 4294967295
+EnableRaisingEvents        : False
+StandardInput              :
+StandardOutput             :
+StandardError              :
+WorkingSet                 : 23384064
+WorkingSet64               : 23384064
+Site                       :
+Container                  :
+
+Name                       : chrome
+SI                         : 19
+Handles                    : 351
+VM                         : 4294967295
+WS                         : 72048640
+PM                         : 52064256
+NPM                        : 23520
+Path                       :
+Company                    :
+CPU                        : 7,703125
+FileVersion                :
+ProductVersion             :
+Description                :
+Product                    :
+__NounName                 : Process
+BasePriority               : 4
+ExitCode                   :
+HasExited                  : False
+ExitTime                   :
+Handle                     : 3444
+SafeHandle                 : Microsoft.Win32.SafeHandles.SafeProcessHandle
+HandleCount                : 351
+Id                         : 8316
+MachineName                : .
+MainWindowHandle           : 0
+MainWindowTitle            :
+MainModule                 :
+MaxWorkingSet              : 1413120
+MinWorkingSet              : 204800
+Modules                    :
+NonpagedSystemMemorySize   : 23520
+NonpagedSystemMemorySize64 : 23520
+PagedMemorySize            : 52064256
+PagedMemorySize64          : 52064256
+PagedSystemMemorySize      : 540088
+PagedSystemMemorySize64    : 540088
+PeakPagedMemorySize        : 61296640
+PeakPagedMemorySize64      : 61296640
+PeakWorkingSet             : 111939584
+PeakWorkingSet64           : 111939584
+PeakVirtualMemorySize      : -1
+PeakVirtualMemorySize64    : 4294967295
+PriorityBoostEnabled       : True
+PriorityClass              : Idle
+PrivateMemorySize          : 52064256
+PrivateMemorySize64        : 52064256
+PrivilegedProcessorTime    : 00:00:00.8437500
+ProcessName                : chrome
+ProcessorAffinity          : 3
+Responding                 : True
+SessionId                  : 19
+StartInfo                  : System.Diagnostics.ProcessStartInfo
+StartTime                  : 21/02/2020 1:30:19 p. m.
+SynchronizingObject        :
+Threads                    : System.Diagnostics.ProcessThreadCollection
+TotalProcessorTime         : 00:00:07.7031250
+UserProcessorTime          : 00:00:06.8593750
+VirtualMemorySize          : -1
+VirtualMemorySize64        : 4294967295
+EnableRaisingEvents        : False
+StandardInput              :
+StandardOutput             :
+StandardError              :
+WorkingSet                 : 72048640
+WorkingSet64               : 72048640
+Site                       :
+Container                  :
+
+Name                       : chrome
+SI                         : 19
+Handles                    : 296
+VM                         : 4294967295
+WS                         : 16183296
+PM                         : 7225344
+NPM                        : 19680
+Path                       :
+Company                    :
+CPU                        : 17,96875
+FileVersion                :
+ProductVersion             :
+Description                :
+Product                    :
+__NounName                 : Process
+BasePriority               : 8
+ExitCode                   :
+HasExited                  : False
+ExitTime                   :
+Handle                     : 3824
+SafeHandle                 : Microsoft.Win32.SafeHandles.SafeProcessHandle
+HandleCount                : 296
+Id                         : 9080
+MachineName                : .
+MainWindowHandle           : 0
+MainWindowTitle            :
+MainModule                 :
+MaxWorkingSet              : 1413120
+MinWorkingSet              : 204800
+Modules                    :
+NonpagedSystemMemorySize   : 19680
+NonpagedSystemMemorySize64 : 19680
+PagedMemorySize            : 7225344
+PagedMemorySize64          : 7225344
+PagedSystemMemorySize      : 453000
+PagedSystemMemorySize64    : 453000
+PeakPagedMemorySize        : 7274496
+PeakPagedMemorySize64      : 7274496
+PeakWorkingSet             : 17502208
+PeakWorkingSet64           : 17502208
+PeakVirtualMemorySize      : -1
+PeakVirtualMemorySize64    : 4294967295
+PriorityBoostEnabled       : True
+PriorityClass              : Normal
+PrivateMemorySize          : 7225344
+PrivateMemorySize64        : 7225344
+PrivilegedProcessorTime    : 00:00:07.1875000
+ProcessName                : chrome
+ProcessorAffinity          : 3
+Responding                 : True
+SessionId                  : 19
+StartInfo                  : System.Diagnostics.ProcessStartInfo
+StartTime                  : 21/02/2020 1:24:23 p. m.
+SynchronizingObject        :
+Threads                    : System.Diagnostics.ProcessThreadCollection
+TotalProcessorTime         : 00:00:17.9687500
+UserProcessorTime          : 00:00:10.7812500
+VirtualMemorySize          : -1
+VirtualMemorySize64        : 4294967295
+EnableRaisingEvents        : False
+StandardInput              :
+StandardOutput             :
+StandardError              :
+WorkingSet                 : 16183296
+WorkingSet64               : 16183296
+Site                       :
+Container                  :
+
+Name                       : chrome
+SI                         : 19
+Handles                    : 289
+VM                         : 4294967295
+WS                         : 78577664
+PM                         : 44765184
+NPM                        : 20120
+Path                       :
+Company                    :
+CPU                        : 7,125
+FileVersion                :
+ProductVersion             :
+Description                :
+Product                    :
+__NounName                 : Process
+BasePriority               : 4
+ExitCode                   :
+HasExited                  : False
+ExitTime                   :
+Handle                     : 3860
+SafeHandle                 : Microsoft.Win32.SafeHandles.SafeProcessHandle
+HandleCount                : 289
+Id                         : 9524
+MachineName                : .
+MainWindowHandle           : 0
+MainWindowTitle            :
+MainModule                 :
+MaxWorkingSet              : 1413120
+MinWorkingSet              : 204800
+Modules                    :
+NonpagedSystemMemorySize   : 20120
+NonpagedSystemMemorySize64 : 20120
+PagedMemorySize            : 44765184
+PagedMemorySize64          : 44765184
+PagedSystemMemorySize      : 459624
+PagedSystemMemorySize64    : 459624
+PeakPagedMemorySize        : 64430080
+PeakPagedMemorySize64      : 64430080
+PeakWorkingSet             : 100700160
+PeakWorkingSet64           : 100700160
+PeakVirtualMemorySize      : -1
+PeakVirtualMemorySize64    : 4294967295
+PriorityBoostEnabled       : True
+PriorityClass              : Idle
+PrivateMemorySize          : 44765184
+PrivateMemorySize64        : 44765184
+PrivilegedProcessorTime    : 00:00:00.7031250
+ProcessName                : chrome
+ProcessorAffinity          : 3
+Responding                 : True
+SessionId                  : 19
+StartInfo                  : System.Diagnostics.ProcessStartInfo
+StartTime                  : 21/02/2020 1:51:41 p. m.
+SynchronizingObject        :
+Threads                    : System.Diagnostics.ProcessThreadCollection
+TotalProcessorTime         : 00:00:07.1250000
+UserProcessorTime          : 00:00:06.4218750
+VirtualMemorySize          : -1
+VirtualMemorySize64        : 4294967295
+EnableRaisingEvents        : False
+StandardInput              :
+StandardOutput             :
+StandardError              :
+WorkingSet                 : 78577664
+WorkingSet64               : 78577664
+Site                       :
+Container                  :
+
+Name                       : chrome
+SI                         : 19
+Handles                    : 466
+VM                         : 4294967295
+WS                         : 41738240
+PM                         : 29773824
+NPM                        : 29432
+Path                       :
+Company                    :
+CPU                        : 207,796875
+FileVersion                :
+ProductVersion             :
+Description                :
+Product                    :
+__NounName                 : Process
+BasePriority               : 10
+ExitCode                   :
+HasExited                  : False
+ExitTime                   :
+Handle                     : 4068
+SafeHandle                 : Microsoft.Win32.SafeHandles.SafeProcessHandle
+HandleCount                : 466
+Id                         : 11024
+MachineName                : .
+MainWindowHandle           : 0
+MainWindowTitle            :
+MainModule                 :
+MaxWorkingSet              : 1413120
+MinWorkingSet              : 204800
+Modules                    :
+NonpagedSystemMemorySize   : 29432
+NonpagedSystemMemorySize64 : 29432
+PagedMemorySize            : 29773824
+PagedMemorySize64          : 29773824
+PagedSystemMemorySize      : 530832
+PagedSystemMemorySize64    : 530832
+PeakPagedMemorySize        : 399175680
+PeakPagedMemorySize64      : 399175680
+PeakWorkingSet             : 110284800
+PeakWorkingSet64           : 110284800
+PeakVirtualMemorySize      : -1
+PeakVirtualMemorySize64    : 4294967295
+PriorityBoostEnabled       : True
+PriorityClass              : AboveNormal
+PrivateMemorySize          : 29773824
+PrivateMemorySize64        : 29773824
+PrivilegedProcessorTime    : 00:00:52.5312500
+ProcessName                : chrome
+ProcessorAffinity          : 3
+Responding                 : True
+SessionId                  : 19
+StartInfo                  : System.Diagnostics.ProcessStartInfo
+StartTime                  : 21/02/2020 7:14:42 a. m.
+SynchronizingObject        :
+Threads                    : System.Diagnostics.ProcessThreadCollection
+TotalProcessorTime         : 00:03:27.7968750
+UserProcessorTime          : 00:02:35.2656250
+VirtualMemorySize          : -1
+VirtualMemorySize64        : 4294967295
+EnableRaisingEvents        : False
+StandardInput              :
+StandardOutput             :
+StandardError              :
+WorkingSet                 : 41738240
+WorkingSet64               : 41738240
+Site                       :
+Container                  :
+
+Name                       : chrome
+SI                         : 19
+Handles                    : 356
+VM                         : 4294967295
+WS                         : 245682176
+PM                         : 160415744
+NPM                        : 32712
+Path                       :
+Company                    :
+CPU                        : 336,890625
+FileVersion                :
+ProductVersion             :
+Description                :
+Product                    :
+__NounName                 : Process
+BasePriority               : 8
+ExitCode                   :
+HasExited                  : False
+ExitTime                   :
+Handle                     : 3296
+SafeHandle                 : Microsoft.Win32.SafeHandles.SafeProcessHandle
+HandleCount                : 356
+Id                         : 11276
+MachineName                : .
+MainWindowHandle           : 0
+MainWindowTitle            :
+MainModule                 :
+MaxWorkingSet              : 1413120
+MinWorkingSet              : 204800
+Modules                    :
+NonpagedSystemMemorySize   : 32712
+NonpagedSystemMemorySize64 : 32712
+PagedMemorySize            : 160415744
+PagedMemorySize64          : 160415744
+PagedSystemMemorySize      : 802720
+PagedSystemMemorySize64    : 802720
+PeakPagedMemorySize        : 176324608
+PeakPagedMemorySize64      : 176324608
+PeakWorkingSet             : 290136064
+PeakWorkingSet64           : 290136064
+PeakVirtualMemorySize      : -1
+PeakVirtualMemorySize64    : 4294967295
+PriorityBoostEnabled       : True
+PriorityClass              : Normal
+PrivateMemorySize          : 160415744
+PrivateMemorySize64        : 160415744
+PrivilegedProcessorTime    : 00:00:31.9531250
+ProcessName                : chrome
+ProcessorAffinity          : 3
+Responding                 : True
+SessionId                  : 19
+StartInfo                  : System.Diagnostics.ProcessStartInfo
+StartTime                  : 21/02/2020 1:24:01 p. m.
+SynchronizingObject        :
+Threads                    : System.Diagnostics.ProcessThreadCollection
+TotalProcessorTime         : 00:05:36.8906250
+UserProcessorTime          : 00:05:04.9375000
+VirtualMemorySize          : -1
+VirtualMemorySize64        : 4294967295
+EnableRaisingEvents        : False
+StandardInput              :
+StandardOutput             :
+StandardError              :
+WorkingSet                 : 245682176
+WorkingSet64               : 245682176
+Site                       :
+Container                  :
+
+Name                       : chrome
+SI                         : 19
+Handles                    : 189
+VM                         : 4294967295
+WS                         : 6279168
+PM                         : 1720320
+NPM                        : 9312
+Path                       :
+Company                    :
+CPU                        : 0,109375
+FileVersion                :
+ProductVersion             :
+Description                :
+Product                    :
+__NounName                 : Process
+BasePriority               : 8
+ExitCode                   :
+HasExited                  : False
+ExitTime                   :
+Handle                     : 2628
+SafeHandle                 : Microsoft.Win32.SafeHandles.SafeProcessHandle
+HandleCount                : 189
+Id                         : 11636
+MachineName                : .
+MainWindowHandle           : 0
+MainWindowTitle            :
+MainModule                 :
+MaxWorkingSet              : 1413120
+MinWorkingSet              : 204800
+Modules                    :
+NonpagedSystemMemorySize   : 9312
+NonpagedSystemMemorySize64 : 9312
+PagedMemorySize            : 1720320
+PagedMemorySize64          : 1720320
+PagedSystemMemorySize      : 109904
+PagedSystemMemorySize64    : 109904
+PeakPagedMemorySize        : 1769472
+PeakPagedMemorySize64      : 1769472
+PeakWorkingSet             : 6725632
+PeakWorkingSet64           : 6725632
+PeakVirtualMemorySize      : -1
+PeakVirtualMemorySize64    : 4294967295
+PriorityBoostEnabled       : True
+PriorityClass              : Normal
+PrivateMemorySize          : 1720320
+PrivateMemorySize64        : 1720320
+PrivilegedProcessorTime    : 00:00:00.0625000
+ProcessName                : chrome
+ProcessorAffinity          : 3
+Responding                 : True
+SessionId                  : 19
+StartInfo                  : System.Diagnostics.ProcessStartInfo
+StartTime                  : 21/02/2020 7:14:40 a. m.
+SynchronizingObject        :
+Threads                    : System.Diagnostics.ProcessThreadCollection
+TotalProcessorTime         : 00:00:00.1093750
+UserProcessorTime          : 00:00:00.0468750
+VirtualMemorySize          : -1
+VirtualMemorySize64        : 4294967295
+EnableRaisingEvents        : False
+StandardInput              :
+StandardOutput             :
+StandardError              :
+WorkingSet                 : 6279168
+WorkingSet64               : 6279168
+Site                       :
+Container                  :
+
+Name                       : chrome
+SI                         : 19
+Handles                    : 519
+VM                         : 4294967295
+WS                         : 53886976
+PM                         : 38113280
+NPM                        : 28280
+Path                       :
+Company                    :
+CPU                        : 5,265625
+FileVersion                :
+ProductVersion             :
+Description                :
+Product                    :
+__NounName                 : Process
+BasePriority               : 4
+ExitCode                   :
+HasExited                  : False
+ExitTime                   :
+Handle                     : 2964
+SafeHandle                 : Microsoft.Win32.SafeHandles.SafeProcessHandle
+HandleCount                : 519
+Id                         : 13328
+MachineName                : .
+MainWindowHandle           : 0
+MainWindowTitle            :
+MainModule                 :
+MaxWorkingSet              : 1413120
+MinWorkingSet              : 204800
+Modules                    :
+NonpagedSystemMemorySize   : 28280
+NonpagedSystemMemorySize64 : 28280
+PagedMemorySize            : 38113280
+PagedMemorySize64          : 38113280
+PagedSystemMemorySize      : 837408
+PagedSystemMemorySize64    : 837408
+PeakPagedMemorySize        : 45252608
+PeakPagedMemorySize64      : 45252608
+PeakWorkingSet             : 101437440
+PeakWorkingSet64           : 101437440
+PeakVirtualMemorySize      : -1
+PeakVirtualMemorySize64    : 4294967295
+PriorityBoostEnabled       : True
+PriorityClass              : Idle
+PrivateMemorySize          : 38113280
+PrivateMemorySize64        : 38113280
+PrivilegedProcessorTime    : 00:00:00.4062500
+ProcessName                : chrome
+ProcessorAffinity          : 3
+Responding                 : True
+SessionId                  : 19
+StartInfo                  : System.Diagnostics.ProcessStartInfo
+StartTime                  : 21/02/2020 8:04:05 a. m.
+SynchronizingObject        :
+Threads                    : System.Diagnostics.ProcessThreadCollection
+TotalProcessorTime         : 00:00:05.2656250
+UserProcessorTime          : 00:00:04.8593750
+VirtualMemorySize          : -1
+VirtualMemorySize64        : 4294967295
+EnableRaisingEvents        : False
+StandardInput              :
+StandardOutput             :
+StandardError              :
+WorkingSet                 : 53886976
+WorkingSet64               : 53886976
+Site                       :
+Container                  :
+
+Name                       : chrome
+SI                         : 19
+Handles                    : 299
+VM                         : 4294967295
+WS                         : 86392832
+PM                         : 54849536
+NPM                        : 25560
+Path                       :
+Company                    :
+CPU                        : 19,640625
+FileVersion                :
+ProductVersion             :
+Description                :
+Product                    :
+__NounName                 : Process
+BasePriority               : 4
+ExitCode                   :
+HasExited                  : False
+ExitTime                   :
+Handle                     : 3284
+SafeHandle                 : Microsoft.Win32.SafeHandles.SafeProcessHandle
+HandleCount                : 299
+Id                         : 14300
+MachineName                : .
+MainWindowHandle           : 0
+MainWindowTitle            :
+MainModule                 :
+MaxWorkingSet              : 1413120
+MinWorkingSet              : 204800
+Modules                    :
+NonpagedSystemMemorySize   : 25560
+NonpagedSystemMemorySize64 : 25560
+PagedMemorySize            : 54849536
+PagedMemorySize64          : 54849536
+PagedSystemMemorySize      : 473608
+PagedSystemMemorySize64    : 473608
+PeakPagedMemorySize        : 76890112
+PeakPagedMemorySize64      : 76890112
+PeakWorkingSet             : 124997632
+PeakWorkingSet64           : 124997632
+PeakVirtualMemorySize      : -1
+PeakVirtualMemorySize64    : 4294967295
+PriorityBoostEnabled       : True
+PriorityClass              : Idle
+PrivateMemorySize          : 54849536
+PrivateMemorySize64        : 54849536
+PrivilegedProcessorTime    : 00:00:02.2656250
+ProcessName                : chrome
+ProcessorAffinity          : 3
+Responding                 : True
+SessionId                  : 19
+StartInfo                  : System.Diagnostics.ProcessStartInfo
+StartTime                  : 21/02/2020 1:27:17 p. m.
+SynchronizingObject        :
+Threads                    : System.Diagnostics.ProcessThreadCollection
+TotalProcessorTime         : 00:00:19.6406250
+UserProcessorTime          : 00:00:17.3750000
+VirtualMemorySize          : -1
+VirtualMemorySize64        : 4294967295
+EnableRaisingEvents        : False
+StandardInput              :
+StandardOutput             :
+StandardError              :
+WorkingSet                 : 86392832
+WorkingSet64               : 86392832
+Site                       :
+Container                  :
+
+Name                       : chrome
+SI                         : 19
+Handles                    : 136
+VM                         : 4294967295
+WS                         : 8482816
+PM                         : 2052096
+NPM                        : 11080
+Path                       :
+Company                    :
+CPU                        : 0,0625
+FileVersion                :
+ProductVersion             :
+Description                :
+Product                    :
+__NounName                 : Process
+BasePriority               : 8
+ExitCode                   :
+HasExited                  : False
+ExitTime                   :
+Handle                     : 3316
+SafeHandle                 : Microsoft.Win32.SafeHandles.SafeProcessHandle
+HandleCount                : 136
+Id                         : 14324
+MachineName                : .
+MainWindowHandle           : 0
+MainWindowTitle            :
+MainModule                 :
+MaxWorkingSet              : 1413120
+MinWorkingSet              : 204800
+Modules                    :
+NonpagedSystemMemorySize   : 11080
+NonpagedSystemMemorySize64 : 11080
+PagedMemorySize            : 2052096
+PagedMemorySize64          : 2052096
+PagedSystemMemorySize      : 152616
+PagedSystemMemorySize64    : 152616
+PeakPagedMemorySize        : 2101248
+PeakPagedMemorySize64      : 2101248
+PeakWorkingSet             : 9035776
+PeakWorkingSet64           : 9035776
+PeakVirtualMemorySize      : -1
+PeakVirtualMemorySize64    : 4294967295
+PriorityBoostEnabled       : True
+PriorityClass              : Normal
+PrivateMemorySize          : 2052096
+PrivateMemorySize64        : 2052096
+PrivilegedProcessorTime    : 00:00:00.0156250
+ProcessName                : chrome
+ProcessorAffinity          : 3
+Responding                 : True
+SessionId                  : 19
+StartInfo                  : System.Diagnostics.ProcessStartInfo
+StartTime                  : 21/02/2020 7:14:42 a. m.
+SynchronizingObject        :
+Threads                    : System.Diagnostics.ProcessThreadCollection
+TotalProcessorTime         : 00:00:00.0625000
+UserProcessorTime          : 00:00:00.0468750
+VirtualMemorySize          : -1
+VirtualMemorySize64        : 4294967295
+EnableRaisingEvents        : False
+StandardInput              :
+StandardOutput             :
+StandardError              :
+WorkingSet                 : 8482816
+WorkingSet64               : 8482816
+Site                       :
+Container                  :
+
+Name                       : chrome
+SI                         : 19
+Handles                    : 463
+VM                         : 4294967295
+WS                         : 37867520
+PM                         : 27361280
+NPM                        : 29960
+Path                       :
+Company                    :
+CPU                        : 59,640625
+FileVersion                :
+ProductVersion             :
+Description                :
+Product                    :
+__NounName                 : Process
+BasePriority               : 8
+ExitCode                   :
+HasExited                  : False
+ExitTime                   :
+Handle                     : 3192
+SafeHandle                 : Microsoft.Win32.SafeHandles.SafeProcessHandle
+HandleCount                : 463
+Id                         : 14616
+MachineName                : .
+MainWindowHandle           : 0
+MainWindowTitle            :
+MainModule                 :
+MaxWorkingSet              : 1413120
+MinWorkingSet              : 204800
+Modules                    :
+NonpagedSystemMemorySize   : 29960
+NonpagedSystemMemorySize64 : 29960
+PagedMemorySize            : 27361280
+PagedMemorySize64          : 27361280
+PagedSystemMemorySize      : 488504
+PagedSystemMemorySize64    : 488504
+PeakPagedMemorySize        : 28884992
+PeakPagedMemorySize64      : 28884992
+PeakWorkingSet             : 50507776
+PeakWorkingSet64           : 50507776
+PeakVirtualMemorySize      : -1
+PeakVirtualMemorySize64    : 4294967295
+PriorityBoostEnabled       : True
+>> ErrorTerminación(): "Se ha detenido la canalización."
+>> ErrorTerminación(): "Se ha detenido la canalización."
+PS C:\Users\S T E V E N> Get-Process |Export-Csv servicios.csv -Delimiter ((Get-Culture).TextInfo.ListSeparator)
+
+PS C:\Users\S T E V E N> cat ./servicios.csv
+#TYPE System.Diagnostics.Process
+"Name";"SI";"Handles";"VM";"WS";"PM";"NPM";"Path";"Company";"CPU";"FileVersion";"ProductVersion";"Description";"Product";"__NounName";"BasePriority";"ExitCode";"HasExited";"ExitTime";"Handle";"SafeHandle";"HandleCount";"Id";"MachineName";"MainWindowHandle";"MainWindowTitle";"MainModule";"MaxWorkingSet";"MinWorkingSet";"Modules";"NonpagedSystemMemorySize";"NonpagedSystemMemorySize64";"PagedMemorySize";"PagedMemorySize64";"PagedSystemMemorySize";"PagedSystemMemorySize64";"PeakPagedMemorySize";"PeakPagedMemorySize64";"PeakWorkingSet";"PeakWorkingSet64";"PeakVirtualMemorySize";"PeakVirtualMemorySize64";"PriorityBoostEnabled";"PriorityClass";"PrivateMemorySize";"PrivateMemorySize64";"PrivilegedProcessorTime";"ProcessName";"ProcessorAffinity";"Responding";"SessionId";"StartInfo";"StartTime";"SynchronizingObject";"Threads";"TotalProcessorTime";"UserProcessorTime";"VirtualMemorySize";"VirtualMemorySize64";"EnableRaisingEvents";"StandardInput";"StandardOutput";"StandardError";"WorkingSet";"WorkingSet64";"Site";"Container"
+"ApplicationFrameHost";"19";"317";"4294967295";"24326144";"7221248";"19440";;;"0,4375";;;;;"Process";"8";;"False";;"3600";"Microsoft.Win32.SafeHandles.SafeProcessHandle";"317";"4392";".";"197230";"Configuraci?n";;"1413120";"204800";;"19440";"19440";"7221248";"7221248";"323312";"323312";"8433664";"8433664";"28008448";"28008448";"-1";"4294967295";"True";"Normal";"7221248";"7221248";"00:00:00.3281250";"ApplicationFrameHost";"3";"True";"19";"System.Diagnostics.ProcessStartInfo";"21/02/2020 7:13:07 a. m.";;"System.Diagnostics.ProcessThreadCollection";"00:00:00.4375000";"00:00:00.1093750";"-1";"4294967295";"False";;;;"24326144";"24326144";;
+"armsvc";"0";"328";"69824512";"2662400";"3530752";"18184";;;;;;;;"Process";"8";;;;;;"328";"3968";".";"0";"";;;;;"18184";"18184";"3530752";"3530752";"148792";"148792";"4243456";"4243456";"18919424";"18919424";"89673728";"89673728";;;"3530752";"3530752";;"armsvc";;"True";"0";"System.Diagnostics.ProcessStartInfo";;;"System.Diagnostics.ProcessThreadCollection";;;"69824512";"69824512";"False";;;;"2662400";"2662400";;
+"AsusSmartGestureDetector64";"19";"249";"4294967295";"159744";"2813952";"12704";;;"0,5";;;;;"Process";"6";;"False";;"2628";"Microsoft.Win32.SafeHandles.SafeProcessHandle";"249";"1416";".";"0";"";;"1413120";"204800";;"12704";"12704";"2813952";"2813952";"182056";"182056";"2940928";"2940928";"12136448";"12136448";"-1";"4294967295";"True";"BelowNormal";"2813952";"2813952";"00:00:00.3281250";"AsusSmartGestureDetector64";"3";"True";"19";"System.Diagnostics.ProcessStartInfo";"21/02/2020 7:13:15 a. m.";;"System.Diagnostics.ProcessThreadCollection";"00:00:00.5000000";"00:00:00.1718750";"-1";"4294967295";"False";;;;"159744";"159744";;
+"AsusTPCenter";"19";"243";"4294967295";"811008";"3485696";"16664";;;"4,578125";;;;;"Process";"6";;"False";;"3328";"Microsoft.Win32.SafeHandles.SafeProcessHandle";"243";"16332";".";"0";"";;"1413120";"204800";;"16664";"16664";"3485696";"3485696";"192752";"192752";"3833856";"3833856";"14266368";"14266368";"-1";"4294967295";"True";"BelowNormal";"3485696";"3485696";"00:00:02.4375000";"AsusTPCenter";"3";"True";"19";"System.Diagnostics.ProcessStartInfo";"21/02/2020 1:21:58 p. m.";;"System.Diagnostics.ProcessThreadCollection";"00:00:04.5781250";"00:00:02.1406250";"-1";"4294967295";"False";;;;"811008";"811008";;
+"AsusTPHelper";"19";"113";"4294967295";"180224";"1458176";"8488";;;"0,25";;;;;"Process";"6";;;;;;"113";"2556";".";"0";"";;;;;"8488";"8488";"1458176";"1458176";"119728";"119728";"1589248";"1589248";"7290880";"7290880";"-1";"4294967295";;;"1458176";"1458176";"00:00:00.2187500";"AsusTPHelper";;"True";"19";"System.Diagnostics.ProcessStartInfo";"21/02/2020 7:13:18 a. m.";;"System.Diagnostics.ProcessThreadCollection";"00:00:00.2500000";"00:00:00.0312500";"-1";"4294967295";"False";;;;"180224";"180224";;
+"AsusTPLoader";"19";"270";"4294967295";"376832";"2846720";"14808";;;"1,375";;;;;"Process";"6";;"False";;"3764";"Microsoft.Win32.SafeHandles.SafeProcessHandle";"270";"9560";".";"0";"";;"1413120";"204800";;"14808";"14808";"2846720";"2846720";"203000";"203000";"3461120";"3461120";"19951616";"19951616";"-1";"4294967295";"True";"BelowNormal";"2846720";"2846720";"00:00:01.1093750";"AsusTPLoader";"3";"True";"19";"System.Diagnostics.ProcessStartInfo";"21/02/2020 7:12:46 a. m.";;"System.Diagnostics.ProcessThreadCollection";"00:00:01.3750000";"00:00:00.2656250";"-1";"4294967295";"False";;;;"376832";"376832";;
+"audiodg";"0";"593";"4294967295";"23588864";"22913024";"17872";;;"330,609375";;;;;"Process";"8";;;;;;"593";"16552";".";"0";"";;;;;"17872";"17872";"22913024";"22913024";"129112";"129112";"27987968";"27987968";"33914880";"33914880";"-1";"4294967295";;;"22913024";"22913024";"00:00:10.5000000";"audiodg";;"True";"0";"System.Diagnostics.ProcessStartInfo";"21/02/2020 8:13:47 a. m.";;"System.Diagnostics.ProcessThreadCollection";"00:05:30.6250000";"00:05:20.1250000";"-1";"4294967295";"False";;;;"23588864";"23588864";;
+"avp";"0";"5378";"1001938944";"226639872";"463577088";"359064";;;;;;;;"Process";"8";;;;;;"5378";"3940";".";"0";"";;;;;"359064";"359064";"463577088";"463577088";"705992";"705992";"596025344";"596025344";"435314688";"435314688";"1176829952";"1176829952";;;"463577088";"463577088";;"avp";;"True";"0";"System.Diagnostics.ProcessStartInfo";;;"System.Diagnostics.ProcessThreadCollection";;;"1001938944";"1001938944";"False";;;;"226639872";"226639872";;
+"avpui";"19";"841";"379908096";"3784704";"80031744";"106552";"C:\Program Files (x86)\Kaspersky Lab\Kaspersky Total Security 20.0\avpui.exe";"AO Kaspersky Lab";"36,5";"20.0.21.1325";"20.0.21.1325";"Kaspersky Anti-Virus";"Kaspersky Anti-Virus";"Process";"8";;"False";;"3452";"Microsoft.Win32.SafeHandles.SafeProcessHandle";"841";"11880";".";"0";"";"System.Diagnostics.ProcessModule (avpui.exe)";"1413120";"204800";"System.Diagnostics.ProcessModuleCollection";"106552";"106552";"80031744";"80031744";"540640";"540640";"84426752";"84426752";"132849664";"132849664";"406368256";"406368256";"True";"Normal";"80031744";"80031744";"00:00:10.6250000";"avpui";"3";"True";"19";"System.Diagnostics.ProcessStartInfo";"21/02/2020 7:11:46 a. m.";;"System.Diagnostics.ProcessThreadCollection";"00:00:36.5000000";"00:00:25.8750000";"379908096";"379908096";"False";;;;"3784704";"3784704";;
+"chrome";"19";"240";"4294967295";"43307008";"20455424";"16584";;;"1,296875";;;;;"Process";"4";;"False";;"3868";"Microsoft.Win32.SafeHandles.SafeProcessHandle";"240";"1940";".";"0";"";;"1413120";"204800";;"16584";"16584";"20455424";"20455424";"422800";"422800";"24731648";"24731648";"45346816";"45346816";"-1";"4294967295";"True";"Idle";"20455424";"20455424";"00:00:00.2187500";"chrome";"3";"True";"19";"System.Diagnostics.ProcessStartInfo";"21/02/2020 1:40:17 p. m.";;"System.Diagnostics.ProcessThreadCollection";"00:00:01.2968750";"00:00:01.0781250";"-1";"4294967295";"False";;;;"43307008";"43307008";;
+"chrome";"19";"352";"4294967295";"92909568";"65318912";"25560";;;"275,484375";;;;;"Process";"4";;"False";;"3292";"Microsoft.Win32.SafeHandles.SafeProcessHandle";"352";"3552";".";"0";"";;"1413120";"204800";;"25560";"25560";"65318912";"65318912";"540320";"540320";"78577664";"78577664";"137609216";"137609216";"-1";"4294967295";"True";"Idle";"65318912";"65318912";"00:00:07.7968750";"chrome";"3";"True";"19";"System.Diagnostics.ProcessStartInfo";"21/02/2020 1:37:03 p. m.";;"System.Diagnostics.ProcessThreadCollection";"00:04:35.4843750";"00:04:27.6875000";"-1";"4294967295";"False";;;;"92909568";"92909568";;
+"chrome";"19";"213";"4294967295";"23384064";"12677120";"14952";;;"0,234375";;;;;"Process";"4";;"False";;"3940";"Microsoft.Win32.SafeHandles.SafeProcessHandle";"213";"5888";".";"0";"";;"1413120";"204800";;"14952";"14952";"12677120";"12677120";"405288";"405288";"13930496";"13930496";"23441408";"23441408";"-1";"4294967295";"True";"Idle";"12677120";"12677120";"00:00:00.1093750";"chrome";"3";"True";"19";"System.Diagnostics.ProcessStartInfo";"21/02/2020 1:51:42 p. m.";;"System.Diagnostics.ProcessThreadCollection";"00:00:00.2343750";"00:00:00.1250000";"-1";"4294967295";"False";;;;"23384064";"23384064";;
+"chrome";"19";"351";"4294967295";"68898816";"52064256";"23520";;;"7,703125";;;;;"Process";"4";;"False";;"2172";"Microsoft.Win32.SafeHandles.SafeProcessHandle";"351";"8316";".";"0";"";;"1413120";"204800";;"23520";"23520";"52064256";"52064256";"540088";"540088";"61296640";"61296640";"111939584";"111939584";"-1";"4294967295";"True";"Idle";"52064256";"52064256";"00:00:00.8437500";"chrome";"3";"True";"19";"System.Diagnostics.ProcessStartInfo";"21/02/2020 1:30:19 p. m.";;"System.Diagnostics.ProcessThreadCollection";"00:00:07.7031250";"00:00:06.8593750";"-1";"4294967295";"False";;;;"68898816";"68898816";;
+"chrome";"19";"299";"4294967295";"16199680";"7262208";"19816";;;"18,875";;;;;"Process";"8";;"False";;"3952";"Microsoft.Win32.SafeHandles.SafeProcessHandle";"299";"9080";".";"0";"";;"1413120";"204800";;"19816";"19816";"7262208";"7262208";"453000";"453000";"7274496";"7274496";"17502208";"17502208";"-1";"4294967295";"True";"Normal";"7262208";"7262208";"00:00:07.5468750";"chrome";"3";"True";"19";"System.Diagnostics.ProcessStartInfo";"21/02/2020 1:24:23 p. m.";;"System.Diagnostics.ProcessThreadCollection";"00:00:18.8750000";"00:00:11.3281250";"-1";"4294967295";"False";;;;"16199680";"16199680";;
+"chrome";"19";"289";"4294967295";"78622720";"44765184";"20120";;;"7,203125";;;;;"Process";"4";;"False";;"3104";"Microsoft.Win32.SafeHandles.SafeProcessHandle";"289";"9524";".";"0";"";;"1413120";"204800";;"20120";"20120";"44765184";"44765184";"459624";"459624";"64430080";"64430080";"100700160";"100700160";"-1";"4294967295";"True";"Idle";"44765184";"44765184";"00:00:00.7031250";"chrome";"3";"True";"19";"System.Diagnostics.ProcessStartInfo";"21/02/2020 1:51:41 p. m.";;"System.Diagnostics.ProcessThreadCollection";"00:00:07.2031250";"00:00:06.5000000";"-1";"4294967295";"False";;;;"78622720";"78622720";;
+"chrome";"19";"466";"4294967295";"39751680";"30851072";"28616";;;"210,84375";;;;;"Process";"10";;"False";;"3648";"Microsoft.Win32.SafeHandles.SafeProcessHandle";"466";"11024";".";"0";"";;"1413120";"204800";;"28616";"28616";"30851072";"30851072";"527592";"527592";"399175680";"399175680";"110284800";"110284800";"-1";"4294967295";"True";"AboveNormal";"30851072";"30851072";"00:00:53.2812500";"chrome";"3";"True";"19";"System.Diagnostics.ProcessStartInfo";"21/02/2020 7:14:42 a. m.";;"System.Diagnostics.ProcessThreadCollection";"00:03:30.8437500";"00:02:37.5625000";"-1";"4294967295";"False";;;;"39751680";"39751680";;
+"chrome";"19";"363";"4294967295";"260145152";"172527616";"33392";;;"352,65625";;;;;"Process";"8";;"False";;"3992";"Microsoft.Win32.SafeHandles.SafeProcessHandle";"363";"11276";".";"0";"";;"1413120";"204800";;"33392";"33392";"172527616";"172527616";"808768";"808768";"185393152";"185393152";"290136064";"290136064";"-1";"4294967295";"True";"Normal";"172527616";"172527616";"00:00:34.7968750";"chrome";"3";"True";"19";"System.Diagnostics.ProcessStartInfo";"21/02/2020 1:24:01 p. m.";;"System.Diagnostics.ProcessThreadCollection";"00:05:52.6718750";"00:05:17.8750000";"-1";"4294967295";"False";;;;"260145152";"260145152";;
+"chrome";"19";"189";"4294967295";"6262784";"1720320";"9312";;;"0,109375";;;;;"Process";"8";;"False";;"3056";"Microsoft.Win32.SafeHandles.SafeProcessHandle";"189";"11636";".";"0";"";;"1413120";"204800";;"9312";"9312";"1720320";"1720320";"109904";"109904";"1769472";"1769472";"6725632";"6725632";"-1";"4294967295";"True";"Normal";"1720320";"1720320";"00:00:00.0625000";"chrome";"3";"True";"19";"System.Diagnostics.ProcessStartInfo";"21/02/2020 7:14:40 a. m.";;"System.Diagnostics.ProcessThreadCollection";"00:00:00.1093750";"00:00:00.0468750";"-1";"4294967295";"False";;;;"6262784";"6262784";;
+"chrome";"19";"522";"4294967295";"54050816";"38150144";"28416";;;"5,265625";;;;;"Process";"4";;"False";;"1304";"Microsoft.Win32.SafeHandles.SafeProcessHandle";"522";"13328";".";"0";"";;"1413120";"204800";;"28416";"28416";"38150144";"38150144";"837408";"837408";"45252608";"45252608";"101437440";"101437440";"-1";"4294967295";"True";"Idle";"38150144";"38150144";"00:00:00.4062500";"chrome";"3";"True";"19";"System.Diagnostics.ProcessStartInfo";"21/02/2020 8:04:05 a. m.";;"System.Diagnostics.ProcessThreadCollection";"00:00:05.2656250";"00:00:04.8593750";"-1";"4294967295";"False";;;;"54050816";"54050816";;
+"chrome";"19";"299";"4294967295";"87707648";"55934976";"26376";;;"20,5";;;;;"Process";"8";;"False";;"4016";"Microsoft.Win32.SafeHandles.SafeProcessHandle";"299";"14300";".";"0";"";;"1413120";"204800";;"26376";"26376";"55934976";"55934976";"472248";"472248";"76890112";"76890112";"124997632";"124997632";"-1";"4294967295";"True";"Normal";"55934976";"55934976";"00:00:02.3906250";"chrome";"3";"True";"19";"System.Diagnostics.ProcessStartInfo";"21/02/2020 1:27:17 p. m.";;"System.Diagnostics.ProcessThreadCollection";"00:00:20.5000000";"00:00:18.1093750";"-1";"4294967295";"False";;;;"87707648";"87707648";;
+"chrome";"19";"136";"4294967295";"8482816";"2052096";"11080";;;"0,0625";;;;;"Process";"8";;"False";;"3432";"Microsoft.Win32.SafeHandles.SafeProcessHandle";"136";"14324";".";"0";"";;"1413120";"204800";;"11080";"11080";"2052096";"2052096";"152616";"152616";"2101248";"2101248";"9035776";"9035776";"-1";"4294967295";"True";"Normal";"2052096";"2052096";"00:00:00.0156250";"chrome";"3";"True";"19";"System.Diagnostics.ProcessStartInfo";"21/02/2020 7:14:42 a. m.";;"System.Diagnostics.ProcessThreadCollection";"00:00:00.0625000";"00:00:00.0468750";"-1";"4294967295";"False";;;;"8482816";"8482816";;
+"chrome";"19";"467";"4294967295";"37957632";"27607040";"30696";;;"60,5";;;;;"Process";"8";;"False";;"3676";"Microsoft.Win32.SafeHandles.SafeProcessHandle";"467";"14616";".";"0";"";;"1413120";"204800";;"30696";"30696";"27607040";"27607040";"488696";"488696";"28884992";"28884992";"50507776";"50507776";"-1";"4294967295";"True";"Normal";"27607040";"27607040";"00:00:20.5468750";"chrome";"3";"True";"19";"System.Diagnostics.ProcessStartInfo";"21/02/2020 7:14:42 a. m.";;"System.Diagnostics.ProcessThreadCollection";"00:01:00.5000000";"00:00:39.9531250";"-1";"4294967295";"False";;;;"37957632";"37957632";;
+"chrome";"19";"1559";"4294967295";"141750272";"92184576";"66120";;;"234,328125";;;;;"Process";"8";;"False";;"3576";"Microsoft.Win32.SafeHandles.SafeProcessHandle";"1559";"15608";".";"66682";"PowerShell/respuestaClase3.md at master ? njse22/PowerShell - Google Chrome";;"1413120";"204800";;"66120";"66120";"92184576";"92184576";"1102448";"1102448";"160411648";"160411648";"196190208";"196190208";"-1";"4294967295";"True";"Normal";"92184576";"92184576";"00:01:18.7031250";"chrome";"3";"True";"19";"System.Diagnostics.ProcessStartInfo";"21/02/2020 7:14:35 a. m.";;"System.Diagnostics.ProcessThreadCollection";"00:03:54.3281250";"00:02:35.6250000";"-1";"4294967295";"False";;;;"141750272";"141750272";;
+"chrome";"19";"292";"4294967295";"75005952";"42455040";"22568";;;"14,109375";;;;;"Process";"4";;"False";;"3700";"Microsoft.Win32.SafeHandles.SafeProcessHandle";"292";"16380";".";"0";"";;"1413120";"204800";;"22568";"22568";"42455040";"42455040";"448760";"448760";"44273664";"44273664";"103452672";"103452672";"-1";"4294967295";"True";"Idle";"42455040";"42455040";"00:00:01.9218750";"chrome";"3";"True";"19";"System.Diagnostics.ProcessStartInfo";"21/02/2020 1:29:35 p. m.";;"System.Diagnostics.ProcessThreadCollection";"00:00:14.1093750";"00:00:12.1875000";"-1";"4294967295";"False";;;;"75005952";"75005952";;
+"conhost";"0";"153";"4294967295";"1552384";"6893568";"10048";;;;;;;;"Process";"8";;;;;;"153";"4520";".";"0";"";;;;;"10048";"10048";"6893568";"6893568";"125352";"125352";"6955008";"6955008";"13152256";"13152256";"-1";"4294967295";;;"6893568";"6893568";;"conhost";;"True";"0";"System.Diagnostics.ProcessStartInfo";;;"System.Diagnostics.ProcessThreadCollection";;;"-1";"4294967295";"False";;;;"1552384";"1552384";;
+"csrss";"0";"796";"4294967295";"2383872";"2154496";"24944";;;;;;;;"Process";"13";;;;;;"796";"740";".";"0";"";;;;;"24944";"24944";"2154496";"2154496";"264744";"264744";"2596864";"2596864";"6033408";"6033408";"-1";"4294967295";;;"2154496";"2154496";;"csrss";;"True";"0";"System.Diagnostics.ProcessStartInfo";;;"System.Diagnostics.ProcessThreadCollection";;;"-1";"4294967295";"False";;;;"2383872";"2383872";;
+"csrss";"19";"571";"4294967295";"5337088";"2383872";"18568";;;;;;;;"Process";"13";;;;;;"571";"4844";".";"0";"";;;;;"18568";"18568";"2383872";"2383872";"207752";"207752";"11059200";"11059200";"13660160";"13660160";"-1";"4294967295";;;"2383872";"2383872";;"csrss";;"True";"19";"System.Diagnostics.ProcessStartInfo";;;"System.Diagnostics.ProcessThreadCollection";;;"-1";"4294967295";"False";;;;"5337088";"5337088";;
+"ctfmon";"19";"461";"4294967295";"16670720";"4333568";"15952";;;"20,8125";;;;;"Process";"13";;;;;;"461";"7056";".";"0";"";;;;;"15952";"15952";"4333568";"4333568";"187136";"187136";"4366336";"4366336";"16871424";"16871424";"-1";"4294967295";;;"4333568";"4333568";"00:00:15.5156250";"ctfmon";;"True";"19";"System.Diagnostics.ProcessStartInfo";"21/02/2020 7:11:45 a. m.";;"System.Diagnostics.ProcessThreadCollection";"00:00:20.8125000";"00:00:05.2968750";"-1";"4294967295";"False";;;;"16670720";"16670720";;
+"dasHost";"0";"344";"4294967295";"9035776";"6467584";"13840";;;;;;;;"Process";"8";;;;;;"344";"3524";".";"0";"";;;;;"13840";"13840";"6467584";"6467584";"136112";"136112";"8757248";"8757248";"16773120";"16773120";"-1";"4294967295";;;"6467584";"6467584";;"dasHost";;"True";"0";"System.Diagnostics.ProcessStartInfo";;;"System.Diagnostics.ProcessThreadCollection";;;"-1";"4294967295";"False";;;;"9035776";"9035776";;
+"dllhost";"0";"201";"4294967295";"5939200";"3833856";"17536";;;;;;;;"Process";"8";;;;;;"201";"6088";".";"0";"";;;;;"17536";"17536";"3833856";"3833856";"111432";"111432";"4272128";"4272128";"11354112";"11354112";"-1";"4294967295";;;"3833856";"3833856";;"dllhost";;"True";"0";"System.Diagnostics.ProcessStartInfo";;;"System.Diagnostics.ProcessThreadCollection";;;"-1";"4294967295";"False";;;;"5939200";"5939200";;
+"dllhost";"19";"229";"4294967295";"11689984";"3428352";"16856";;;"0,359375";;;;;"Process";"8";;"False";;"4076";"Microsoft.Win32.SafeHandles.SafeProcessHandle";"229";"12100";".";"0";"";;"1413120";"204800";;"16856";"16856";"3428352";"3428352";"144136";"144136";"5226496";"5226496";"13041664";"13041664";"-1";"4294967295";"True";"Normal";"3428352";"3428352";"00:00:00.2187500";"dllhost";"3";"True";"19";"System.Diagnostics.ProcessStartInfo";"21/02/2020 1:25:07 p. m.";;"System.Diagnostics.ProcessThreadCollection";"00:00:00.3593750";"00:00:00.1406250";"-1";"4294967295";"False";;;;"11689984";"11689984";;
+"dwm";"19";"862";"4294967295";"53256192";"50933760";"41768";;;;;;;;"Process";"13";;;;;;"862";"8736";".";"0";"";;;;;"41768";"41768";"50933760";"50933760";"625528";"625528";"66756608";"66756608";"83525632";"83525632";"-1";"4294967295";;;"50933760";"50933760";;"dwm";;"True";"19";"System.Diagnostics.ProcessStartInfo";;;"System.Diagnostics.ProcessThreadCollection";;;"-1";"4294967295";"False";;;;"53256192";"53256192";;
+"explorer";"19";"2988";"4294967295";"167038976";"178810880";"158544";;;"313,328125";;;;;"Process";"8";;"False";;"4068";"Microsoft.Win32.SafeHandles.SafeProcessHandle";"2988";"14316";".";"65732";"";;"1413120";"204800";;"158544";"158544";"178810880";"178810880";"1289520";"1289520";"194363392";"194363392";"177737728";"177737728";"-1";"4294967295";"True";"Normal";"178810880";"178810880";"00:03:03.7343750";"explorer";"3";"True";"19";"System.Diagnostics.ProcessStartInfo";"21/02/2020 7:11:46 a. m.";;"System.Diagnostics.ProcessThreadCollection";"00:05:13.3281250";"00:02:09.5937500";"-1";"4294967295";"False";;;;"167038976";"167038976";;
+"fontdrvhost";"0";"31";"4294967295";"724992";"1503232";"5432";;;;;;;;"Process";"8";;;;;;"31";"524";".";"0";"";;;;;"5432";"5432";"1503232";"1503232";"36016";"36016";"1560576";"1560576";"3452928";"3452928";"-1";"4294967295";;;"1503232";"1503232";;"fontdrvhost";;"True";"0";"System.Diagnostics.ProcessStartInfo";;;"System.Diagnostics.ProcessThreadCollection";;;"-1";"4294967295";"False";;;;"724992";"724992";;
+"fontdrvhost";"19";"31";"4294967295";"12300288";"5042176";"8696";;;;;;;;"Process";"8";;;;;;"31";"1788";".";"0";"";;;;;"8696";"8696";"5042176";"5042176";"258128";"258128";"5070848";"5070848";"25452544";"25452544";"-1";"4294967295";;;"5042176";"5042176";;"fontdrvhost";;"True";"19";"System.Diagnostics.ProcessStartInfo";;;"System.Diagnostics.ProcessThreadCollection";;;"-1";"4294967295";"False";;;;"12300288";"12300288";;
+"Idle";"0";"0";"8192";"8192";"61440";"272";;;;;;;;"Process";"0";;;;;;"0";"0";".";"0";"";;;;;"272";"272";"61440";"61440";"0";"0";"61440";"61440";"12288";"12288";"8192";"8192";;;"61440";"61440";;"Idle";;"True";"0";"System.Diagnostics.ProcessStartInfo";;;"System.Diagnostics.ProcessThreadCollection";;;"8192";"8192";"False";;;;"8192";"8192";;
+"igfxCUIService";"0";"188";"4294967295";"4739072";"2260992";"11072";;;;;;;;"Process";"8";;;;;;"188";"1108";".";"0";"";;;;;"11072";"11072";"2260992";"2260992";"99872";"99872";"2490368";"2490368";"10035200";"10035200";"-1";"4294967295";;;"2260992";"2260992";;"igfxCUIService";;"True";"0";"System.Diagnostics.ProcessStartInfo";;;"System.Diagnostics.ProcessThreadCollection";;;"-1";"4294967295";"False";;;;"4739072";"4739072";;
+"igfxEM";"19";"268";"4294967295";"12480512";"7577600";"15416";;;"0,4375";;;;;"Process";"8";;"False";;"3980";"Microsoft.Win32.SafeHandles.SafeProcessHandle";"268";"11368";".";"0";"";;"1413120";"204800";;"15416";"15416";"7577600";"7577600";"196928";"196928";"7790592";"7790592";"17731584";"17731584";"-1";"4294967295";"True";"Normal";"7577600";"7577600";"00:00:00.2500000";"igfxEM";"3";"True";"19";"System.Diagnostics.ProcessStartInfo";"21/02/2020 7:11:46 a. m.";;"System.Diagnostics.ProcessThreadCollection";"00:00:00.4375000";"00:00:00.1875000";"-1";"4294967295";"False";;;;"12480512";"12480512";;
+"igfxHK";"19";"146";"4294967295";"9678848";"7258112";"11072";;;"0,265625";;;;;"Process";"8";;"False";;"3308";"Microsoft.Win32.SafeHandles.SafeProcessHandle";"146";"8852";".";"0";"";;"1413120";"204800";;"11072";"11072";"7258112";"7258112";"124288";"124288";"7413760";"7413760";"14741504";"14741504";"-1";"4294967295";"True";"Normal";"7258112";"7258112";"00:00:00.0937500";"igfxHK";"3";"True";"19";"System.Diagnostics.ProcessStartInfo";"21/02/2020 7:11:46 a. m.";;"System.Diagnostics.ProcessThreadCollection";"00:00:00.2656250";"00:00:00.1718750";"-1";"4294967295";"False";;;;"9678848";"9678848";;
+"igfxTray";"19";"236";"4294967295";"11825152";"7933952";"13656";;;"0,96875";;;;;"Process";"8";;"False";;"3780";"Microsoft.Win32.SafeHandles.SafeProcessHandle";"236";"6364";".";"0";"";;"1413120";"204800";;"13656";"13656";"7933952";"7933952";"174192";"174192";"8634368";"8634368";"17424384";"17424384";"-1";"4294967295";"True";"Normal";"7933952";"7933952";"00:00:00.6562500";"igfxTray";"3";"True";"19";"System.Diagnostics.ProcessStartInfo";"21/02/2020 7:11:47 a. m.";;"System.Diagnostics.ProcessThreadCollection";"00:00:00.9687500";"00:00:00.3125000";"-1";"4294967295";"False";;;;"11825152";"11825152";;
+"IpOverUsbSvc";"0";"274";"126816256";"3391488";"9555968";"16952";;;;;;;;"Process";"8";;;;;;"274";"3380";".";"0";"";;;;;"16952";"16952";"9555968";"9555968";"179712";"179712";"9928704";"9928704";"14168064";"14168064";"137302016";"137302016";;;"9555968";"9555968";;"IpOverUsbSvc";;"True";"0";"System.Diagnostics.ProcessStartInfo";;;"System.Diagnostics.ProcessThreadCollection";;;"126816256";"126816256";"False";;;;"3391488";"3391488";;
+"jusched";"19";"163";"74199040";"7081984";"2097152";"11536";"C:\Program Files (x86)\Common Files\Java\Java Update\jusched.exe";"Oracle Corporation";"0,078125";"2.8.211.12";"2.8.211.12";"Java Update Scheduler";"Java Platform SE Auto Updater";"Process";"8";;"False";;"2976";"Microsoft.Win32.SafeHandles.SafeProcessHandle";"163";"15292";".";"0";"";"System.Diagnostics.ProcessModule (jusched.exe)";"1413120";"204800";"System.Diagnostics.ProcessModuleCollection";"11536";"11536";"2097152";"2097152";"146064";"146064";"2314240";"2314240";"8224768";"8224768";"78131200";"78131200";"True";"Normal";"2097152";"2097152";"00:00:00.0625000";"jusched";"3";"True";"19";"System.Diagnostics.ProcessStartInfo";"21/02/2020 7:12:40 a. m.";;"System.Diagnostics.ProcessThreadCollection";"00:00:00.0781250";"00:00:00.0156250";"74199040";"74199040";"False";;;;"7081984";"7081984";;
+"ksde";"0";"783";"172228608";"20496384";"28712960";"209400";;;;;;;;"Process";"8";;;;;;"783";"9636";".";"0";"";;;;;"209400";"209400";"28712960";"28712960";"238896";"238896";"30388224";"30388224";"43470848";"43470848";"194510848";"194510848";;;"28712960";"28712960";;"ksde";;"True";"0";"System.Diagnostics.ProcessStartInfo";;;"System.Diagnostics.ProcessThreadCollection";;;"172228608";"172228608";"False";;;;"20496384";"20496384";;
+"ksdeui";"19";"626";"385363968";"1544192";"48377856";"49520";"C:\Program Files (x86)\Kaspersky Lab\Kaspersky Secure Connection 4.0\ksdeui.exe";"AO Kaspersky Lab";"10,5625";"20.0.21.1325";"20.0.21.1325";"Kaspersky Secure Connection";"Kaspersky Anti-Virus";"Process";"8";;"False";;"3944";"Microsoft.Win32.SafeHandles.SafeProcessHandle";"626";"14904";".";"0";"";"System.Diagnostics.ProcessModule (ksdeui.exe)";"1413120";"204800";"System.Diagnostics.ProcessModuleCollection";"49520";"49520";"48377856";"48377856";"623528";"623528";"50814976";"50814976";"66527232";"66527232";"407220224";"407220224";"True";"Normal";"48377856";"48377856";"00:00:04.1875000";"ksdeui";"3";"True";"19";"System.Diagnostics.ProcessStartInfo";"21/02/2020 7:11:41 a. m.";;"System.Diagnostics.ProcessThreadCollection";"00:00:10.5625000";"00:00:06.3750000";"385363968";"385363968";"False";;;;"1544192";"1544192";;
+"LockApp";"19";"514";"4294967295";"38875136";"15482880";"25720";;;"1,046875";;;;;"Process";"8";;"False";;"3500";"Microsoft.Win32.SafeHandles.SafeProcessHandle";"514";"14460";".";"0";"";;"1413120";"204800";;"25720";"25720";"15482880";"15482880";"507112";"507112";"17117184";"17117184";"49438720";"49438720";"-1";"4294967295";"True";"Normal";"15482880";"15482880";"00:00:00.4375000";"LockApp";"3";"True";"19";"System.Diagnostics.ProcessStartInfo";"21/02/2020 8:18:25 a. m.";;"System.Diagnostics.ProcessThreadCollection";"00:00:01.0468750";"00:00:00.6093750";"-1";"4294967295";"False";;;;"38875136";"38875136";;
+"lsass";"0";"1544";"4294967295";"16232448";"9920512";"31688";;;;;;;;"Process";"9";;;;;;"1544";"968";".";"0";"";;;;;"31688";"31688";"9920512";"9920512";"216432";"216432";"10424320";"10424320";"23752704";"23752704";"-1";"4294967295";;;"9920512";"9920512";;"lsass";;"True";"0";"System.Diagnostics.ProcessStartInfo";;;"System.Diagnostics.ProcessThreadCollection";;;"-1";"4294967295";"False";;;;"16232448";"16232448";;
+"Memory Compression";"0";"0";"266731520";"210407424";"724992";"0";;;;;;;;"Process";"8";;;;;;"0";"2196";".";"0";"";;;;;"0";"0";"724992";"724992";"4224";"4224";"1167360";"1167360";"286236672";"286236672";"561512448";"561512448";;;"724992";"724992";;"Memory Compression";;"True";"0";"System.Diagnostics.ProcessStartInfo";;;"System.Diagnostics.ProcessThreadCollection";;;"266731520";"266731520";"False";;;;"210407424";"210407424";;
+"NitroPDFDriverService11x64";"0";"130";"4294967295";"1236992";"1347584";"7824";;;;;;;;"Process";"8";;;;;;"130";"3392";".";"0";"";;;;;"7824";"7824";"1347584";"1347584";"92456";"92456";"1417216";"1417216";"5890048";"5890048";"-1";"4294967295";;;"1347584";"1347584";;"NitroPDFDriverService11x64";;"True";"0";"System.Diagnostics.ProcessStartInfo";;;"System.Diagnostics.ProcessThreadCollection";;;"-1";"4294967295";"False";;;;"1236992";"1236992";;
+"NLSSRV32";"0";"698";"17481728";"1146880";"1019904";"7552";;;;;;;;"Process";"8";;;;;;"698";"3148";".";"0";"";;;;;"7552";"7552";"1019904";"1019904";"46992";"46992";"1089536";"1089536";"3989504";"3989504";"21381120";"21381120";;;"1019904";"1019904";;"NLSSRV32";;"True";"0";"System.Diagnostics.ProcessStartInfo";;;"System.Diagnostics.ProcessThreadCollection";;;"17481728";"17481728";"False";;;;"1146880";"1146880";;
+"notepad";"19";"271";"4294967295";"16887808";"3223552";"14936";;;"1,34375";;;;;"Process";"8";;"False";;"3688";"Microsoft.Win32.SafeHandles.SafeProcessHandle";"271";"14196";".";"1442212";"*Nuevo documento de texto.txt: Bloc de notas";;"1413120";"204800";;"14936";"14936";"3223552";"3223552";"241752";"241752";"3510272";"3510272";"17285120";"17285120";"-1";"4294967295";"True";"Normal";"3223552";"3223552";"00:00:00.9062500";"notepad";"3";"True";"19";"System.Diagnostics.ProcessStartInfo";"21/02/2020 1:28:39 p. m.";;"System.Diagnostics.ProcessThreadCollection";"00:00:01.3437500";"00:00:00.4375000";"-1";"4294967295";"False";;;;"16887808";"16887808";;
+"OfficeClickToRun";"0";"768";"4294967295";"31895552";"44867584";"29040";;;;;;;;"Process";"8";;;;;;"768";"3924";".";"0";"";;;;;"29040";"29040";"44867584";"44867584";"314480";"314480";"76304384";"76304384";"82059264";"82059264";"-1";"4294967295";;;"44867584";"44867584";;"OfficeClickToRun";;"True";"0";"System.Diagnostics.ProcessStartInfo";;;"System.Diagnostics.ProcessThreadCollection";;;"-1";"4294967295";"False";;;;"31895552";"31895552";;
+"pg_ctl";"0";"141";"4294967295";"1540096";"1613824";"9032";;;;;;;;"Process";"8";;;;;;"141";"3428";".";"0";"";;;;;"9032";"9032";"1613824";"1613824";"113928";"113928";"1699840";"1699840";"7450624";"7450624";"-1";"4294967295";;;"1613824";"1613824";;"pg_ctl";;"True";"0";"System.Diagnostics.ProcessStartInfo";;;"System.Diagnostics.ProcessThreadCollection";;;"-1";"4294967295";"False";;;;"1540096";"1540096";;
+"postgres";"0";"378";"4294967295";"1626112";"3293184";"13336";;;;;;;;"Process";"8";;;;;;"378";"4512";".";"0";"";;;;;"13336";"13336";"3293184";"3293184";"471752";"471752";"3436544";"3436544";"19738624";"19738624";"-1";"4294967295";;;"3293184";"3293184";;"postgres";;"True";"0";"System.Diagnostics.ProcessStartInfo";;;"System.Diagnostics.ProcessThreadCollection";;;"-1";"4294967295";"False";;;;"1626112";"1626112";;
+"postgres";"0";"320";"4294967295";"1777664";"2703360";"9088";;;;;;;;"Process";"8";;;;;;"320";"4808";".";"0";"";;;;;"9088";"9088";"2703360";"2703360";"166912";"166912";"2826240";"2826240";"7057408";"7057408";"-1";"4294967295";;;"2703360";"2703360";;"postgres";;"True";"0";"System.Diagnostics.ProcessStartInfo";;;"System.Diagnostics.ProcessThreadCollection";;;"-1";"4294967295";"False";;;;"1777664";"1777664";;
+"postgres";"0";"320";"4294967295";"1564672";"3047424";"8952";;;;;;;;"Process";"8";;;;;;"320";"4884";".";"0";"";;;;;"8952";"8952";"3047424";"3047424";"457040";"457040";"3076096";"3076096";"8769536";"8769536";"-1";"4294967295";;;"3047424";"3047424";;"postgres";;"True";"0";"System.Diagnostics.ProcessStartInfo";;;"System.Diagnostics.ProcessThreadCollection";;;"-1";"4294967295";"False";;;;"1564672";"1564672";;
+"postgres";"0";"319";"4294967295";"1306624";"3035136";"8952";;;;;;;;"Process";"8";;;;;;"319";"4892";".";"0";"";;;;;"8952";"8952";"3035136";"3035136";"457040";"457040";"3112960";"3112960";"8351744";"8351744";"-1";"4294967295";;;"3035136";"3035136";;"postgres";;"True";"0";"System.Diagnostics.ProcessStartInfo";;;"System.Diagnostics.ProcessThreadCollection";;;"-1";"4294967295";"False";;;;"1306624";"1306624";;
+"postgres";"0";"320";"4294967295";"1339392";"3022848";"8952";;;;;;;;"Process";"8";;;;;;"320";"4900";".";"0";"";;;;;"8952";"8952";"3022848";"3022848";"457040";"457040";"3125248";"3125248";"11538432";"11538432";"-1";"4294967295";;;"3022848";"3022848";;"postgres";;"True";"0";"System.Diagnostics.ProcessStartInfo";;;"System.Diagnostics.ProcessThreadCollection";;;"-1";"4294967295";"False";;;;"1339392";"1339392";;
+"postgres";"0";"320";"4294967295";"2338816";"3862528";"9088";;;;;;;;"Process";"8";;;;;;"320";"4908";".";"0";"";;;;;"9088";"9088";"3862528";"3862528";"457040";"457040";"3887104";"3887104";"7843840";"7843840";"-1";"4294967295";;;"3862528";"3862528";;"postgres";;"True";"0";"System.Diagnostics.ProcessStartInfo";;;"System.Diagnostics.ProcessThreadCollection";;;"-1";"4294967295";"False";;;;"2338816";"2338816";;
+"postgres";"0";"319";"4294967295";"2002944";"2732032";"8952";;;;;;;;"Process";"8";;;;;;"319";"4916";".";"0";"";;;;;"8952";"8952";"2732032";"2732032";"166912";"166912";"2756608";"2756608";"7045120";"7045120";"-1";"4294967295";;;"2732032";"2732032";;"postgres";;"True";"0";"System.Diagnostics.ProcessStartInfo";;;"System.Diagnostics.ProcessThreadCollection";;;"-1";"4294967295";"False";;;;"2002944";"2002944";;
+"postgres";"0";"320";"4294967295";"1875968";"3334144";"8952";;;;;;;;"Process";"8";;;;;;"320";"4932";".";"0";"";;;;;"8952";"8952";"3334144";"3334144";"457040";"457040";"3428352";"3428352";"7966720";"7966720";"-1";"4294967295";;;"3334144";"3334144";;"postgres";;"True";"0";"System.Diagnostics.ProcessStartInfo";;;"System.Diagnostics.ProcessThreadCollection";;;"-1";"4294967295";"False";;;;"1875968";"1875968";;
+"powershell_ise";"19";"812";"530591744";"139571200";"114475008";"60088";"C:\WINDOWS\syswow64\WindowsPowerShell\v1.0\PowerShell_ISE.exe";"Microsoft Corporation";"123,234375";"10.0.18362.1 (WinBuild.160101.0800)";"10.0.18362.1";"Windows PowerShell ISE";"Microsoft? Windows? Operating System";"Process";"8";;"False";;"3244";"Microsoft.Win32.SafeHandles.SafeProcessHandle";"812";"8796";".";"2884348";"Windows PowerShell ISE (x86)";"System.Diagnostics.ProcessModule (PowerShell_ISE.exe)";"1413120";"204800";"System.Diagnostics.ProcessModuleCollection";"60088";"60088";"114475008";"114475008";"779512";"779512";"133332992";"133332992";"164040704";"164040704";"544432128";"544432128";"True";"Normal";"114475008";"114475008";"00:00:44.8750000";"powershell_ise";"3";"True";"19";"System.Diagnostics.ProcessStartInfo";"21/02/2020 1:25:22 p. m.";;"System.Diagnostics.ProcessThreadCollection";"00:02:03.3437500";"00:01:18.4687500";"530591744";"530591744";"False";;;;"139571200";"139571200";;
+"PresentationFontCache";"0";"241";"4294967295";"3084288";"26636288";"28488";;;;;;;;"Process";"8";;;;;;"241";"5452";".";"0";"";;;;;"28488";"28488";"26636288";"26636288";"240104";"240104";"30851072";"30851072";"26013696";"26013696";"-1";"4294967295";;;"26636288";"26636288";;"PresentationFontCache";;"True";"0";"System.Diagnostics.ProcessStartInfo";;;"System.Diagnostics.ProcessThreadCollection";;;"-1";"4294967295";"False";;;;"3084288";"3084288";;
+"RAVBg64";"19";"299";"4294967295";"90112";"5931008";"15544";;;"0,3125";;;;;"Process";"6";;"False";;"3756";"Microsoft.Win32.SafeHandles.SafeProcessHandle";"299";"2036";".";"0";"";;"1413120";"204800";;"15544";"15544";"5931008";"5931008";"213544";"213544";"6176768";"6176768";"15568896";"15568896";"-1";"4294967295";"True";"BelowNormal";"5931008";"5931008";"00:00:00.2031250";"RAVBg64";"3";"True";"19";"System.Diagnostics.ProcessStartInfo";"21/02/2020 7:12:13 a. m.";;"System.Diagnostics.ProcessThreadCollection";"00:00:00.3125000";"00:00:00.1093750";"-1";"4294967295";"False";;;;"90112";"90112";;
+"RAVBg64";"19";"295";"4294967295";"86016";"5918720";"15288";;;"0,296875";;;;;"Process";"6";;"False";;"3268";"Microsoft.Win32.SafeHandles.SafeProcessHandle";"295";"8336";".";"0";"";;"1413120";"204800";;"15288";"15288";"5918720";"5918720";"213128";"213128";"6135808";"6135808";"15527936";"15527936";"-1";"4294967295";"True";"BelowNormal";"5918720";"5918720";"00:00:00.2343750";"RAVBg64";"3";"True";"19";"System.Diagnostics.ProcessStartInfo";"21/02/2020 7:12:13 a. m.";;"System.Diagnostics.ProcessThreadCollection";"00:00:00.2968750";"00:00:00.0625000";"-1";"4294967295";"False";;;;"86016";"86016";;
+"RAVCpl64";"19";"411";"4294967295";"118784";"5042176";"18072";;;"1,34375";;;;;"Process";"6";;"False";;"4084";"Microsoft.Win32.SafeHandles.SafeProcessHandle";"411";"15652";".";"0";"";;"1413120";"204800";;"18072";"18072";"5042176";"5042176";"290656";"290656";"14327808";"14327808";"25026560";"25026560";"-1";"4294967295";"True";"BelowNormal";"5042176";"5042176";"00:00:01.0156250";"RAVCpl64";"3";"True";"19";"System.Diagnostics.ProcessStartInfo";"21/02/2020 7:12:13 a. m.";;"System.Diagnostics.ProcessThreadCollection";"00:00:01.3437500";"00:00:00.3281250";"-1";"4294967295";"False";;;;"118784";"118784";;
+"Registry";"0";"0";"193982464";"79556608";"13062144";"15368";;;;;;;;"Process";"8";;;;;;"0";"88";".";"0";"";;;;;"15368";"15368";"13062144";"13062144";"383096";"383096";"82235392";"82235392";"169766912";"169766912";"283934720";"283934720";;;"13062144";"13062144";;"Registry";;"True";"0";"System.Diagnostics.ProcessStartInfo";;;"System.Diagnostics.ProcessThreadCollection";;;"193982464";"193982464";"False";;;;"79556608";"79556608";;
+"RuntimeBroker";"19";"593";"4294967295";"36507648";"11030528";"28232";;;"4,5";;;;;"Process";"8";;"False";;"3372";"Microsoft.Win32.SafeHandles.SafeProcessHandle";"593";"3244";".";"0";"";;"1413120";"204800";;"28232";"28232";"11030528";"11030528";"398736";"398736";"12537856";"12537856";"44015616";"44015616";"-1";"4294967295";"True";"Normal";"11030528";"11030528";"00:00:02.5000000";"RuntimeBroker";"3";"True";"19";"System.Diagnostics.ProcessStartInfo";"21/02/2020 7:12:19 a. m.";;"System.Diagnostics.ProcessThreadCollection";"00:00:04.5000000";"00:00:02";"-1";"4294967295";"False";;;;"36507648";"36507648";;
+"RuntimeBroker";"19";"143";"4294967295";"7778304";"1781760";"8880";;;"0,21875";;;;;"Process";"8";;"False";;"3728";"Microsoft.Win32.SafeHandles.SafeProcessHandle";"143";"9388";".";"0";"";;"1413120";"204800";;"8880";"8880";"1781760";"1781760";"109016";"109016";"2830336";"2830336";"10866688";"10866688";"-1";"4294967295";"True";"Normal";"1781760";"1781760";"00:00:00.1562500";"RuntimeBroker";"3";"True";"19";"System.Diagnostics.ProcessStartInfo";"21/02/2020 7:16:49 a. m.";;"System.Diagnostics.ProcessThreadCollection";"00:00:00.2187500";"00:00:00.0625000";"-1";"4294967295";"False";;;;"7778304";"7778304";;
+>> ErrorTerminación(): "Se ha detenido la canalización."
+>> ErrorTerminación(): "Se ha detenido la canalización."
+PS C:\Users\S T E V E N> random
+506112939
+PS C:\Users\S T E V E N> Get-Random
+1781921954
+PS C:\Users\S T E V E N> date
+
+viernes, 21 de febrero de 2020 2:22:35 p. m.
+
+
+PS C:\Users\S T E V E N> DateTime
+DateTime : El término 'DateTime' no se reconoce como nombre de un cmdlet, función, archivo de script o programa 
+ejecutable. Compruebe si escribió correctamente el nombre o, si incluyó una ruta de acceso, compruebe que dicha ruta es 
+correcta e inténtelo de nuevo.
+En línea: 1 Carácter: 1
++ DateTime
++ ~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (DateTime:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+DateTime : El término 'DateTime' no se reconoce como nombre de un cmdlet, función, archivo de script o programa ejecutable.
+Compruebe si escribió correctamente el nombre o, si incluyó una ruta de acceso, compruebe que dicha ruta es correcta e inténtelo de
+nuevo.
+En línea: 1 Carácter: 1
++ DateTime
++ ~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (DateTime:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\S T E V E N> date | Select-Object DayOfWeek
+
+
+DayOfWeek
+---------
+   Friday
+
+
+PS C:\Users\S T E V E N> Get-HotFix
+
+Source        Description      HotFixID      InstalledBy          InstalledOn
+------        -----------      --------      -----------          -----------
+DESKTOP-7F... Update           KB4534132     NT AUTHORITY\SYSTEM  8/02/2020 12:00:00 a. m.
+DESKTOP-7F... Security Update  KB4515383     NT AUTHORITY\SYSTEM  27/09/2019 12:00:00 a. m.
+DESKTOP-7F... Security Update  KB4516115     NT AUTHORITY\SYSTEM  29/09/2019 12:00:00 a. m.
+DESKTOP-7F... Security Update  KB4521863     NT AUTHORITY\SYSTEM  13/10/2019 12:00:00 a. m.
+DESKTOP-7F... Security Update  KB4524244     NT AUTHORITY\SYSTEM  14/02/2020 12:00:00 a. m.
+DESKTOP-7F... Security Update  KB4524569     NT AUTHORITY\SYSTEM  15/11/2019 12:00:00 a. m.
+DESKTOP-7F... Security Update  KB4528759     NT AUTHORITY\SYSTEM  4/02/2020 12:00:00 a. m.
+DESKTOP-7F... Update           KB4532441     NT AUTHORITY\SYSTEM  10/12/2019 12:00:00 a. m.
+DESKTOP-7F... Security Update  KB4537759     NT AUTHORITY\SYSTEM  13/02/2020 12:00:00 a. m.
+DESKTOP-7F... Security Update  KB4538674     NT AUTHORITY\SYSTEM  12/02/2020 12:00:00 a. m.
+DESKTOP-7F... Update           KB4532693     NT AUTHORITY\SYSTEM  13/02/2020 12:00:00 a. m.
+
+
+PS C:\Users\S T E V E N> Get-HotFix | Select-Object InstalledOn,InstalledBy,HotFixID | Sort-Object -Property InstalledOn
+
+
+InstalledOn               InstalledBy         HotFixID
+-----------               -----------         --------
+27/09/2019 12:00:00 a. m. NT AUTHORITY\SYSTEM KB4515383
+29/09/2019 12:00:00 a. m. NT AUTHORITY\SYSTEM KB4516115
+13/10/2019 12:00:00 a. m. NT AUTHORITY\SYSTEM KB4521863
+15/11/2019 12:00:00 a. m. NT AUTHORITY\SYSTEM KB4524569
+10/12/2019 12:00:00 a. m. NT AUTHORITY\SYSTEM KB4532441
+4/02/2020 12:00:00 a. m.  NT AUTHORITY\SYSTEM KB4528759
+8/02/2020 12:00:00 a. m.  NT AUTHORITY\SYSTEM KB4534132
+12/02/2020 12:00:00 a. m. NT AUTHORITY\SYSTEM KB4538674
+13/02/2020 12:00:00 a. m. NT AUTHORITY\SYSTEM KB4537759
+13/02/2020 12:00:00 a. m. NT AUTHORITY\SYSTEM KB4532693
+14/02/2020 12:00:00 a. m. NT AUTHORITY\SYSTEM KB4524244
+
+
+PS C:\Users\S T E V E N> Get-HotFix | Select-Object -Property InstalledOn, InstalledBy, HotfixID | Sort-Object -Property InstalledOn
+
+
+InstalledOn               InstalledBy         HotfixID
+-----------               -----------         --------
+27/09/2019 12:00:00 a. m. NT AUTHORITY\SYSTEM KB4515383
+29/09/2019 12:00:00 a. m. NT AUTHORITY\SYSTEM KB4516115
+13/10/2019 12:00:00 a. m. NT AUTHORITY\SYSTEM KB4521863
+15/11/2019 12:00:00 a. m. NT AUTHORITY\SYSTEM KB4524569
+10/12/2019 12:00:00 a. m. NT AUTHORITY\SYSTEM KB4532441
+4/02/2020 12:00:00 a. m.  NT AUTHORITY\SYSTEM KB4528759
+8/02/2020 12:00:00 a. m.  NT AUTHORITY\SYSTEM KB4534132
+12/02/2020 12:00:00 a. m. NT AUTHORITY\SYSTEM KB4538674
+13/02/2020 12:00:00 a. m. NT AUTHORITY\SYSTEM KB4537759
+13/02/2020 12:00:00 a. m. NT AUTHORITY\SYSTEM KB4532693
+14/02/2020 12:00:00 a. m. NT AUTHORITY\SYSTEM KB4524244
+
+
+PS C:\Users\S T E V E N> Get-HotFix|ConvertTo-Html|Select-Object -Property InstalledOn, InstalledBy, HotfixID | Sort-Object -Property InstalledOn
+
+
+InstalledOn InstalledBy HotfixID
+----------- ----------- --------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PS C:\Users\S T E V E N> Get-EventLog -LogName System -Newest 50 | Select-Object -Property Index, TimeGenerated, Source | Sort-Object -Property TimeGenerated, Index > eventLog.txt
+
+PS C:\Users\S T E V E N> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16909; TimeGenerated=20/02/2020 11:03:21 p. m.; Source=Microsoft-Windows-Winlogon}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16910; TimeGenerated=20/02/2020 11:03:22 p. m.; Source=Microsoft-Windows-Kernel-Power}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16911; TimeGenerated=20/02/2020 11:03:25 p. m.; Source=Microsoft-Windows-Kernel-Power}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16912; TimeGenerated=20/02/2020 11:03:31 p. m.; Source=Microsoft-Windows-Kernel-Power}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16913; TimeGenerated=21/02/2020 7:11:34 a. m.; Source=Microsoft-Windows-Kernel-General}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16914; TimeGenerated=21/02/2020 7:11:35 a. m.; Source=VBoxNetLwf}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16915; TimeGenerated=21/02/2020 7:11:35 a. m.; Source=VBoxNetLwf}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16916; TimeGenerated=21/02/2020 7:11:36 a. m.; Source=VBoxNetLwf}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16917; TimeGenerated=21/02/2020 7:11:36 a. m.; Source=Microsoft-Windows-Kernel-Boot}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16918; TimeGenerated=21/02/2020 7:11:36 a. m.; Source=Microsoft-Windows-Kernel-Boot}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16919; TimeGenerated=21/02/2020 7:11:36 a. m.; Source=Microsoft-Windows-Kernel-Boot}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16920; TimeGenerated=21/02/2020 7:11:36 a. m.; Source=Microsoft-Windows-Kernel-Boot}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16921; TimeGenerated=21/02/2020 7:11:36 a. m.; Source=Microsoft-Windows-Kernel-Boot}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16922; TimeGenerated=21/02/2020 7:11:37 a. m.; Source=Microsoft-Windows-Winlogon}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16923; TimeGenerated=21/02/2020 7:11:40 a. m.; Source=Microsoft-Windows-Power-Troubleshooter}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16924; TimeGenerated=21/02/2020 7:14:44 a. m.; Source=DCOM}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16925; TimeGenerated=21/02/2020 7:14:57 a. m.; Source=Service Control Manager}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16926; TimeGenerated=21/02/2020 7:25:12 a. m.; Source=Service Control Manager}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16927; TimeGenerated=21/02/2020 7:32:36 a. m.; Source=Microsoft-Windows-Kernel-Power}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16928; TimeGenerated=21/02/2020 7:44:40 a. m.; Source=Service Control Manager}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16929; TimeGenerated=21/02/2020 8:04:58 a. m.; Source=Microsoft-Windows-Kernel-Power}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16930; TimeGenerated=21/02/2020 8:13:52 a. m.; Source=DCOM}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16931; TimeGenerated=21/02/2020 8:16:56 a. m.; Source=DCOM}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16932; TimeGenerated=21/02/2020 8:17:21 a. m.; Source=DCOM}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16933; TimeGenerated=21/02/2020 8:18:39 a. m.; Source=Microsoft-Windows-Kernel-Power}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16934; TimeGenerated=21/02/2020 8:18:43 a. m.; Source=Microsoft-Windows-Kernel-Power}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16935; TimeGenerated=21/02/2020 8:18:43 a. m.; Source=Microsoft-Windows-Kernel-Power}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16936; TimeGenerated=21/02/2020 11:18:40 a. m.; Source=Microsoft-Windows-Kernel-General}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16937; TimeGenerated=21/02/2020 11:18:40 a. m.; Source=Microsoft-Windows-Kernel-Power}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16938; TimeGenerated=21/02/2020 11:18:41 a. m.; Source=VBoxNetLwf}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16939; TimeGenerated=21/02/2020 11:18:41 a. m.; Source=VBoxNetLwf}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16940; TimeGenerated=21/02/2020 11:18:42 a. m.; Source=VBoxNetLwf}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16941; TimeGenerated=21/02/2020 11:18:45 a. m.; Source=Microsoft-Windows-Power-Troubleshooter}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16942; TimeGenerated=21/02/2020 11:18:51 a. m.; Source=Microsoft-Windows-Kernel-Power}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16943; TimeGenerated=21/02/2020 11:19:03 a. m.; Source=Microsoft-Windows-Kernel-Power}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16944; TimeGenerated=21/02/2020 1:21:12 p. m.; Source=Microsoft-Windows-Kernel-General}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16945; TimeGenerated=21/02/2020 1:21:13 p. m.; Source=EventLog}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16946; TimeGenerated=21/02/2020 1:21:14 p. m.; Source=VBoxNetLwf}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16947; TimeGenerated=21/02/2020 1:21:14 p. m.; Source=VBoxNetLwf}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16948; TimeGenerated=21/02/2020 1:21:14 p. m.; Source=VBoxNetLwf}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16949; TimeGenerated=21/02/2020 1:21:15 p. m.; Source=Microsoft-Windows-Kernel-Boot}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16950; TimeGenerated=21/02/2020 1:21:15 p. m.; Source=Microsoft-Windows-Kernel-Boot}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16951; TimeGenerated=21/02/2020 1:21:15 p. m.; Source=Microsoft-Windows-Kernel-Boot}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16952; TimeGenerated=21/02/2020 1:21:15 p. m.; Source=Microsoft-Windows-Kernel-Boot}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16953; TimeGenerated=21/02/2020 1:21:15 p. m.; Source=Microsoft-Windows-Kernel-Boot}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16954; TimeGenerated=21/02/2020 1:21:17 p. m.; Source=Microsoft-Windows-Power-Troubleshooter}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16955; TimeGenerated=21/02/2020 1:21:51 p. m.; Source=Microsoft-Windows-Kernel-Power}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16956; TimeGenerated=21/02/2020 1:25:48 p. m.; Source=DCOM}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16957; TimeGenerated=21/02/2020 1:25:49 p. m.; Source=DCOM}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16958; TimeGenerated=21/02/2020 1:44:56 p. m.; Source=Service Control Manager}"
+PS C:\Users\S T E V E N> Get-EventLog -LogName System -Newest 50 | Select-Object -Property Index, TimeGenerated, Source | Sort-Object -Property TimeGenerated, Index > eventLog.txt
+
+PS C:\Users\S T E V E N> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16909; TimeGenerated=20/02/2020 11:03:21 p. m.; Source=Microsoft-Windows-Winlogon}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16910; TimeGenerated=20/02/2020 11:03:22 p. m.; Source=Microsoft-Windows-Kernel-Power}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16911; TimeGenerated=20/02/2020 11:03:25 p. m.; Source=Microsoft-Windows-Kernel-Power}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16912; TimeGenerated=20/02/2020 11:03:31 p. m.; Source=Microsoft-Windows-Kernel-Power}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16913; TimeGenerated=21/02/2020 7:11:34 a. m.; Source=Microsoft-Windows-Kernel-General}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16914; TimeGenerated=21/02/2020 7:11:35 a. m.; Source=VBoxNetLwf}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16915; TimeGenerated=21/02/2020 7:11:35 a. m.; Source=VBoxNetLwf}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16916; TimeGenerated=21/02/2020 7:11:36 a. m.; Source=VBoxNetLwf}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16917; TimeGenerated=21/02/2020 7:11:36 a. m.; Source=Microsoft-Windows-Kernel-Boot}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16918; TimeGenerated=21/02/2020 7:11:36 a. m.; Source=Microsoft-Windows-Kernel-Boot}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16919; TimeGenerated=21/02/2020 7:11:36 a. m.; Source=Microsoft-Windows-Kernel-Boot}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16920; TimeGenerated=21/02/2020 7:11:36 a. m.; Source=Microsoft-Windows-Kernel-Boot}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16921; TimeGenerated=21/02/2020 7:11:36 a. m.; Source=Microsoft-Windows-Kernel-Boot}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16922; TimeGenerated=21/02/2020 7:11:37 a. m.; Source=Microsoft-Windows-Winlogon}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16923; TimeGenerated=21/02/2020 7:11:40 a. m.; Source=Microsoft-Windows-Power-Troubleshooter}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16924; TimeGenerated=21/02/2020 7:14:44 a. m.; Source=DCOM}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16925; TimeGenerated=21/02/2020 7:14:57 a. m.; Source=Service Control Manager}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16926; TimeGenerated=21/02/2020 7:25:12 a. m.; Source=Service Control Manager}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16927; TimeGenerated=21/02/2020 7:32:36 a. m.; Source=Microsoft-Windows-Kernel-Power}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16928; TimeGenerated=21/02/2020 7:44:40 a. m.; Source=Service Control Manager}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16929; TimeGenerated=21/02/2020 8:04:58 a. m.; Source=Microsoft-Windows-Kernel-Power}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16930; TimeGenerated=21/02/2020 8:13:52 a. m.; Source=DCOM}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16931; TimeGenerated=21/02/2020 8:16:56 a. m.; Source=DCOM}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16932; TimeGenerated=21/02/2020 8:17:21 a. m.; Source=DCOM}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16933; TimeGenerated=21/02/2020 8:18:39 a. m.; Source=Microsoft-Windows-Kernel-Power}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16934; TimeGenerated=21/02/2020 8:18:43 a. m.; Source=Microsoft-Windows-Kernel-Power}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16935; TimeGenerated=21/02/2020 8:18:43 a. m.; Source=Microsoft-Windows-Kernel-Power}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16936; TimeGenerated=21/02/2020 11:18:40 a. m.; Source=Microsoft-Windows-Kernel-General}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16937; TimeGenerated=21/02/2020 11:18:40 a. m.; Source=Microsoft-Windows-Kernel-Power}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16938; TimeGenerated=21/02/2020 11:18:41 a. m.; Source=VBoxNetLwf}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16939; TimeGenerated=21/02/2020 11:18:41 a. m.; Source=VBoxNetLwf}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16940; TimeGenerated=21/02/2020 11:18:42 a. m.; Source=VBoxNetLwf}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16941; TimeGenerated=21/02/2020 11:18:45 a. m.; Source=Microsoft-Windows-Power-Troubleshooter}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16942; TimeGenerated=21/02/2020 11:18:51 a. m.; Source=Microsoft-Windows-Kernel-Power}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16943; TimeGenerated=21/02/2020 11:19:03 a. m.; Source=Microsoft-Windows-Kernel-Power}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16944; TimeGenerated=21/02/2020 1:21:12 p. m.; Source=Microsoft-Windows-Kernel-General}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16945; TimeGenerated=21/02/2020 1:21:13 p. m.; Source=EventLog}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16946; TimeGenerated=21/02/2020 1:21:14 p. m.; Source=VBoxNetLwf}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16947; TimeGenerated=21/02/2020 1:21:14 p. m.; Source=VBoxNetLwf}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16948; TimeGenerated=21/02/2020 1:21:14 p. m.; Source=VBoxNetLwf}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16949; TimeGenerated=21/02/2020 1:21:15 p. m.; Source=Microsoft-Windows-Kernel-Boot}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16950; TimeGenerated=21/02/2020 1:21:15 p. m.; Source=Microsoft-Windows-Kernel-Boot}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16951; TimeGenerated=21/02/2020 1:21:15 p. m.; Source=Microsoft-Windows-Kernel-Boot}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16952; TimeGenerated=21/02/2020 1:21:15 p. m.; Source=Microsoft-Windows-Kernel-Boot}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16953; TimeGenerated=21/02/2020 1:21:15 p. m.; Source=Microsoft-Windows-Kernel-Boot}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16954; TimeGenerated=21/02/2020 1:21:17 p. m.; Source=Microsoft-Windows-Power-Troubleshooter}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16955; TimeGenerated=21/02/2020 1:21:51 p. m.; Source=Microsoft-Windows-Kernel-Power}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16956; TimeGenerated=21/02/2020 1:25:48 p. m.; Source=DCOM}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16957; TimeGenerated=21/02/2020 1:25:49 p. m.; Source=DCOM}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16958; TimeGenerated=21/02/2020 1:44:56 p. m.; Source=Service Control Manager}"
+PS C:\Users\S T E V E N> Get-EventLog -LogName System -Newest 50 | Select-Object -Property Index, TimeGenerated, Source | Sort-Object -Property TimeGenerated, Index > log.txt
+
+PS C:\Users\S T E V E N> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16909; TimeGenerated=20/02/2020 11:03:21 p. m.; Source=Microsoft-Windows-Winlogon}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16910; TimeGenerated=20/02/2020 11:03:22 p. m.; Source=Microsoft-Windows-Kernel-Power}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16911; TimeGenerated=20/02/2020 11:03:25 p. m.; Source=Microsoft-Windows-Kernel-Power}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16912; TimeGenerated=20/02/2020 11:03:31 p. m.; Source=Microsoft-Windows-Kernel-Power}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16913; TimeGenerated=21/02/2020 7:11:34 a. m.; Source=Microsoft-Windows-Kernel-General}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16914; TimeGenerated=21/02/2020 7:11:35 a. m.; Source=VBoxNetLwf}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16915; TimeGenerated=21/02/2020 7:11:35 a. m.; Source=VBoxNetLwf}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16916; TimeGenerated=21/02/2020 7:11:36 a. m.; Source=VBoxNetLwf}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16917; TimeGenerated=21/02/2020 7:11:36 a. m.; Source=Microsoft-Windows-Kernel-Boot}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16918; TimeGenerated=21/02/2020 7:11:36 a. m.; Source=Microsoft-Windows-Kernel-Boot}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16919; TimeGenerated=21/02/2020 7:11:36 a. m.; Source=Microsoft-Windows-Kernel-Boot}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16920; TimeGenerated=21/02/2020 7:11:36 a. m.; Source=Microsoft-Windows-Kernel-Boot}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16921; TimeGenerated=21/02/2020 7:11:36 a. m.; Source=Microsoft-Windows-Kernel-Boot}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16922; TimeGenerated=21/02/2020 7:11:37 a. m.; Source=Microsoft-Windows-Winlogon}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16923; TimeGenerated=21/02/2020 7:11:40 a. m.; Source=Microsoft-Windows-Power-Troubleshooter}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16924; TimeGenerated=21/02/2020 7:14:44 a. m.; Source=DCOM}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16925; TimeGenerated=21/02/2020 7:14:57 a. m.; Source=Service Control Manager}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16926; TimeGenerated=21/02/2020 7:25:12 a. m.; Source=Service Control Manager}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16927; TimeGenerated=21/02/2020 7:32:36 a. m.; Source=Microsoft-Windows-Kernel-Power}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16928; TimeGenerated=21/02/2020 7:44:40 a. m.; Source=Service Control Manager}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16929; TimeGenerated=21/02/2020 8:04:58 a. m.; Source=Microsoft-Windows-Kernel-Power}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16930; TimeGenerated=21/02/2020 8:13:52 a. m.; Source=DCOM}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16931; TimeGenerated=21/02/2020 8:16:56 a. m.; Source=DCOM}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16932; TimeGenerated=21/02/2020 8:17:21 a. m.; Source=DCOM}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16933; TimeGenerated=21/02/2020 8:18:39 a. m.; Source=Microsoft-Windows-Kernel-Power}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16934; TimeGenerated=21/02/2020 8:18:43 a. m.; Source=Microsoft-Windows-Kernel-Power}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16935; TimeGenerated=21/02/2020 8:18:43 a. m.; Source=Microsoft-Windows-Kernel-Power}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16936; TimeGenerated=21/02/2020 11:18:40 a. m.; Source=Microsoft-Windows-Kernel-General}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16937; TimeGenerated=21/02/2020 11:18:40 a. m.; Source=Microsoft-Windows-Kernel-Power}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16938; TimeGenerated=21/02/2020 11:18:41 a. m.; Source=VBoxNetLwf}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16939; TimeGenerated=21/02/2020 11:18:41 a. m.; Source=VBoxNetLwf}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16940; TimeGenerated=21/02/2020 11:18:42 a. m.; Source=VBoxNetLwf}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16941; TimeGenerated=21/02/2020 11:18:45 a. m.; Source=Microsoft-Windows-Power-Troubleshooter}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16942; TimeGenerated=21/02/2020 11:18:51 a. m.; Source=Microsoft-Windows-Kernel-Power}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16943; TimeGenerated=21/02/2020 11:19:03 a. m.; Source=Microsoft-Windows-Kernel-Power}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16944; TimeGenerated=21/02/2020 1:21:12 p. m.; Source=Microsoft-Windows-Kernel-General}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16945; TimeGenerated=21/02/2020 1:21:13 p. m.; Source=EventLog}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16946; TimeGenerated=21/02/2020 1:21:14 p. m.; Source=VBoxNetLwf}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16947; TimeGenerated=21/02/2020 1:21:14 p. m.; Source=VBoxNetLwf}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16948; TimeGenerated=21/02/2020 1:21:14 p. m.; Source=VBoxNetLwf}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16949; TimeGenerated=21/02/2020 1:21:15 p. m.; Source=Microsoft-Windows-Kernel-Boot}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16950; TimeGenerated=21/02/2020 1:21:15 p. m.; Source=Microsoft-Windows-Kernel-Boot}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16951; TimeGenerated=21/02/2020 1:21:15 p. m.; Source=Microsoft-Windows-Kernel-Boot}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16952; TimeGenerated=21/02/2020 1:21:15 p. m.; Source=Microsoft-Windows-Kernel-Boot}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16953; TimeGenerated=21/02/2020 1:21:15 p. m.; Source=Microsoft-Windows-Kernel-Boot}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16954; TimeGenerated=21/02/2020 1:21:17 p. m.; Source=Microsoft-Windows-Power-Troubleshooter}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16955; TimeGenerated=21/02/2020 1:21:51 p. m.; Source=Microsoft-Windows-Kernel-Power}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16956; TimeGenerated=21/02/2020 1:25:48 p. m.; Source=DCOM}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16957; TimeGenerated=21/02/2020 1:25:49 p. m.; Source=DCOM}"
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="@{Index=16958; TimeGenerated=21/02/2020 1:44:56 p. m.; Source=Service Control Manager}"
+PS C:\Users\S T E V E N> cat log.text
+cat : No se encuentra la ruta de acceso 'C:\Users\S T E V E N\log.text' porque no existe.
+En línea: 1 Carácter: 1
++ cat log.text
++ ~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\S T E V E N\log.text:String) [Get-Content], 
+ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.GetContentCommand
+cat : No se encuentra la ruta de acceso 'C:\Users\S T E V E N\log.text' porque no existe.
+En línea: 1 Carácter: 1
++ cat log.text
++ ~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\S T E V E N\log.text:String) [Get-Content], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.GetContentCommand
+
+PS C:\Users\S T E V E N> cat .\log.text
+cat : No se encuentra la ruta de acceso 'C:\Users\S T E V E N\log.text' porque no existe.
+En línea: 1 Carácter: 1
++ cat .\log.text
++ ~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\S T E V E N\log.text:String) [Get-Content], 
+ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.GetContentCommand
+cat : No se encuentra la ruta de acceso 'C:\Users\S T E V E N\log.text' porque no existe.
+En línea: 1 Carácter: 1
++ cat .\log.text
++ ~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\S T E V E N\log.text:String) [Get-Content], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.GetContentCommand
+
+PS C:\Users\S T E V E N> dir
+
+
+    Directorio: C:\Users\S T E V E N
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----     18/06/2019  4:47 p. m.                .3T
+d-----      1/12/2019  3:49 p. m.                .anaconda
+d-----    28/08/2019  11:57 p. m.                .android
+d-----     13/06/2019  4:36 p. m.                .aws
+d-----    20/10/2019  12:56 a. m.                .conda
+d-----     28/07/2019  9:54 p. m.                .config
+d-----    13/12/2017  11:15 p. m.                .cordova
+d-----      1/06/2018  7:52 p. m.                .dotnet
+d-----     20/10/2018  5:13 p. m.                .eclipse
+d-----     17/01/2020  4:10 p. m.                .Icecream Screen Recorder
+d-----      8/12/2019  7:10 p. m.                .ipynb_checkpoints
+d-----     20/10/2019  1:22 a. m.                .ipython
+d-----    24/10/2019  12:42 p. m.                .jupyter
+d-----     11/09/2018  4:45 p. m.                .m2
+d-----     12/12/2019  4:55 p. m.                .matplotlib
+d-----     19/06/2019  1:24 p. m.                .node-gyp
+d-----     25/12/2017  6:03 p. m.                .nuget
+d-----      7/01/2020  8:42 p. m.                .p2
+d-----     12/12/2018  5:51 p. m.                .PyCharmCE2018.3
+d-----     13/06/2019  4:36 p. m.                .serverless
+d-----     28/07/2019  9:20 p. m.                .ssh
+d-----     29/08/2019  7:03 a. m.                .sts4
+d-----     25/12/2017  6:01 p. m.                .templateengine
+d-----     11/08/2017  3:57 p. m.                .tooling
+d-----    22/06/2019  11:04 a. m.                .vim
+d-----     24/06/2019  9:13 a. m.                .VirtualBox
+d-----      6/02/2020  6:29 p. m.                .vscode
+d-----     10/01/2019  3:17 p. m.                .webgoat-8.0.0.M21
+d-----     19/07/2019  6:05 p. m.                .WebStorm2019.1
+d-r---     13/02/2020  4:57 p. m.                3D Objects
+d-----      6/02/2020  8:43 p. m.                app
+d-----      6/02/2020  8:36 p. m.                app2
+d-----     24/09/2019  7:30 p. m.                Application Data
+d-----     8/05/2019  10:25 p. m.                CmapToolsLogs
+d-r---     13/02/2020  4:57 p. m.                Contacts
+d-----     4/08/2019  11:44 a. m.                cursoGit
+d-----     7/10/2018  12:09 a. m.                CUsersS
+d-r---     21/02/2020  1:22 p. m.                Desktop
+d-r---     21/02/2020  1:43 p. m.                Documents
+d-r---     21/02/2020  8:17 a. m.                Downloads
+d-----      1/05/2019  4:35 p. m.                eclipse
+d-----     1/09/2017  10:04 a. m.                eclipse-workspace
+d-r---     13/02/2020  4:57 p. m.                Favorites
+d-----     8/10/2018  11:20 a. m.                git
+d-r---     13/02/2020  4:57 p. m.                Links
+d-r---     13/02/2020  4:57 p. m.                Music
+d-----     7/10/2018  12:09 a. m.                NDesktop
+d-----      6/02/2020  8:02 p. m.                node_modules
+d-r---     11/02/2020  2:09 p. m.                OneDrive
+d-----    10/01/2019  10:31 p. m.                OWASP ZAP
+d-r---     13/02/2020  4:57 p. m.                Pictures
+d-----     9/06/2019  10:40 p. m.                Postman
+d-----     12/11/2018  4:09 p. m.                pseint
+d-r---     13/02/2020  4:57 p. m.                Saved Games
+d-r---     13/02/2020  4:57 p. m.                Searches
+d-----    29/01/2018  12:17 a. m.                source
+d-r---     13/02/2020  4:57 p. m.                Videos
+d-----    10/04/2019  10:46 p. m.                VirtualBox VMs
+-a----     20/02/2020  8:38 p. m.          11708 .bash_history
+-a----     11/12/2019  8:11 p. m.             60 .condarc
+-a----      4/08/2019  8:52 p. m.            242 .gitconfig
+-a----      4/02/2020  6:09 p. m.             99 .node_repl_history
+-a----      9/02/2019  4:40 p. m.             78 .octave_hist
+-a----    24/10/2019  12:12 p. m.             65 .pgAdmin4.1590372639.addr
+-a----    24/10/2019  12:11 p. m.              0 .pgAdmin4.1590372639.log
+-a----     26/10/2019  9:37 p. m.             65 .pgAdmin4.2123502176.addr
+-a----     26/10/2019  9:40 p. m.            825 .pgAdmin4.2123502176.log
+-a----     26/10/2019  9:37 p. m.           1586 .pgAdmin4.startup.log
+-a----     13/06/2019  4:36 p. m.            207 .serverlessrc
+-a----    20/10/2019  12:14 a. m.          13861 .viminfo
+-a----     20/02/2020  7:59 p. m.             59 .vuerc
+-a----     20/02/2020  8:27 p. m.            121 .yarnrc
+-a----     25/04/2018  5:25 p. m.        8388608 Biblio.mdf
+-a----     25/04/2018  4:49 p. m.        8388608 Biblioteca.mdf
+-a----     25/04/2018  4:49 p. m.        8388608 Biblioteca_log.ldf
+-a----     25/04/2018  5:25 p. m.        8388608 Biblio_log.ldf
+-a----     21/02/2020  1:43 p. m.            125 data1.csv
+-a----     21/02/2020  1:44 p. m.             57 data2.csv
+-a----     21/02/2020  1:48 p. m.              0 data3.csv
+-a----     21/02/2020  2:36 p. m.           7502 eventLog.txt
+-a----      4/10/2018  1:23 p. m.           1997 jnp4e.keys
+-a----     21/02/2020  2:37 p. m.           7502 log.txt
+-a----     18/02/2019  9:12 p. m.              0 openstego.ini
+-a----      6/02/2020  8:02 p. m.         124499 package-lock.json
+-a----     21/02/2020  2:03 p. m.          88134 procesos.csv
+-a----     14/02/2020  4:22 p. m.          42616 Process.txt
+-a----     21/02/2020  2:05 p. m.          86646 servicios.csv
+-a----    13/05/2018  12:35 p. m.           1026 source - Acceso directo.lnk
+-a----     4/10/2018  10:55 p. m.              0 Sti_Trace.log
+-a----     16/06/2019  9:30 p. m.            200 _netrc
+
+
+PS C:\Users\S T E V E N> cat log.txt
+
+Index TimeGenerated             Source
+----- -------------             ------
+16909 20/02/2020 11:03:21 p. m. Microsoft-Windows-Winlogon
+16910 20/02/2020 11:03:22 p. m. Microsoft-Windows-Kernel-Power
+16911 20/02/2020 11:03:25 p. m. Microsoft-Windows-Kernel-Power
+16912 20/02/2020 11:03:31 p. m. Microsoft-Windows-Kernel-Power
+16913 21/02/2020 7:11:34 a. m.  Microsoft-Windows-Kernel-General
+16914 21/02/2020 7:11:35 a. m.  VBoxNetLwf
+16915 21/02/2020 7:11:35 a. m.  VBoxNetLwf
+16916 21/02/2020 7:11:36 a. m.  VBoxNetLwf
+16917 21/02/2020 7:11:36 a. m.  Microsoft-Windows-Kernel-Boot
+16918 21/02/2020 7:11:36 a. m.  Microsoft-Windows-Kernel-Boot
+16919 21/02/2020 7:11:36 a. m.  Microsoft-Windows-Kernel-Boot
+16920 21/02/2020 7:11:36 a. m.  Microsoft-Windows-Kernel-Boot
+16921 21/02/2020 7:11:36 a. m.  Microsoft-Windows-Kernel-Boot
+16922 21/02/2020 7:11:37 a. m.  Microsoft-Windows-Winlogon
+16923 21/02/2020 7:11:40 a. m.  Microsoft-Windows-Power-Troubleshooter
+16924 21/02/2020 7:14:44 a. m.  DCOM
+16925 21/02/2020 7:14:57 a. m.  Service Control Manager
+16926 21/02/2020 7:25:12 a. m.  Service Control Manager
+16927 21/02/2020 7:32:36 a. m.  Microsoft-Windows-Kernel-Power
+16928 21/02/2020 7:44:40 a. m.  Service Control Manager
+16929 21/02/2020 8:04:58 a. m.  Microsoft-Windows-Kernel-Power
+16930 21/02/2020 8:13:52 a. m.  DCOM
+16931 21/02/2020 8:16:56 a. m.  DCOM
+16932 21/02/2020 8:17:21 a. m.  DCOM
+16933 21/02/2020 8:18:39 a. m.  Microsoft-Windows-Kernel-Power
+16934 21/02/2020 8:18:43 a. m.  Microsoft-Windows-Kernel-Power
+16935 21/02/2020 8:18:43 a. m.  Microsoft-Windows-Kernel-Power
+16936 21/02/2020 11:18:40 a. m. Microsoft-Windows-Kernel-General
+16937 21/02/2020 11:18:40 a. m. Microsoft-Windows-Kernel-Power
+16938 21/02/2020 11:18:41 a. m. VBoxNetLwf
+16939 21/02/2020 11:18:41 a. m. VBoxNetLwf
+16940 21/02/2020 11:18:42 a. m. VBoxNetLwf
+16941 21/02/2020 11:18:45 a. m. Microsoft-Windows-Power-Troubleshooter
+16942 21/02/2020 11:18:51 a. m. Microsoft-Windows-Kernel-Power
+16943 21/02/2020 11:19:03 a. m. Microsoft-Windows-Kernel-Power
+16944 21/02/2020 1:21:12 p. m.  Microsoft-Windows-Kernel-General
+16945 21/02/2020 1:21:13 p. m.  EventLog
+16946 21/02/2020 1:21:14 p. m.  VBoxNetLwf
+16947 21/02/2020 1:21:14 p. m.  VBoxNetLwf
+16948 21/02/2020 1:21:14 p. m.  VBoxNetLwf
+16949 21/02/2020 1:21:15 p. m.  Microsoft-Windows-Kernel-Boot
+16950 21/02/2020 1:21:15 p. m.  Microsoft-Windows-Kernel-Boot
+16951 21/02/2020 1:21:15 p. m.  Microsoft-Windows-Kernel-Boot
+16952 21/02/2020 1:21:15 p. m.  Microsoft-Windows-Kernel-Boot
+16953 21/02/2020 1:21:15 p. m.  Microsoft-Windows-Kernel-Boot
+16954 21/02/2020 1:21:17 p. m.  Microsoft-Windows-Power-Troubleshooter
+16955 21/02/2020 1:21:51 p. m.  Microsoft-Windows-Kernel-Power
+16956 21/02/2020 1:25:48 p. m.  DCOM
+16957 21/02/2020 1:25:49 p. m.  DCOM
+16958 21/02/2020 1:44:56 p. m.  Service Control Manager
+
+
+PS C:\Users\S T E V E N> Stop-Transcript
+**********************
+Fin de la transcripción de Windows PowerShell
+Hora de finalización: 20200221144657
+**********************
