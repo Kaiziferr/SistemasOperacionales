@@ -1,3 +1,6 @@
+#Tercer Taller
+
+
 Get-Process -Name WmiPrvSE | Select-Object -Property BasePriority,Id,SessionId,WorkingSet |
   Export-Csv -Path .\data1.csv -NoTypeInformation
 
