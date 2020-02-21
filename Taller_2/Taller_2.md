@@ -1,6 +1,9 @@
 #Tercer Taller
 
 
+**1.Cree dos archivos de texto similares (con una o dos líneas diferentes). Compárelos empleando diff.**
+
+
 Get-Process -Name WmiPrvSE | Select-Object -Property BasePriority,Id,SessionId,WorkingSet |
   Export-Csv -Path .\data1.csv -NoTypeInformation
 
