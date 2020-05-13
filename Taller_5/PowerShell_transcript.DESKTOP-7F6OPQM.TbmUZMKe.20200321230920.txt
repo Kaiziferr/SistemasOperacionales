@@ -1,0 +1,384 @@
+﻿**********************
+Inicio de la transcripción de Windows PowerShell
+Hora de inicio: 20200321230920
+Nombre de usuario: DESKTOP-7F6OPQM\S T E V E N
+Usuario RunAs: DESKTOP-7F6OPQM\S T E V E N
+Nombre de la configuración: 
+Máquina: DESKTOP-7F6OPQM (Microsoft Windows NT 10.0.18362.0)
+Aplicación host: C:\WINDOWS\system32\WindowsPowerShell\v1.0\PowerShell_ISE.exe
+Id. de proceso: 6376
+PSVersion: 5.1.18362.628
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.18362.628
+BuildVersion: 10.0.18362.628
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+La transcripción ha comenzado. El archivo de salida es C:\Users\S T E V E N\Documents\PowerShell_transcript.DESKTOP-7F6OPQM.TbmUZMKe.20200321230920.txt
+PS C:\Users\S T E V E N> Get-CimInstance -ClassName win32_NetworkadapterConfiguration | ft ServiceName, IPAddress
+
+
+ServiceName  IPAddress
+-----------  ---------
+kdnic
+vwifimp
+VBoxNetAdp   {192.168.56.1, fe80::b5d9:a7fe:3ccb:9842}
+VBoxNetAdp   {169.254.253.111, fe80::55c4:1d21:504b:fd6f}
+tap0901
+athr
+rt640x64
+vwifimp
+vwifimp
+RasSstp
+RasAgileVpn
+Rasl2tp
+PptpMiniport
+RasPppoe
+NdisWan
+NdisWan
+NdisWan
+kltap
+aftap0901
+
+
+PS C:\Users\S T E V E N> Get-WmiObject win32_quickfixengineering
+
+Source        Description      HotFixID      InstalledBy          InstalledOn
+------        -----------      --------      -----------          -----------
+DESKTOP-7F... Update           KB4534132     NT AUTHORITY\SYSTEM  8/02/2020 12:00:00 a. m.
+DESKTOP-7F... Security Update  KB4515383     NT AUTHORITY\SYSTEM  27/09/2019 12:00:00 a. m.
+DESKTOP-7F... Security Update  KB4516115     NT AUTHORITY\SYSTEM  29/09/2019 12:00:00 a. m.
+DESKTOP-7F... Security Update  KB4521863     NT AUTHORITY\SYSTEM  13/10/2019 12:00:00 a. m.
+DESKTOP-7F... Security Update  KB4524244     NT AUTHORITY\SYSTEM  14/02/2020 12:00:00 a. m.
+DESKTOP-7F... Security Update  KB4524569     NT AUTHORITY\SYSTEM  15/11/2019 12:00:00 a. m.
+DESKTOP-7F... Security Update  KB4528759     NT AUTHORITY\SYSTEM  4/02/2020 12:00:00 a. m.
+DESKTOP-7F... Update           KB4532441     NT AUTHORITY\SYSTEM  10/12/2019 12:00:00 a. m.
+DESKTOP-7F... Security Update  KB4537759     NT AUTHORITY\SYSTEM  13/02/2020 12:00:00 a. m.
+DESKTOP-7F... Security Update  KB4538674     NT AUTHORITY\SYSTEM  12/02/2020 12:00:00 a. m.
+DESKTOP-7F... Security Update  KB4541338     NT AUTHORITY\SYSTEM  11/03/2020 12:00:00 a. m.
+DESKTOP-7F... Update           KB4551762     NT AUTHORITY\SYSTEM  14/03/2020 12:00:00 a. m.
+
+
+PS C:\Users\S T E V E N> Get-WmiObject -Class Win32_service | ft status, startMode, name
+
+status startMode name
+------ --------- ----
+OK     Auto      AdobeARMservice
+OK     Manual    AJRouter
+OK     Manual    ALG
+OK     Manual    AppIDSvc
+OK     Manual    Appinfo
+OK     Manual    AppMgmt
+OK     Manual    AppReadiness
+OK     Disabled  AppVClient
+OK     Manual    AppXSvc
+OK     Manual    aspnet_state
+OK     Manual    AssignedAccessManagerSvc
+OK     Auto      AudioEndpointBuilder
+OK     Auto      Audiosrv
+OK     Manual    autotimesvc
+OK     Manual    AxInstSV
+OK     Manual    BDESVC
+OK     Auto      BFE
+OK     Manual    BITS
+OK     Auto      Bonjour Service
+OK     Auto      BrokerInfrastructure
+OK     Manual    BTAGService
+OK     Manual    BthAvctpSvc
+OK     Manual    bthserv
+OK     Manual    c2wts
+OK     Manual    camsvc
+OK     Auto      CDPSvc
+OK     Manual    CertPropSvc
+OK     Auto      ClickToRunSvc
+OK     Manual    ClipSVC
+OK     Manual    COMSysApp
+OK     Auto      CoreMessagingRegistrar
+OK     Manual    cphs
+OK     Auto      CryptSvc
+OK     Manual    CscService
+OK     Auto      DcomLaunch
+OK     Auto      debugregsvc
+OK     Manual    defragsvc
+OK     Manual    DeveloperToolsService
+OK     Auto      DeviceAssociationService
+OK     Manual    DeviceInstall
+OK     Manual    DevQueryBroker
+OK     Auto      Dhcp
+OK     Manual    diagnosticshub.standa...
+OK     Manual    diagsvc
+OK     Auto      DiagTrack
+OK     Auto      DispBrokerDesktopSvc
+OK     Manual    DisplayEnhancementSer...
+OK     Manual    DmEnrollmentSvc
+OK     Manual    dmwappushservice
+OK     Auto      Dnscache
+OK     Manual    DoSvc
+OK     Manual    dot3svc
+OK     Auto      DPS
+OK     Manual    DsmSvc
+OK     Manual    DsSvc
+OK     Auto      DusmSvc
+OK     Manual    Eaphost
+OK     Manual    EFS
+OK     Manual    embeddedmode
+OK     Manual    EntAppSvc
+OK     Auto      EventLog
+OK     Auto      EventSystem
+OK     Manual    Fax
+OK     Manual    fdPHost
+OK     Manual    FDResPub
+OK     Manual    fhsvc
+OK     Auto      FontCache
+OK     Manual    FontCache3.0.0.0
+OK     Manual    FrameServer
+OK     Manual    GoogleChromeElevation...
+OK     Auto      gpsvc
+OK     Manual    GraphicsPerfSvc
+OK     Auto      gupdate
+OK     Manual    gupdatem
+OK     Manual    hidserv
+OK     Manual    HvHost
+OK     Manual    icssvc
+OK     Auto      igfxCUIService1.0.0.0
+OK     Auto      IKEEXT
+OK     Manual    InstallService
+OK     Auto      iphlpsvc
+OK     Auto      IpOverUsbSvc
+OK     Manual    IpxlatCfgSvc
+OK     Manual    KeyIso
+OK     Manual    KtmRm
+OK     Auto      LanmanServer
+OK     Auto      LanmanWorkstation
+OK     Manual    lfsvc
+OK     Manual    LicenseManager
+OK     Manual    lltdsvc
+OK     Manual    lmhosts
+UNK... Unknown   LSM
+OK     Manual    LxpSvc
+OK     Manual    LxssManager
+OK     Auto      MapsBroker
+OK     Manual    MozillaMaintenance
+OK     Auto      mpssvc
+OK     Manual    MSDTC
+OK     Manual    MSiSCSI
+OK     Manual    msiserver
+OK     Manual    MsMpiLaunchSvc
+OK     Auto      MySQL80
+OK     Manual    NaturalAuthentication
+OK     Manual    NcaSvc
+OK     Manual    NcbService
+OK     Manual    NcdAutoSetup
+OK     Manual    Netlogon
+OK     Manual    Netman
+OK     Manual    netprofm
+UNK... Unknown   NetSetupSvc
+OK     Disabled  NetTcpPortSharing
+OK     Manual    NgcCtnrSvc
+OK     Manual    NgcSvc
+OK     Auto      NitroDriverReadSpool11
+OK     Manual    NitroUpdateService
+OK     Auto      NlaSvc
+OK     Auto      nlsX86cc
+OK     Auto      nsi
+OK     Manual    OpenVPNService
+OK     Auto      OrientDBGraph
+OK     Manual    ose
+OK     Manual    p2pimsvc
+OK     Manual    p2psvc
+OK     Manual    PcaSvc
+OK     Manual    PeerDistSvc
+OK     Manual    perceptionsimulation
+OK     Manual    PerfHost
+OK     Manual    PhoneSvc
+OK     Manual    pla
+OK     Manual    PlugPlay
+OK     Manual    PNRPAutoReg
+OK     Manual    PNRPsvc
+OK     Manual    PolicyAgent
+OK     Auto      postgresql-x64-10
+OK     Auto      Power
+OK     Manual    PrintNotify
+OK     Auto      ProfSvc
+OK     Manual    PushToInstall
+OK     Manual    QWAVE
+OK     Manual    RasAuto
+OK     Auto      RasMan
+OK     Disabled  RemoteAccess
+OK     Disabled  RemoteRegistry
+OK     Manual    RetailDemo
+OK     Manual    RmSvc
+OK     Manual    rpcapd
+OK     Auto      RpcEptMapper
+OK     Manual    RpcLocator
+OK     Auto      RpcSs
+OK     Auto      SamSs
+OK     Manual    SCardSvr
+OK     Manual    ScDeviceEnum
+OK     Auto      Schedule
+OK     Manual    SCPolicySvc
+OK     Manual    SDRSVC
+OK     Manual    seclogon
+OK     Manual    SecurityHealthService
+OK     Manual    SEMgrSvc
+OK     Auto      SENS
+OK     Manual    Sense
+OK     Manual    SensorDataService
+OK     Manual    SensorService
+OK     Manual    SensrSvc
+OK     Manual    SessionEnv
+OK     Auto      SgrmBroker
+OK     Manual    SharedAccess
+OK     Manual    SharedRealitySvc
+OK     Auto      ShellHWDetection
+OK     Disabled  shpamsvc
+OK     Manual    smphost
+OK     Manual    SmsRouter
+OK     Manual    SNMPTRAP
+OK     Manual    spectrum
+OK     Auto      Spooler
+OK     Auto      sppsvc
+OK     Auto      SQLWriter
+OK     Manual    SSDPSRV
+OK     Disabled  ssh-agent
+OK     Manual    sshd
+OK     Manual    SshdBroker
+OK     Manual    SstpSvc
+OK     Manual    StateRepository
+OK     Auto      stisvc
+OK     Manual    StorSvc
+OK     Manual    svsvc
+OK     Manual    swprv
+OK     Auto      SysMain
+OK     Auto      SystemEventsBroker
+OK     Manual    TabletInputService
+OK     Manual    TapiSrv
+OK     Manual    Te.Service
+OK     Manual    TermService
+OK     Auto      Themes
+OK     Manual    TieringEngineService
+OK     Manual    TimeBrokerSvc
+OK     Manual    TokenBroker
+OK     Auto      TrkWks
+OK     Manual    TroubleshootingSvc
+OK     Manual    TrustedInstaller
+OK     Disabled  tzautoupdate
+OK     Disabled  UevAgentService
+OK     Manual    UmRdpService
+OK     Manual    upnphost
+OK     Auto      UserManager
+OK     Auto      UsoSvc
+OK     Manual    VacSvc
+OK     Manual    VaultSvc
+OK     Manual    VBoxSDS
+OK     Manual    vds
+OK     Manual    vmicguestinterface
+OK     Manual    vmicheartbeat
+OK     Manual    vmickvpexchange
+OK     Manual    vmicrdv
+OK     Manual    vmicshutdown
+OK     Manual    vmictimesync
+OK     Manual    vmicvmsession
+OK     Manual    vmicvss
+OK     Manual    VSS
+OK     Manual    VSStandardCollectorSe...
+OK     Manual    W32Time
+OK     Manual    WaaSMedicSvc
+OK     Manual    WalletService
+OK     Manual    WarpJITSvc
+OK     Manual    wbengine
+OK     Manual    WbioSrvc
+OK     Auto      Wcmsvc
+OK     Manual    wcncsvc
+OK     Manual    WdiServiceHost
+OK     Manual    WdiSystemHost
+OK     Manual    WdNisSvc
+OK     Manual    WebClient
+OK     Disabled  WebManagement
+OK     Manual    Wecsvc
+OK     Manual    WEPHOSTSVC
+OK     Manual    wercplsupport
+OK     Manual    WerSvc
+OK     Manual    WFDSConMgrSvc
+OK     Manual    WiaRpc
+OK     Manual    WinDefend
+OK     Manual    WinHttpAutoProxySvc
+OK     Auto      Winmgmt
+OK     Manual    WinRM
+OK     Manual    wisvc
+OK     Auto      WlanSvc
+OK     Manual    wlidsvc
+OK     Manual    wlpasvc
+OK     Manual    WManSvc
+OK     Manual    wmiApSrv
+OK     Manual    WMPNetworkSvc
+OK     Manual    workfolderssvc
+OK     Manual    WpcMonSvc
+OK     Manual    WPDBusEnum
+OK     Auto      WpnService
+OK     Auto      wscsvc
+OK     Auto      WSearch
+OK     Manual    wuauserv
+OK     Manual    WwanSvc
+OK     Manual    XblAuthManager
+OK     Manual    XblGameSave
+OK     Manual    XboxGipSvc
+OK     Manual    XboxNetApiSvc
+OK     Auto      NanoServiceMain
+OK     Auto      PSUAService
+OK     Manual    Panda VPN Service
+OK     Auto      pselamsvc
+OK     Auto      PandaAgent
+OK     Manual    AarSvc_10134dfc
+OK     Manual    BcastDVRUserService_1...
+OK     Manual    BluetoothUserService_...
+OK     Manual    CaptureService_10134dfc
+OK     Manual    cbdhsvc_10134dfc
+OK     Auto      CDPUserSvc_10134dfc
+OK     Manual    ConsentUxUserSvc_1013...
+OK     Manual    CredentialEnrollmentM...
+OK     Manual    DeviceAssociationBrok...
+OK     Manual    DevicePickerUserSvc_1...
+OK     Manual    DevicesFlowUserSvc_10...
+OK     Auto      LxssManagerUser_10134dfc
+OK     Manual    MessagingService_1013...
+OK     Auto      OneSyncSvc_10134dfc
+OK     Manual    PimIndexMaintenanceSv...
+OK     Manual    PrintWorkflowUserSvc_...
+OK     Manual    UnistoreSvc_10134dfc
+OK     Manual    UserDataSvc_10134dfc
+OK     Auto      WpnUserService_10134dfc
+
+
+PS C:\Users\S T E V E N>  Get-CimClass -Namespace root\CIMv2 | where cimclassname -like *product*
+
+
+   NameSpace: ROOT/CIMv2
+
+CimClassName                        CimClassMethods      CimClassProperties
+------------                        ---------------      ------------------
+CIM_Product                         {}                   {Caption, Description, IdentifyingNumber, Name...}
+Win32_ComputerSystemProduct         {}                   {Caption, Description, IdentifyingNumber, Name...}
+Win32_Product                       {Install, Admin, ... {Caption, Description, IdentifyingNumber, Name...}
+SoftwareLicensingProduct            {UninstallProduct... {ADActivationCsvlkPid, ADActivationCsvlkSkuId, ADActivati...
+Win32_ProductResource               {}                   {Product, Resource}
+CIM_ProductSoftwareFeatures         {}                   {Component, Product}
+Win32_ProductSoftwareFeatures       {}                   {Component, Product}
+CIM_ProductFRU                      {}                   {FRU, Product}
+CIM_FRUIncludesProduct              {}                   {Component, FRU}
+CIM_ProductPhysicalElements         {}                   {Component, Product}
+CIM_ProductSupport                  {}                   {Product, Support}
+Win32_ProductCheck                  {}                   {Check, Product}
+CIM_ProductParentChild              {}                   {Child, Parent}
+CIM_ProductProductDependency        {}                   {DependentProduct, RequiredProduct, TypeOfDependency}
+CIM_CompatibleProduct               {}                   {CompatibilityDescription, CompatibleProduct, Product}
+
+
+PS C:\Users\S T E V E N> Get-CimClass -Namespace root\CIMv2 | where cimclassname -like *AntiSpyware*
+PS C:\Users\S T E V E N> Stop-Transcript
+**********************
+Fin de la transcripción de Windows PowerShell
+Hora de finalización: 20200321231059
+**********************
